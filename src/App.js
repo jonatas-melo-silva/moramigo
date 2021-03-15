@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
  
+
 function Genero() {
   const data = [
     {
@@ -29,7 +30,7 @@ function Genero() {
   }
  
   return (
-    <div className="Genero" style={{ width: 500 }}>
+    <div className="Genero" style={{ width: 300 }}>
       <p>Gênero</p>
       
         <Select
@@ -74,7 +75,7 @@ function Animais() {
   
  
   return (
-    <div className="Animais" style={{ width: 500 }}>
+    <div className="Animais" style={{ width: 300 }}>
       <p>Animais</p>
       <Select
         className="dropdown"
@@ -120,7 +121,7 @@ const handleChange = (e) => {
 
 
 return (
-  <div className="Visitas" style={{ width: 500 }}>
+  <div className="Visitas" style={{ width: 300 }}>
     <p>Visitas</p>
     <Select
       className="dropdown"
@@ -166,7 +167,7 @@ const handleChange = (e) => {
 
 
 return (
-  <div className="Bebidas" style={{ width: 500 }}>
+  <div className="Bebidas" style={{ width: 300 }}>
     <p>Bebidas</p>
     <Select
       className="dropdown"
@@ -211,7 +212,7 @@ const handleChange = (e) => {
 
 
 return (
-  <div className="Fumantes" style={{ width: 500 }}>
+  <div className="Fumantes" style={{ width: 300 }}>
     <p>Fumantes</p>
     <Select
       className="dropdown"
@@ -257,7 +258,7 @@ const handleChange = (e) => {
 
 
 return (
-  <div className="Festas" style={{ width: 500 }}>
+  <div className="Festas" style={{ width: 300 }}>
     <p>Festas</p>
     <Select
       className="dropdown"

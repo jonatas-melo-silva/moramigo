@@ -1,22 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Genero } from './App';
-import { Animais } from './App';
-import { Visitas } from './App';
-import { Bebidas } from './App';
-import { Fumantes } from './App';
-import { Festas } from './App';
-
+import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Genero />
-    <Animais />
-    <Visitas />
-    <Bebidas />
-    <Fumantes />
-    <Festas />
+    <App />
   </React.StrictMode>,
-  
   document.getElementById('root')
 );
+
+// reportWebVitals();

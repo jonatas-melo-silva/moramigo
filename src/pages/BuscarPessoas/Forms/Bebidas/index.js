@@ -11,11 +11,15 @@ const Bebidas = () => {
   }
 
   return (
-    <select name="bebidas" onChange={handleInputChange} value={FormValues.genero || ''}>
+    <div>
+    <label>Bedidas</label>
+    <select name="bebidas" onChange={handleInputChange} value={FormValues.bebidas || ''}>
+      <option value="">Selecione</option>
       <option value="S">Podem beber</option>
       <option value="N">Sem bebidas</option>
       <option value="T">Tanto faz</option>
     </select>
+    </div>
   );
 
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 const Visitas = () => {
 
   const [FormValues, setFormValues] = useState({});
@@ -11,11 +12,16 @@ const Visitas = () => {
   }
 
   return (
-    <select name="visitas" onChange={handleInputChange} value={FormValues.genero || ''}>
+    <div>
+     <label>Visitas</label>
+    <select name="visitas" onChange={handleInputChange} value={FormValues.visitas || ''}>
+      <option value="">Selecione</option>
       <option value="S">Podem receber visitas</option>
       <option value="N">Sem receber visitas</option>
       <option value="T">Tanto faz</option>
     </select>
+    </div>
+
   );
 
 }

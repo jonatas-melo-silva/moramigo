@@ -1,6 +1,7 @@
 import Routes from './routes';
 import GlobalStyle from './styles/global'
 
+
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
     </>
   );
+
 }
 
 export default App;

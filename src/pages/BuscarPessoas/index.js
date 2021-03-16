@@ -1,12 +1,23 @@
-import { Title } from './styles';
+
+import Style from './styles';
+import HeaderBuscarPessoas from './HeaderBuscarPessoas';
 import Form from './Forms';
+import Cards from './Cards';
+import Rodape from '../Main/Rodape';
+
 
 const BuscarPessoas = () => {
 
   return (
     <>
-      <Title>Buscar Pessoas</Title>
+      <HeaderBuscarPessoas/>
+      <div className = "forms">
       <Form/>
+      </div>
+      <Style />
+      <Cards/>
+      <Rodape/>
+  
     </>
 
   );

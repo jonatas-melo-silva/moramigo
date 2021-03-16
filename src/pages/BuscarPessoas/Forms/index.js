@@ -4,6 +4,7 @@ import Visitas from './Visitas';
 import Bebidas from './Bebidas';
 import Fumantes from './Fumantes';
 import Festas from './Festas';
+import Localidades from './Localidades';
 
 
 const Form = () => {
@@ -24,11 +25,14 @@ const Form = () => {
       <Genero />
       <Animais />
       <Visitas />
+      <button type="submit" className = "btn-buscarPessoas">
+        Buscar
+      </button>
       <Bebidas />
       <Fumantes />
       <Festas />
+      <Localidades/>
 
-      <button type="submit">Enviar</button>
     </form>
   )
 };

@@ -1,11 +1,16 @@
-import { Title } from './styles';
-import { Link } from 'react-router-dom';
+import Style from './styles';
+import HeaderMain from './HeaderMain';
+import Rodape from './Rodape';
 
 const Main = () => {
   return (
     <>
-      <Title>MORAMIGO</Title>
-      <Link to="/buscarpessoas">Buscar Pessoas</Link>
+      <HeaderMain/>
+      <Style/>
+      <Rodape/>
+
+ 
+  
     </>
 
   );

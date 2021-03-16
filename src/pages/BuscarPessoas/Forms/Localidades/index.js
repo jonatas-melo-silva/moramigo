@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const Festas = () => {
+const Localidades = () => {
 
   const [FormValues, setFormValues] = useState({});
 
@@ -13,16 +13,16 @@ const Festas = () => {
 
   return (
     <div>
-    <label>Festas</label>
-    <select name="festas" onChange={handleInputChange} value={FormValues.festas || ''}>
+    <label>Localidades</label>
+    <select name="Localidades" onChange={handleInputChange} value={FormValues.Localidades || ''}>
       <option value="">Selecione</option>
-      <option value="S">Podem ter festa</option>
-      <option value="N">Sem festas</option>
-      <option value="T">Tanto faz</option>
+      <option value="S">Bernado Viera</option>
+      <option value="N">Bairro Vermelho</option>
+      <option value="T">Tirol</option>
     </select>
     </div>
   );
 
 }
 
-export default Festas;
+export default Localidades;

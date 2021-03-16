@@ -1,4 +1,10 @@
 import Genero from './genero';
+import Animais from './animais';
+import Visitas from './visitas';
+import Bebidas from './bebidas';
+import Fumantes from './fumantes';
+import Festas from './festas';
+
 
 const Form = () => {
 
@@ -15,7 +21,12 @@ const Form = () => {
 
     <form onSubmit={handleSubmit}>
 
-      <Genero/>
+      <Genero />
+      <Animais />
+      <Visitas />
+      <Bebidas />
+      <Fumantes />
+      <Festas />
 
       <button type="submit">Enviar</button>
     </form>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Genero = () => {
+const Fumantes = () => {
 
   const [FormValues, setFormValues] = useState({});
 
@@ -11,13 +11,13 @@ const Genero = () => {
   }
 
   return (
-    <select name="genero" onChange={handleInputChange} value={FormValues.genero || ''}>
-      <option value="M">Masculino</option>
-      <option value="F">Feminino</option>
-      <option value="O">Outro</option>
+    <select name="fumantes" onChange={handleInputChange} value={FormValues.genero || ''}>
+      <option value="S">Podem fumar</option>
+      <option value="N">Sem Fumantes</option>
       <option value="T">Tanto faz</option>
     </select>
   );
+
 }
 
-export default Genero;
+export default Fumantes;

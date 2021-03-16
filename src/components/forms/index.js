@@ -1,23 +1,36 @@
-import { Fragment } from 'react';
-import Genero from './campos/Genero'
-import Animais from './campos/Animais'
-import Bebidas from './campos/Bebidas'
-import Fumantes from './campos/Fumantes'
-import Visitas from './campos/Visitas'
-import Festas from './campos/Festas'
+import Genero from './genero';
+import Animais from './animais';
+import Visitas from './visitas';
+import Bebidas from './bebidas';
+import Fumantes from './fumantes';
+import Festas from './festas';
 
 
 const Form = () => {
-    return (
-        <Fragment>
-            <Genero/>
-            <Animais/>
-            <Bebidas/>
-            <Fumantes/>
-            <Visitas/>
-            <Festas/>
-        </Fragment>
-    )
-}
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    console.log(data);
+  };
+
+  return (
+
+    <form onSubmit={handleSubmit}>
+
+      <Genero />
+      <Animais />
+      <Visitas />
+      <Bebidas />
+      <Fumantes />
+      <Festas />
+
+      <button type="submit">Enviar</button>
+    </form>
+  )
+};
 
 export default Form;

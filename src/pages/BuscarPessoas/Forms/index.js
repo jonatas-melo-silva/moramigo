@@ -1,9 +1,9 @@
-import Genero from './genero';
-import Animais from './animais';
-import Visitas from './visitas';
-import Bebidas from './bebidas';
-import Fumantes from './fumantes';
-import Festas from './festas';
+import Genero from './Genero';
+import Animais from './Animais';
+import Visitas from './Visitas';
+import Bebidas from './Bebidas';
+import Fumantes from './Fumantes';
+import Festas from './Festas';
 
 
 const Form = () => {

@@ -8,11 +8,8 @@ ReactDOM.render(
   <React.StrictMode>
 
     <App />
-<<<<<<< Updated upstream
-=======
  
     
->>>>>>> Stashed changes
   </React.StrictMode>,
   document.getElementById('root')
 );

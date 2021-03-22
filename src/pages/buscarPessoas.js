@@ -5,7 +5,7 @@ import HeaderBuscarPessoas from '../components/HeaderBuscarPessoas';
 import Rodape from '../components/Rodape';
 import Cards from '../components/Cards';
 import api from '../services/api'
-
+import HeaderMain from './../components/HederMain';
 const BuscarPessoas = () => {
 
   const [filtros, setFiltros] = useState({})
@@ -27,8 +27,8 @@ const BuscarPessoas = () => {
   return (
     <>
       { console.log( filtros)}
-
-      <HeaderBuscarPessoas />
+      <HeaderMain/>
+      {/* <HeaderBuscarPessoas /> */}
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>
 
@@ -100,6 +100,7 @@ const BuscarPessoas = () => {
           <button type="submit" className={styles.btnBuscarPessoas}>Buscar</button>
         </form>
       </div>
+  
       <Cards usuarios={perfils}/>
       <Rodape />
     </>

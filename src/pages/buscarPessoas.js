@@ -9,7 +9,7 @@ import HeaderMain from './../components/HederMain';
 const BuscarPessoas = () => {
 
   const [filtros, setFiltros] = useState({})
-  const [perfils, setPerfils] = useState([])
+  const [perfilUsuarios, setPerfilUsuarios] = useState([])
 
   const handleChange = (event) => {
     setFiltros({ ...filtros, [event.target.name]: event.target.value })
@@ -19,8 +19,8 @@ const BuscarPessoas = () => {
     event.preventDefault()
 
     const url = "busca/"
-    api.get(url, filtros).then(response => {
-      setPerfils(response.data)
+    api.get(url, {params: filtros}).then(response => {
+      setPerfilUsuarios(response.data)
     })
   }
 
@@ -101,7 +101,7 @@ const BuscarPessoas = () => {
         </form>
       </div>
   
-      <Cards usuarios={perfils}/>
+      <Cards perfilUsuarios={perfilUsuarios}/>
       <Rodape />
     </>
   );

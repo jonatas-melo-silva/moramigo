@@ -2,13 +2,16 @@ import styles from '../styles/components/Cards.module.css';
 
 const Cards = (props) => {
 
-  const perfis = props.usuarios;
+  const perperfilUsuariosfis = props.perfilUsuarios;
 
-  console.log('cards',perfis)
+  perperfilUsuariosfis.forEach(perfil => {
+    const pessoa = perfil.pessoa
+    console.log('for', pessoa)
+  });
 
   return (
     <>
-      <header>
+
         <div className={styles.cards}>
 
           <div className={styles.card}>
@@ -27,7 +30,7 @@ const Cards = (props) => {
             </section>
           </div>
         </div>
-      </header>
+    
     </>
   );
 }

@@ -5,11 +5,11 @@ import HeaderBuscarPessoas from '../components/HeaderBuscarPessoas';
 import Rodape from '../components/Rodape';
 import Cards from '../components/Cards';
 import api from '../services/api'
-
+import HeaderMain from './../components/HederMain';
 const BuscarPessoas = () => {
 
   const [filtros, setFiltros] = useState({})
-  const [perfils, setPerfils] = useState([])
+  const [perfilUsuarios, setPerfilUsuarios] = useState([])
 
   const handleChange = (event) => {
     setFiltros({ ...filtros, [event.target.name]: event.target.value })
@@ -19,16 +19,16 @@ const BuscarPessoas = () => {
     event.preventDefault()
 
     const url = "busca/"
-    api.get(url, filtros).then(response => {
-      setPerfils(response.data)
+    api.get(url, {params: filtros}).then(response => {
+      setPerfilUsuarios(response.data)
     })
   }
 
   return (
     <>
       { console.log( filtros)}
-
-      <HeaderBuscarPessoas />
+      <HeaderMain/>
+      {/* <HeaderBuscarPessoas /> */}
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>
 
@@ -100,7 +100,8 @@ const BuscarPessoas = () => {
           <button type="submit" className={styles.btnBuscarPessoas}>Buscar</button>
         </form>
       </div>
-      <Cards usuarios={perfils}/>
+  
+      <Cards perfilUsuarios={perfilUsuarios}/>
       <Rodape />
     </>
   );

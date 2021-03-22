@@ -4,7 +4,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2px;
+  color: black;
+  min-height: 308px;
 }
+
 
 #nome {
   color: black;

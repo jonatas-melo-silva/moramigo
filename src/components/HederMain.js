@@ -1,15 +1,25 @@
 import Link from 'next/link'
-
 import styles from '../styles/components/HederMain.module.css';
 
 const HeaderMain = () => {
   return (
     <>
-      <header>
-        <div className={styles.menu}>
-          <h1 id={styles.titulo}>MORAMIGO</h1>
-          <Link href="/buscarPessoas">Buscar Pessoas</Link>
+      <header className = {styles.containerHeader}>
+        
+      <div className = "logo">
+        <Link href="/">
+            <img src="img/logo.svg" alt="MorAmigo"/>
+        </Link>
+          
         </div>
+
+        <div className={styles.menu}>
+          <Link href="/buscarPessoas">Buscar Pessoas</Link>
+          <Link href="/">Sobre - Nós</Link>
+          <Link href="/">Entrar</Link>
+          <Link href="/">Cadastre-se</Link>
+        </div>
+
       </header>
     </>
   );

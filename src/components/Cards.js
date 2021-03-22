@@ -8,7 +8,7 @@ const Cards = (props) => {
 
   return (
     <>
-      <header>
+
         <div className={styles.cards}>
 
           <div className={styles.card}>
@@ -27,7 +27,7 @@ const Cards = (props) => {
             </section>
           </div>
         </div>
-      </header>
+    
     </>
   );
 }

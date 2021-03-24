@@ -1,17 +1,19 @@
-import styles from "../styles/components/pages/Main.module.css";
-import HeaderMain from "../components/HederMain";
+import styles from "../styles/components/pages/Index.module.css";
+import HeaderMain from "../components/HeaderMain";
 import Rodape from "../components/Rodape";
 
-const Main = () => {
+const Home = () => {
   return (
-    <>
+    <div className="container">
+      <title>Moramigo</title>
       <HeaderMain />
-      <div className="container">
-        <p>dmkwdmdmwdmwdomwo</p>
-      </div>
+      <h1 className={styles.textoTitulo}>
+        Encontrar uma galera bacana para compartilhar moradia não precisa ser
+        uma tarefa difícil.
+      </h1>
       <Rodape />
-    </>
+    </div>
   );
 };
 
-export default Main;
+export default Home;

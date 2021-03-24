@@ -1,33 +1,24 @@
-
-.containerHeader  {
-  display:flex;
+.containerHeader {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  
 }
-.menu{
-  display:flex;
+.menu {
+  display: flex;
 
   justify-content: space-around;
 
   width: 800px;
 }
-.containerHeader .menu a{
+.containerHeader .menu a {
   text-decoration: none;
   color: gray;
   padding: 8px;
-  font-size: 18px;  
-
-  
+  font-size: 18px;
 }
 
-.containerHeader .menu a:hover{
-  background-color:var(--color-orange);
-  color:white;
-  
-
- 
+.containerHeader .menu a:hover {
+  background-color: var(--color-orange);
+  color: white;
 }
-
-

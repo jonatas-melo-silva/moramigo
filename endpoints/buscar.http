@@ -1,0 +1,30 @@
+### Buscar todos
+http://127.0.0.1:8000/api/v1/busca
+
+### filtrar todos por genero_colega
+http://127.0.0.1:8000/api/v1/busca/?genero_colega=M
+
+### filtrar todos por animais
+http://127.0.0.1:8000/api/v1/busca/?animal=S
+
+### filtrar todos por visitas
+http://127.0.0.1:8000/api/v1/busca/?visitas=S
+
+### filtrar todos por bebidas
+http://127.0.0.1:8000/api/v1/busca/?bebidas=S
+
+### filtrar todos por fumantes
+http://127.0.0.1:8000/api/v1/busca/?fumantes=N
+
+### filtrar todos por festas
+http://127.0.0.1:8000/api/v1/busca/?festas=N
+
+### filtrar todos por localidades
+http://127.0.0.1:8000/api/v1/busca/?localidades=1
+
+###
+http://127.0.0.1:8000/api/v1/pessoas/1
+
+
+###
+http://127.0.0.1:8000/api/v1/restricoes/1

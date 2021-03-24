@@ -1,40 +1,46 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import styles from '../styles/components/pages/BuscarPessoas.module.css';
-import HeaderBuscarPessoas from '../components/HeaderBuscarPessoas';
-import Rodape from '../components/Rodape';
-import Cards from '../components/Cards';
-import api from '../services/api'
-import HeaderMain from './../components/HederMain';
+import styles from "../styles/components/pages/BuscarPessoas.module.css";
+import HeaderMain from "./../components/HederMain";
+import Cards from "../components/Cards";
+import Rodape from "../components/Rodape";
+import api from "../services/api";
+
 const BuscarPessoas = () => {
-
-  const [filtros, setFiltros] = useState({})
-  const [perfilUsuarios, setPerfilUsuarios] = useState([])
+  const [filtros, setFiltros] = useState({});
+  const [perfilUsuarios, setPerfilUsuarios] = useState([]);
 
   const handleChange = (event) => {
-    setFiltros({ ...filtros, [event.target.name]: event.target.value })
-  }
+    if (event.target.name == 'localidades' && event.target.value == ""){
+      setFiltros([]);
+    } else {
+      setFiltros({ ...filtros, [event.target.name]: event.target.value });
+    }
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const url = "busca/"
-    api.get(url, {params: filtros}).then(response => {
-      setPerfilUsuarios(response.data)
-    })
-  }
+    const url = "busca/";
+    api.get(url, { params: filtros }).then((response) => {
+      setPerfilUsuarios(response.data);
+    });
+  };
 
   return (
     <>
-      { console.log( filtros)}
-      <HeaderMain/>
-      {/* <HeaderBuscarPessoas /> */}
+    {console.log(filtros)}
+      <HeaderMain />
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>
-
           <div>
             <label id={styles.label}>Gênero</label>
-            <select id={styles.select} name="genero_colega" onChange={handleChange} value={filtros.genero_colega || ''}>
+            <select
+              id={styles.select}
+              name="genero_colega"
+              onChange={handleChange}
+              value={filtros.genero_colega || ""}
+            >
               <option value="">Selecione</option>
               <option value="M">Masculino</option>
               <option value="F">Feminino</option>
@@ -44,7 +50,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>Animais</label>
-            <select id={styles.select} name="animais" onChange={handleChange} value={filtros.animais || ''}>
+            <select
+              id={styles.select}
+              name="animais"
+              onChange={handleChange}
+              value={filtros.animais || ""}
+            >
               <option value="">Selecione</option>
               <option value="S">Com animais</option>
               <option value="N">Sem animais</option>
@@ -53,7 +64,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>Visitas</label>
-            <select id={styles.select} name="visitas" onChange={handleChange} value={filtros.visitas || ''}>
+            <select
+              id={styles.select}
+              name="visitas"
+              onChange={handleChange}
+              value={filtros.visitas || ""}
+            >
               <option value="">Selecione</option>
               <option value="S">Podem receber visitas</option>
               <option value="N">Sem receber visitas</option>
@@ -62,7 +78,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>Bebidas</label>
-            <select id={styles.select} name="bebidas" onChange={handleChange} value={filtros.bebidas || ''}>
+            <select
+              id={styles.select}
+              name="bebidas"
+              onChange={handleChange}
+              value={filtros.bebidas || ""}
+            >
               <option value="">Selecione</option>
               <option value="S">Podem beber</option>
               <option value="N">Sem bebidas</option>
@@ -71,7 +92,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>Fumantes</label>
-            <select id={styles.select} name="fumantes" onChange={handleChange} value={filtros.fumantes || ''}>
+            <select
+              id={styles.select}
+              name="fumantes"
+              onChange={handleChange}
+              value={filtros.fumantes || ""}
+            >
               <option value="">Selecione</option>
               <option value="S">Podem fumar</option>
               <option value="N">Sem Fumantes</option>
@@ -80,7 +106,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>Festas</label>
-            <select id={styles.select} name="festas" onChange={handleChange} value={filtros.festas || ''}>
+            <select
+              id={styles.select}
+              name="festas"
+              onChange={handleChange}
+              value={filtros.festas || ""}
+            >
               <option value="">Selecione</option>
               <option value="S">Podem ter festa</option>
               <option value="N">Sem festas</option>
@@ -89,7 +120,12 @@ const BuscarPessoas = () => {
           </div>
           <div>
             <label id={styles.label}>localidades</label>
-            <select id={styles.select} name="Localidades" onChange={handleChange} value={filtros.localidades || ''}>
+            <select
+              id={styles.select}
+              name="localidades"
+              onChange={handleChange}
+              value={filtros.localidades || ""}
+            >
               <option value="">Selecione</option>
               <option value="1">Bernado Viera</option>
               <option value="2">Bairro Vermelho</option>
@@ -97,14 +133,16 @@ const BuscarPessoas = () => {
             </select>
           </div>
 
-          <button type="submit" className={styles.btnBuscarPessoas}>Buscar</button>
+          <button type="submit" className={styles.btnBuscarPessoas}>
+            Buscar
+          </button>
         </form>
       </div>
-  
-      <Cards perfilUsuarios={perfilUsuarios}/>
+
+      <Cards perfilUsuarios={perfilUsuarios} />
       <Rodape />
     </>
   );
-}
+};
 
 export default BuscarPessoas;

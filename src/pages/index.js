@@ -5,7 +5,9 @@ import Rodape from "../components/Rodape";
 const Home = () => {
   return (
     <div className="container">
-      <title>Moramigo</title>
+      <head>
+        <title>Moramigo</title>
+      </head>
       <HeaderMain />
       <h1 className={styles.textoTitulo}>
         Encontrar uma galera bacana para compartilhar moradia não precisa ser

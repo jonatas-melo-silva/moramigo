@@ -1,13 +1,17 @@
-import Main from './main';
+import styles from "../styles/components/pages/Main.module.css";
+import HeaderMain from "../components/HederMain";
+import Rodape from "../components/Rodape";
 
-export default function Home() {
+const Main = () => {
   return (
     <>
+      <HeaderMain />
       <div className="container">
-        <Main />
-        <div>
-        </div>
+        <p>dmkwdmdmwdmwdomwo</p>
       </div>
+      <Rodape />
     </>
-  )
-}
+  );
+};
+
+export default Main;

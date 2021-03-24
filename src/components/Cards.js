@@ -1,35 +1,23 @@
-import styles from '../styles/components/Cards.module.css';
+import styles from "../styles/components/Cards.module.css";
 
-const Cards = (props) => {
+const Cards = ({ perfilUsuarios }) => (
+  <div className={styles.cards}>
+    {perfilUsuarios.map((perfil) => (
+      <div className={styles.card} key={perfil.pessoa.id}>
+        <section>
+          <h1>{perfil.pessoa.nome}</h1>
+          <span>Idade: {perfil.pessoa.idade}</span>
+          <br />
+          <span>valor contribuição: {perfil.valor_contribuicao}</span>
+          <br />
 
-  const perfis = props.usuarios;
-
-  console.log('cards',perfis)
-
-  return (
-    <>
-
-        <div className={styles.cards}>
-
-          <div className={styles.card}>
-            <section>
-              <h1>Jonatas</h1>
-            </section>
-          </div>
-          <div className={styles.card}>
-            <section>
-              <h1>Rafael</h1>
-            </section>
-          </div>
-          <div className={styles.card}>
-            <section>
-              <h1>Rômulo</h1>
-            </section>
-          </div>
-        </div>
-    
-    </>
-  );
-}
+          {perfil.localidades.map((local) => (
+            <span key={perfil.pessoa.id}>Localidades: {local.nome}</span>
+          ))}
+        </section>
+      </div>
+    ))}
+  </div>
+);
 
 export default Cards;

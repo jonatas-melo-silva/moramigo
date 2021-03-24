@@ -1,7 +1,7 @@
 import Rodape from "../components/Rodape";
 import CardsTeste from "../components/CardsTeste";
 import api from "../services/api";
-import HeaderMain from "./../components/HederMain";
+import HeaderMain from "../components/HeaderMain";
 
 const BuscarPessoas = ({ perfilUsuarios }) => (
   <div>

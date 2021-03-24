@@ -7,7 +7,7 @@ const HeaderBuscarPessoas = () => {
     <>
       <header>
         <div className={styles.menu}>
-          <Link href="/main">
+          <Link href="/">
             <h1 id={styles.titulo}>MORAMIGO</h1>
           </Link>
         </div>

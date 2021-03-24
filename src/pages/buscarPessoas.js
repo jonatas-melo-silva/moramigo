@@ -11,7 +11,7 @@ const BuscarPessoas = () => {
   const [perfilUsuarios, setPerfilUsuarios] = useState([]);
 
   const handleChange = (event) => {
-    if (event.target.name == 'localidades' && event.target.value == ""){
+    if (event.target.name == "localidades" && event.target.value == "") {
       setFiltros([]);
     } else {
       setFiltros({ ...filtros, [event.target.name]: event.target.value });
@@ -29,7 +29,10 @@ const BuscarPessoas = () => {
 
   return (
     <>
-    {console.log(filtros)}
+      {console.log(filtros)}
+      <head>
+        <title>Moramigo | Buscar Pessoas</title>
+      </head>
       <HeaderMain />
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>

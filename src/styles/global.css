@@ -22,13 +22,15 @@
     align-items: center;
     width: 12rem;
     height: 7rem;
-    margin-left:8px;
+    margin-left:30px;
   
   }
 
   
   html, body, #root {
     min-height: 100%;
+    width: 100%;
+    min-width: 1340px;
   }
 
   body {

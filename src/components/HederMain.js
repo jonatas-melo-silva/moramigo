@@ -14,8 +14,8 @@ const HeaderMain = () => {
         </div>
 
         <div className={styles.menu}>
-          <Link href="/buscarPessoas">Buscar Pessoas</Link>
           <Link href="/">Sobre - Nós</Link>
+          <Link href="/buscarPessoas">Buscar Pessoas</Link>
           <Link href="/">Entrar</Link>
           <Link href="/">Cadastre-se</Link>
         </div>

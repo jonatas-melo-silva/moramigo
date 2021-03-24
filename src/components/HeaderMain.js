@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/components/HederMain.module.css";
+import styles from "../styles/components/HeaderMain.module.css";
 
 const HeaderMain = () => {
   return (

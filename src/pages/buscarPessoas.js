@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "../styles/components/pages/BuscarPessoas.module.css";
-import HeaderMain from "./../components/HederMain";
+import HeaderMain from "../components/HeaderMain";
 import Cards from "../components/Cards";
 import Rodape from "../components/Rodape";
 import api from "../services/api";

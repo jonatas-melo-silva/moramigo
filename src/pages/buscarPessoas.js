@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "../styles/components/pages/BuscarPessoas.module.css";
-import HeaderMain from "../components/HeaderMain";
+import HeaderMain from "./../components/HederMain";
 import Cards from "../components/Cards";
 import Rodape from "../components/Rodape";
 import api from "../services/api";
@@ -29,7 +29,6 @@ const BuscarPessoas = () => {
 
   return (
     <>
-    <title>Moramigo | Buscar Pessoas</title>
     {console.log(filtros)}
       <HeaderMain />
       <div className={styles.forms}>

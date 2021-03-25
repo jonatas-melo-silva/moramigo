@@ -9,17 +9,22 @@
 
   justify-content: space-around;
 
-  width: 600px;
-  margin-right: 100px;
+  width: 680px;
+  margin-right:50px;
 }
 .containerHeader .menu a {
   text-decoration: none;
   color: gray;
   padding: 8px;
   font-size: 18px;
+
 }
 
 .containerHeader .menu a:hover {
   background-color: var(--color-orange);
   color: white;
 }
+
+
+
+

@@ -1,15 +1,100 @@
-.textoTitulo {
+.banner{
+  display: flex;
+  justify-content:center;
   align-items: center;
-  align-content: center;
-  text-align: center;
+  
+  
+
+}
+#bannerImg{
+	display:flex;
+	justify-content:center;
+  flex-direction: column;
+  align-items: center;
+
+ 
+}
+
+
+#bannerImg img{
+  width: 100%;
+  background-size:cover;
+  background-position:center;
+}
+
+
+.textoTitulo{
+ position: absolute;
+ margin-top: 19%;
+ text-align: center;
+}
+
+.textoTitulo h1{
   color: rgb(112, 111, 111);
-  font-size: 22px;
-  margin: 0;
+  font-size: 24px;
   padding: 10px;
-  width: 500px;
-  max-width: 75%;
-  margin-top: 20px;
+  width: 550px;
   border: solid 3px #ff9a00;
   background-color: #dccea1;
   border-radius: 20px;
+} 
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  color: gray;
+
 }
+
+.card {  
+  background-color: var(--color-roxo);
+  display: grid;
+  cursor: pointer;
+  border: 1px solid rgb(170, 165, 165);
+  margin-top: 20px;
+  height: 200px;
+  width: 250px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+
+
+.card span{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.card h1{
+  color: black;
+  font-weight: bold;
+}
+.btn_verPefil{
+  background-color: white;
+
+  margin-top: 16px;
+  padding: 3px;
+  font-size: 13px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  border: 2px solid var(--color-purple);
+
+}
+.btn_verPefil a{
+  color: var(--color-purple);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn_verPefil a:hover{
+  color: rgb(160, 77, 238);
+}
+

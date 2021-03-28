@@ -1,35 +1,28 @@
-.banner{
+.banner {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  
-  
-
 }
-#bannerImg{
-	display:flex;
-	justify-content:center;
+#bannerImg {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-
- 
 }
 
-
-#bannerImg img{
+#bannerImg img {
   width: 100%;
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
 }
 
-
-.textoTitulo{
- position: absolute;
- margin-top: 19%;
- text-align: center;
+.textoTitulo {
+  position: absolute;
+  margin-top: 19%;
+  text-align: center;
 }
 
-.textoTitulo h1{
+.textoTitulo h1 {
   color: rgb(112, 111, 111);
   font-size: 24px;
   padding: 10px;
@@ -37,7 +30,7 @@
   border: solid 3px #ff9a00;
   background-color: #dccea1;
   border-radius: 20px;
-} 
+}
 
 .cards {
   max-width: 800px;
@@ -46,10 +39,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 26px;
   color: gray;
-
 }
 
-.card {  
+.card {
   background-color: var(--color-roxo);
   display: grid;
   cursor: pointer;
@@ -62,8 +54,7 @@
   padding: 5px;
 }
 
-
-.card span{
+.card span {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -71,11 +62,11 @@
   font-size: 14px;
 }
 
-.card h1{
+.card h1 {
   color: black;
   font-weight: bold;
 }
-.btn_verPefil{
+.btn_verPefil {
   background-color: white;
 
   margin-top: 16px;
@@ -86,15 +77,13 @@
   border-radius: 4px;
   transition: 700ms;
   border: 2px solid var(--color-purple);
-
 }
-.btn_verPefil a{
+.btn_verPefil a {
   color: var(--color-purple);
   text-decoration: none;
   font-weight: bold;
 }
 
-.btn_verPefil a:hover{
+.btn_verPefil a:hover {
   color: rgb(160, 77, 238);
 }
-

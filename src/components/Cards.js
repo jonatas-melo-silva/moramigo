@@ -5,6 +5,10 @@ const Cards = ({ perfilUsuarios }) => (
     {perfilUsuarios.map((perfil) => (
       <div className={styles.card} key={perfil.pessoa.id}>
         <section>
+          <div class="foto-perfil">
+            <img src="img/pessoa1.svg" alt="Person"></img>
+          </div>
+              
           <h1>{perfil.pessoa.nome}</h1>
           <span>Idade: {perfil.pessoa.idade}</span>
           <br />

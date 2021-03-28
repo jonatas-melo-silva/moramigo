@@ -12,11 +12,14 @@ const HeaderMain = () => {
         </div>
 
         <div className={styles.menu}>
+        <Link href="/">
+            <a>Sobre - Nós</a>
+          </Link>
           <Link href="/buscarPessoas">
             <a>Buscar Pessoas</a>
           </Link>
           <Link href="/">
-            <a>Sobre - Nós</a>
+            <a>Meus interesses</a>
           </Link>
           <Link href="/">
             <a>Entrar</a>
@@ -24,7 +27,7 @@ const HeaderMain = () => {
           <Link href="/">
             <a>Cadastre-se</a>
           </Link>
-          <a></a>
+        
         </div>
       </header>
     </>

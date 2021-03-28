@@ -20,14 +20,31 @@
   width: 250px;
   border-radius: 12px;
   text-align: center;
+  
 }
 
 
 .card img{
   
-  width: 4.5rem;
-  margin-right: 5px;
+  width: 4rem;
+  
   display: flex;
   justify-content: space-between;
   
+}
+
+.card a{
+  width: 5rem;
+  text-decoration:none;
+  color: #8257e5;
+  height: 20px;
+  
+  margin-left: 5rem;
+  border:#ff9a00;
+  border-style: outset;
+  border-width:2px;
+  border-radius: 12px;
+  
+  
+
 }

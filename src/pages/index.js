@@ -7,12 +7,14 @@ import Rodape from "../components/Rodape";
 
 const Home = () => {
   return (
-    <div className="container">
+  <>
+   <div className="container">
       <Head>
         <title>Moramigo</title>
       </Head>
       <HeaderMain />
 
+  
       <div className={styles.banner}>
         <div id={styles.bannerImg}>
           <img src="img/banner.svg" alt="MorAmigo | Banner" />
@@ -28,60 +30,67 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className={styles.cards}>
-        <div className={styles.card}>
-          <section>
-            <h1>Rafael</h1>
-            <span> 22 anos</span>
-            <span>
-              Olá moramigo, estou precisando de um colega para dividir uma
-              moradia.
-            </span>
-            <span> Bairro: Alecrim</span>
-            <button className={styles.btn_verPefil}>
-              <Link href="/">
-                <a>Ver Perfil</a>
+      
+      <div className={styles.card}>
+        <section>
+          <div className={styles.imgPerfil}>
+            <img src="img/pessoa1.svg" alt="MorAmigo | Banner"/>
+            <h1>Rafael Rufino</h1>
+          </div>
+          <p> 22 anos</p>
+          <span>Olá moramigo, estou precisando de um colega para dividir uma moradia.</span>  
+          <span> Bairro: Alecrim</span>
+          <button className = {styles.btn_verPefil}>
+              <Link href="/perfil">
+                  <a>Ver Perfil</a>
               </Link>
-            </button>
-          </section>
-        </div>
-        <div className={styles.card}>
-          <section>
-            <h1>jonatas</h1>
-            <span> 22 anos</span>
-            <span>
-              Olá moramigo, estou precisando de um colega para dividir uma
-              moradia.
-            </span>
-            <span> Bairro: Alecrim</span>
-            <button className={styles.btn_verPefil}>
-              <Link href="/">
-                <a>Ver Perfil</a>
+          </button>        
+        </section>
+       </div>
+  
+      <div className={styles.card}>
+        <section>
+          <div className={styles.imgPerfil}>
+            <img src="img/pessoa1.svg" alt="MorAmigo | Banner"/>
+            <h1>Jonatas soares</h1>
+          </div>
+          <p> 22 anos</p>
+          <span>Olá moramigo, estou precisando de um colega para dividir uma moradia.</span>  
+          <span> Bairro: Alecrim</span>
+          <button className = {styles.btn_verPefil}>
+              <Link href="/perfil">
+                  <a>Ver Perfil</a>
               </Link>
-            </button>
-          </section>
-        </div>
-        <div className={styles.card}>
-          <section>
-            <h1>Romulo</h1>
-            <span> 22 anos</span>
-            <span>
-              Olá moramigo, estou precisando de um colega para dividir uma
-              moradia.
-            </span>
-            <span> Bairro: Alecrim</span>
-            <button className={styles.btn_verPefil}>
-              <Link href="/">
-                <a>Ver Perfil</a>
+          </button>        
+        </section>
+       </div>
+  
+      <div className={styles.card}>
+        <section>
+          <div className={styles.imgPerfil}>
+            <img src="img/pessoa1.svg" alt="MorAmigo | Banner"/>
+            <h1>Romulo Silva</h1>
+          </div>
+            <p> 22 anos</p>
+          <span>Olá moramigo, estou precisando de um colega para dividir uma moradia.</span>  
+          <span> Bairro: Alecrim</span>
+          <button className = {styles.btn_verPefil}>
+              <Link href="/perfil">
+                  <a>Ver Perfil</a>
               </Link>
-            </button>
-          </section>
-        </div>
+          </button>        
+        </section>
       </div>
-
-      <Rodape />
+      </div>
+    
     </div>
+     <Rodape />
+  </> 
+
+   
+    
+    
   );
 };
 

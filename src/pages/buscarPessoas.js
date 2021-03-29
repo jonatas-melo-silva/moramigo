@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from 'next/head'
 
 import styles from "../styles/components/pages/BuscarPessoas.module.css";
 import HeaderMain from "../components/HeaderMain";
@@ -30,9 +31,9 @@ const BuscarPessoas = () => {
   return (
     <>
       {console.log(filtros)}
-      <head>
+      <Head>
         <title>Moramigo | Buscar Pessoas</title>
-      </head>
+      </Head>
       <HeaderMain />
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>

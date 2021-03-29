@@ -7,15 +7,36 @@
   outline: 0;
   box-sizing: border-box;
 
-
-
 }
 
 :root {
+  --color-background: #F0F2F5;
+  --color-text: #FCFDFF;
+  --color-primary: #41414C;
+  --color-secondary: #F1972C;
+  --color-secondary-hover: #FA9C2D;
+  --color-input-background: #F8F8FC;
+  --color-button-text: #FFFFFF;
+  --color-hairline-in-dark: #4F4F5B;
+  --color-hairline-in-light: #E1E3E5;
+  --color-card-background: var(--color-text);
+  --color-card-title: #5A5A66;
+  --color-card-label: #BFBFCC;
+  --color-card-content: #787880;
+  --color-cancel: #E1E3E5;
+  --color-delete: #EB3B35; 
+  --color-save: #36B336;
+  --color-badge-progress-text: var(--color-save);
+  --color-badge-progress-background: #E8F8E8;
+  --color-badge-done-text: var(--color-delete);
+  --color-badge-done-background:#FAECEB;
+  --color-header-inner-title: var(--color-card-label);
   --color-background: #f2f3f5;
   --color-orange: #ff9a00;
   --color-purple: #8257e5;
+
 }
+
 header {
   height: 110px;
   background-color: white;
@@ -34,7 +55,7 @@ header {
 html,
 body,
 #root {
-  min-height: 100%;
+  /* min-height: 100%; */
   height: 100%;
 
   
@@ -42,10 +63,12 @@ body,
 }
 
 body {
-  background: #ffff;
+  background: var(--color-background);
   -webkit-font-smoothing: antialiased !important;
-  min-width: 1342px;
+  width: min(1440px, 90vw);
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+
   
 }
 

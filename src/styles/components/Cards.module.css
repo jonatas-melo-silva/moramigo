@@ -4,18 +4,47 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 26px;
-  color: black;
+  color: rgb(0, 0, 0);
   min-height: 308px;
+  
 }
 
 .card {
   background-color: var(--color-roxo);
   display: grid;
   cursor: pointer;
-  border: 1px solid gray;
+  border-style: outset;
+  border-width: 4px;
   margin-top: 20px;
   height: 200px;
   width: 250px;
-  border-radius: 4px;
+  border-radius: 12px;
   text-align: center;
+  
+}
+
+
+.card img{
+  
+  width: 4rem;
+  
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.card a{
+  width: 5rem;
+  text-decoration:none;
+  color: #8257e5;
+  height: 20px;
+  
+  margin-left: 5rem;
+  border:#8257e5;
+  border-style: outset;
+  border-width:2px;
+  border-radius: 12px;
+  
+  
+
 }

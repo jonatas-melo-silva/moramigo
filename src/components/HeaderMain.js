@@ -24,7 +24,7 @@ const HeaderMain = () => {
           <Link href="/login">
             <a>Entrar</a>
           </Link>
-          <Link href="/">
+          <Link href="/registrarUsuario">
             <a>Cadastre-se</a>
           </Link>
         

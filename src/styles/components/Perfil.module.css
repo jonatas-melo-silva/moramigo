@@ -83,7 +83,7 @@
 }
 
 #btnConversar:hover {
-  background:#7e4cf5;
+  background-color: var(--color-purple-hover);
 }
 
 #btnDemostrarInteresse{

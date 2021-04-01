@@ -26,7 +26,7 @@
 .formLogin{
     background-color: white;
     border-radius: 6px;
-    height: 380px;
+    height: 400px;
     width: 400px;
 
 }
@@ -34,7 +34,7 @@
     display: grid;
     width: 20em;
     margin: 18px auto;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.8rem;
 }
 
 
@@ -66,13 +66,14 @@
     
 }
 .inputBlock input:focus{
+    
     display: inline-block;
     box-shadow: 0 0 0 1px var(--color-purple);
     border-radius: 4px;
 
 }
 
-.btnEntrar button{
+.btncadastrar button{
     background-color: var(--color-purple);
     width: 100%;
     height: 35px;
@@ -81,14 +82,14 @@
     border-radius: 4px;
     transition: 200ms;
 }
-.btnEntrar button a{
+.btncadastrar button a{
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
 
 }
-.btnEntrar button:hover{
+.btncadastrar button:hover{
     background-color: var(--color-purple-hover);
 }
 .formLogin fieldset p{

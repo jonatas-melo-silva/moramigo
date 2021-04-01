@@ -1,19 +1,19 @@
 import Head from "next/head";
-import styles from "../styles/components/pages/Login.module.css";
+import styles from "../styles/components/pages/RegistrarUsuario.module.css";
 import HeaderMain from "../components/HeaderMain";
 import Rodape from "../components/Rodape";
 import Link from "next/link";
 
-const Login = () => {
+const RegistrarUsuario = () => {
   return (
     <>
       <Head>
-        <title>Moramigo | Login</title>
+        <title>Moramigo | Cadastre - se</title>
       </Head>
       <HeaderMain />
       <div className={styles.telaLogin}>
         <div className={styles.imglogo}>
-          <h1>Faça seu login na Plataforma</h1>
+          <h1>Faça seu cadastro na Plataforma</h1>
 
           <div className={styles.imgForm}>
             <img src="./img/imgLogin.svg" alt="imgBannerForm" />
@@ -25,7 +25,7 @@ const Login = () => {
 
           <form action="">
             <fieldset>
-              <span>Faça seu login</span>
+              <span>Criar conta</span>
 
               <hr />
 
@@ -50,19 +50,30 @@ const Login = () => {
                 />
               </div>
 
-              {/* <div className={styles.esqueceuSenha}>
-             Esqueceu sua senha? <a href="">Clique aqui</a>
-             </div> */}
+              <div className={styles.inputBlock}>
+                <label for="confirmeSenha"></label>
+                <input
+                  name="confirmeSenha"
+                  placeholder="Confirme sua senha"
+                  type="password"
+                  required
+                />
+              </div>
 
-              <div className={styles.btnEntrar}>
+              {/* <div className={styles.termoUso}>
+                Ao se cadastrar no MORAMIGO você aceita os termos 
+                de uso e politica de privacidade
+              </div> */}
+
+              <div className={styles.btncadastrar}>
                 <button type="submit">
-                  <a href="">Entrar</a>
+                  <a href="">Cadastrar</a>
                 </button>
               </div>
 
-              <Link href="/registrarUsuario">
+              <Link href="/login">
                 <p>
-                  Ainda não tem conta ? <a> Cadastre - se</a>
+                  ja possui conta?<a> Entre aqui</a>
                 </p>
               </Link>
             </fieldset>
@@ -75,4 +86,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default RegistrarUsuario;

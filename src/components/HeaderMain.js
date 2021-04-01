@@ -21,7 +21,7 @@ const HeaderMain = () => {
           <Link href="/">
             <a>Meus interesses</a>
           </Link>
-          <Link href="/">
+          <Link href="/login">
             <a>Entrar</a>
           </Link>
           <Link href="/">

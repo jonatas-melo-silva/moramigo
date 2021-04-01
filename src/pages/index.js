@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
-
 import styles from "../styles/components/pages/Index.module.css";
 import HeaderMain from "../components/HeaderMain";
 import Rodape from "../components/Rodape";
+const Banner = ('/img/banner.svg');
 
 const Home = () => {
   return (
@@ -17,7 +17,9 @@ const Home = () => {
   
       <div className={styles.banner}>
         <div id={styles.bannerImg}>
-          <img src="img/banner.svg" alt="MorAmigo | Banner" />
+
+          <img src={Banner} alt="MorAmigo | Banner"/>
+
 
           <div className={styles.textoTitulo}>
             <h1>

@@ -23,48 +23,19 @@ const SolicitacaoInteresses = () => {
         <div className={styles.cards}>
           <div className={styles.card}>
             <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
-                <h1>Rafael Rufino</h1>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
               </div>
-              <div className={styles.perfileIdade}>
+              <div className={styles.verPerfil}>
                 <Link href="/perfil">
                   <a>Ver Perfil</a>
                 </Link>
-                <p> 22 anos</p>
-              </div>
-
-              <span>
-                Olá moramigo, estou precisando de um colega para dividir uma
-                moradia.
-              </span>
-              <span> Bairro: Alecrim</span>
-              <div className={styles.button}>
-                <button className={styles.btnAceitar}>
-                  <Link href="/perfil">
-                    <a>Aceitar</a>
-                  </Link>
-                </button>
-                <button className={styles.btnCancelar}>
-                  <Link href="/perfil">
-                    <a>Cancelar</a>
-                  </Link>
-                </button>
-              </div>
-            </section>
-          </div>
-
-          <div className={styles.card}>
-            <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
-                <h1>Rafael Rufino</h1>
-              </div>
-              <div className={styles.perfileIdade}>
-                <Link href="/perfil">
-                  <a>Ver Perfil</a>
-                </Link>
-                <p> 22 anos</p>
               </div>
 
               <span>
@@ -88,15 +59,19 @@ const SolicitacaoInteresses = () => {
           </div>
           <div className={styles.card}>
             <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
-                <h1>Rafael Rufino</h1>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
               </div>
-              <div className={styles.perfileIdade}>
+              <div className={styles.verPerfil}>
                 <Link href="/perfil">
                   <a>Ver Perfil</a>
                 </Link>
-                <p> 22 anos</p>
               </div>
 
               <span>
@@ -118,8 +93,42 @@ const SolicitacaoInteresses = () => {
               </div>
             </section>
           </div>
-        
-          
+          <div className={styles.card}>
+            <section>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
+              </div>
+              <div className={styles.verPerfil}>
+                <Link href="/perfil">
+                  <a>Ver Perfil</a>
+                </Link>
+              </div>
+
+              <span>
+                Olá moramigo, estou precisando de um colega para dividir uma
+                moradia.
+              </span>
+              <span> Bairro: Alecrim</span>
+              <div className={styles.button}>
+                <button className={styles.btnAceitar}>
+                  <Link href="/perfil">
+                    <a>Aceitar</a>
+                  </Link>
+                </button>
+                <button className={styles.btnCancelar}>
+                  <Link href="/perfil">
+                    <a>Cancelar</a>
+                  </Link>
+                </button>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
       <Rodape />

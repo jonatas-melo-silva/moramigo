@@ -3,46 +3,50 @@
     height: 100%;
   
 }
-/*=== Perfil e Idade*/
-.perfileIdade{
+/*=== ver Perfil ===*/
+.verPerfil{
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding-bottom: 10px;
-
-
-
-
-}
-.perfileIdade a{
+  
+  
+  
+  
+  }
+  .verPerfil a{
   padding-top: 4px;
-  padding-right: 14px;
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
   color: var(--color-purple);
+  
+  }
+  
 
-}
-.perfileIdade p{
-  padding-right:55px;
-  padding-top: 0;
-}
-/* ===== card ====*/
-.imgPerfil{
+/* ===== perfil ====*/
+.perfil{
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   
   }
   
-  .imgPerfil h1{
+.perfil h1{
     padding-top: 10px;
     font-size: 18px;
   }
-  .imgPerfil img{
+.perfil img{
     width: 4.5em;
     padding: 2px;
     border: 2px solid var(--color-orange);
     border-radius: 50%;
+  }
+.perfil p{
+    font-size: 14px;
+    color:black;
+    font-weight: bold;
+  
+  
   }
   
 .cards {
@@ -65,12 +69,6 @@
     border-radius: 4px;
     text-align: center;
     padding: 5px;
-  }
-  .card p{
-    font-size: 16px;
-    color:black;
-    font-weight: bold;
-    margin-bottom: 5px;
   }
   
   .card span {

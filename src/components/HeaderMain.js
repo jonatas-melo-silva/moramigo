@@ -18,7 +18,7 @@ const HeaderMain = () => {
           <Link href="/buscarPessoas">
             <a>Buscar Pessoas</a>
           </Link>
-          <Link href="/">
+          <Link href="meusInteresses">
             <a>Meus interesses</a>
           </Link>
           <Link href="/login">

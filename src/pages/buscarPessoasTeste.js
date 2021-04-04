@@ -1,4 +1,4 @@
-import HeaderMain from "./../components/HederMain";
+import HeaderMain from "../components/HeaderMain";
 import CardsTeste from "../components/CardsTeste";
 import Rodape from "../components/Rodape";
 import api from "../services/api";

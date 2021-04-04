@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
-
 import styles from "../styles/components/pages/Index.module.css";
 import HeaderMain from "../components/HeaderMain";
 import Rodape from "../components/Rodape";
+const Banner = ('/img/banner.svg');
 
 const Home = () => {
   return (

@@ -1,0 +1,106 @@
+/* ==== tela login*/
+.telaLogin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px auto;
+    justify-items: center;
+    min-height: 450px;
+    height: 100%;
+    width: 880px;
+    gap: 8rem;
+}
+/* ==== banner de login*/
+.imglogo h1{
+    color: var(--color-purple);
+    padding-bottom: 3rem;
+    font-size: 41px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.telaLogin img{
+    align-items: center;
+    width: 24em;
+}
+/* ==== form de login*/
+.formLogin{
+    background-color: white;
+    border-radius: 6px;
+    height: 400px;
+    width: 400px;
+
+}
+.formLogin img {
+    display: grid;
+    width: 20em;
+    margin: 18px auto;
+    margin-bottom: 2.8rem;
+}
+
+
+
+.formLogin fieldset{
+    margin: 20px;
+    border: 0;
+}
+.formLogin fieldset span{
+
+
+    color: var(--color-orange);
+}
+.formLogin hr{
+    margin-top:2px;
+    border:1px solid#E1E3E5;
+    
+}
+.inputBlock input{
+    width: 100%;
+    line-height: 20px;
+    color: black;
+    margin-top:15px;
+    height: 35px;
+    border:1px solid#E1E3E5;
+    border-radius: 4px;
+    padding-left: 4px;
+    font-size: 14px;
+    
+}
+.inputBlock input:focus{
+    
+    display: inline-block;
+    box-shadow: 0 0 0 1px var(--color-purple);
+    border-radius: 4px;
+
+}
+
+.btncadastrar button{
+    background-color: var(--color-purple);
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 4px;
+    transition: 200ms;
+}
+.btncadastrar button a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.btncadastrar button:hover{
+    background-color: var(--color-purple-hover);
+}
+.formLogin fieldset p{
+    color: gray;
+    text-align: center;
+    padding-top: 15px;
+}
+.formLogin fieldset p a{
+    color: var(--color-orange);
+}
+.formLogin fieldset p a:hover{
+    color: rgb(255, 174, 0);
+    cursor: pointer;
+}

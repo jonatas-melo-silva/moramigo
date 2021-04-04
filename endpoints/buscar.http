@@ -1,22 +1,8 @@
-### Para ativas as requisições deve
 ### instalar a extenção Rest client no vscode
 
 ### Buscar todas as pessoas
-http://127.0.0.1:8000/api/v1/busca
+GET http://127.0.0.1:8000/api/v1/busca HTTP/1.1
 
-### filtrar todos por localidades
-http://127.0.0.1:8000/api/v1/busca/?localidades=1
-
-### listar todos os perfis
-http://127.0.0.1:8000/api/v1/pessoas/
-
-### buscar um perfil
-###
-http://127.0.0.1:8000/api/v1/pessoas/1
-
-### listar todas as restrições
-http://127.0.0.1:8000/api/v1/restricoes/
-
-### buscar uma restrição
-###
-http://127.0.0.1:8000/api/v1/restricoes/1
+### filtrar por localidades
+GET http://127.0.0.1:8000/api/v1/busca/
+  ?localidades=2

@@ -18,13 +18,13 @@ const HeaderMain = () => {
           <Link href="/buscarPessoas">
             <a>Buscar Pessoas</a>
           </Link>
-          <Link href="/">
+          <Link href="meusInteresses">
             <a>Meus interesses</a>
           </Link>
-          <Link href="/">
+          <Link href="/login">
             <a>Entrar</a>
           </Link>
-          <Link href="/">
+          <Link href="/registrarUsuario">
             <a>Cadastre-se</a>
           </Link>
         

@@ -1,0 +1,184 @@
+.container{
+    min-height: 600px;
+    height: 100%;
+  
+}
+/*=== ver Perfil ===*/
+.verPerfil{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-bottom: 10px;
+  
+  
+  
+  
+  }
+  .verPerfil a{
+  padding-top: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-purple);
+  
+  }
+  
+
+/* ===== perfil ====*/
+.perfil{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  
+  }
+  
+.perfil h1{
+    padding-top: 10px;
+    font-size: 18px;
+  }
+.perfil img{
+    width: 4.5em;
+    padding: 2px;
+    border: 2px solid var(--color-orange);
+    border-radius: 50%;
+  }
+.perfil p{
+    font-size: 14px;
+    color:black;
+    font-weight: bold;
+  
+  
+  }
+  
+.cards {
+    max-width: 800px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 26px;
+    color: gray;
+  }
+  
+  .card {  
+    background-color: white;
+    display: grid;
+    cursor: pointer;
+    border: 1px solid rgb(170, 165, 165);
+    margin-top: 20px;
+    height: 230px;
+    width: 250px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .card span {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 25px;
+    font-size: 14px;
+  
+  }
+  
+  
+  .card h1{
+    color: black;
+    font-weight: bold;
+  }
+  /* === button Aceitar == */
+  .button{
+    margin-top: 20px;
+ 
+    
+  }
+  .btnAceitar {
+    background-color: #39c915;
+    height: 25px;
+    padding: 3px;
+    font-size: 13px;
+    width: 100px;
+    border: 0;
+    border-radius: 4px;
+    transition: 700ms;
+    margin-right: 8px;
+    
+  }
+  .btnAceitar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btnAceitar:hover{
+    background:#2bb309;
+  }
+/*== button Cancelar*/  
+.btnCancelar {
+  height: 25px;
+  background-color:#E83F5B;
+  padding: 3px;
+  font-size: 13px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  
+}
+.btnCancelar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btnCancelar:hover{
+  background-color: #d82a47;
+}
+/*==== Links ====*/
+
+.links{
+    font-size: 22px;
+    text-align: center;
+    padding-top: 40px;
+    height: 100px;
+    background-color: white;
+}
+
+/*color margin so no ultimo elemento*/
+.links a + a{
+    margin-left: 32px;
+
+}
+.links a{
+
+    text-decoration: none;
+    color: #777;
+    position: relative;
+}
+.links a.active{
+    font-weight: bold;
+    color: var(--color-purple);
+}
+
+.links a:hover{
+    color: var(--color-purple);
+}
+
+/*pseu do elemento*/
+.links a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-purple);
+    position: absolute;
+    left:0;
+    bottom: -4px;
+
+}
+
+/*efeito de transição com pseu do elemento*/
+.links a:hover::after{
+    width: 100%;
+    transition: width 700ms ease-in-out;
+
+}
+

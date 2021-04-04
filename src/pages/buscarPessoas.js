@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from 'next/head'
+import Head from "next/head";
 
 import styles from "../styles/components/pages/BuscarPessoas.module.css";
 import HeaderMain from "../components/HeaderMain";
@@ -19,18 +19,15 @@ const BuscarPessoas = () => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
     const url = "busca/";
-    api.get(url, { params: filtros }).then((response) => {
-      setPerfilUsuarios(response.data);
-    });
+    const response = await api.get(url, { params: filtros });
+    setPerfilUsuarios(response.data);
   };
 
   return (
     <>
-      {console.log(filtros)}
       <Head>
         <title>Moramigo | Buscar Pessoas</title>
       </Head>

@@ -1,8 +1,8 @@
 ### Para ativas as requisições deve
 ### instalar a extenção Rest client no vscode
 
-### Busca127r todos
-http://.0.0.1:8000/api/v1/busca
+### Buscar todas as pessoas
+http://127.0.0.1:8000/api/v1/busca
 
 ### filtrar todos por localidades
 http://127.0.0.1:8000/api/v1/busca/?localidades=1

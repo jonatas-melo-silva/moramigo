@@ -83,7 +83,7 @@
 }
 
 #btnConversar:hover {
-  background:#7e4cf5;
+  background-color: var(--color-purple-hover);
 }
 
 #btnDemostrarInteresse{
@@ -136,11 +136,11 @@
   color: black;
 }
 .inputWrapper p{
-  border: 1px solid gray;
+  border: 1px solid#E1E3E5;
   padding: 1rem;
   border-radius: 4px;
   color: gray;
-  background-color: white;
+
 }
 
 

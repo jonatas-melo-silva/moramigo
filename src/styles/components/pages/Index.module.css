@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
 }
+
 #bannerImg {
   display: flex;
   justify-content: center;
@@ -11,36 +12,34 @@
   width: 100%;
 }
 
-.imgPerfil{
-  display:flex;
-  justify-content:center;
+.imgPerfil {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
-.imgPerfil h1{
+.imgPerfil h1 {
   padding-top: 10px;
   font-size: 18px;
 }
-.imgPerfil img{
+.imgPerfil img {
   width: 5em;
   padding: 2px;
   border: 2px solid var(--color-purple);
   border-radius: 50%;
 }
 
-#bannerImg img{
+#bannerImg img {
   width: 100%;
   background-size: cover;
   background-position: center;
 }
 
-
-.textoTitulo{
- position: absolute;
- margin-top: 244px;
- text-align: center;
+.textoTitulo {
+  position: absolute;
+  margin-top: 244px;
+  text-align: center;
 }
 
 .textoTitulo h1 {
@@ -62,7 +61,7 @@
   color: gray;
 }
 
-.card {  
+.card {
   background-color: white;
   display: grid;
   cursor: pointer;
@@ -74,9 +73,10 @@
   text-align: center;
   padding: 5px;
 }
-.card p{
+
+.card p {
   font-size: 16px;
-  color:black;
+  color: black;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -89,14 +89,13 @@
   font-size: 14px;
 }
 
-
-.card h1{
+.card h1 {
   color: black;
   font-weight: bold;
 }
+
 .btn_verPefil {
   background-color: white;
-
   margin-top: 16px;
   padding: 3px;
   font-size: 13px;
@@ -106,12 +105,13 @@
   transition: 700ms;
   border: 2px solid var(--color-purple);
 }
+
 .btn_verPefil a {
   color: var(--color-purple);
   text-decoration: none;
   font-weight: bold;
 }
 
-.btn_verPefil a:hover{
+.btn_verPefil a:hover {
   color: rgb(38, 116, 189);
 }

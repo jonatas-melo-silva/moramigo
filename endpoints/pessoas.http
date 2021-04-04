@@ -1,0 +1,7 @@
+### instalar a extenção Rest client no vscode
+
+### listar todos os perfis
+GET http://127.0.0.1:8000/api/v1/pessoas/ HTTP/1.1
+
+### buscar um perfil
+GET http://127.0.0.1:8000/api/v1/pessoas/1 HTTP/1.1

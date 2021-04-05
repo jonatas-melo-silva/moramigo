@@ -12,12 +12,14 @@
   background-color: var(--color-roxo);
   display: grid;
   cursor: pointer;
-  border-style: outset;
-  border-width: 4px;
+  padding:7px;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
   margin-top: 20px;
   height: 200px;
   width: 250px;
-  border-radius: 12px;
+  border-radius: 4px;
   text-align: center;
 }
 
@@ -67,7 +69,7 @@
     padding-top: 10px;
     font-size: 18px;
     width: 100%;
-    padding-right: 75px;
+    padding-right: 70px;
   }
   .perfil img{
     width: 4.5em;
@@ -79,6 +81,6 @@
     font-size: 14px;
     color:black;
     font-weight: bold;
-  
+    
   
   }

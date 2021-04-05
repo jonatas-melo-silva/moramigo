@@ -1,27 +1,24 @@
-import Head from "next/head";
-import styles from "../styles/components/pages/RegistrarUsuario.module.css";
-import HeaderMain from "../components/HeaderMain";
-import Rodape from "../components/Rodape";
+import styles from "../../styles/pages/registrar.module.css";
+import Layout from "../../components/Layout"
+
 import Link from "next/link";
 
-const RegistrarUsuario = () => {
+const title = 'Moramigo | Cadastre - se'
+
+const Registrar = () => {
   return (
-    <>
-      <Head>
-        <title>Moramigo | Cadastre - se</title>
-      </Head>
-      <HeaderMain />
+    <Layout title={title}>
       <div className={styles.telaLogin}>
         <div className={styles.imglogo}>
           <h1>Faça seu cadastro na Plataforma</h1>
 
           <div className={styles.imgForm}>
-            <img src="./img/imgLogin.svg" alt="imgBannerForm" />
+            <img src="/img/imgLogin.svg" alt="imgBannerForm" />
           </div>
         </div>
 
         <div className={styles.formLogin}>
-          <img src="./img/imgForm.svg" alt="imgBannerForm" />
+          <img src="/img/imgForm.svg" alt="imgBannerForm" />
 
           <form action="">
             <fieldset>
@@ -61,7 +58,7 @@ const RegistrarUsuario = () => {
               </div>
 
               {/* <div className={styles.termoUso}>
-                Ao se cadastrar no MORAMIGO você aceita os termos 
+                Ao se cadastrar no MORAMIGO você aceita os termos
                 de uso e politica de privacidade
               </div> */}
 
@@ -71,7 +68,7 @@ const RegistrarUsuario = () => {
                 </button>
               </div>
 
-              <Link href="/login">
+              <Link href="/usuario/login">
                 <p>
                   ja possui conta?<a> Entre aqui</a>
                 </p>
@@ -80,10 +77,8 @@ const RegistrarUsuario = () => {
           </form>
         </div>
       </div>
-
-      <Rodape />
-    </>
+    </Layout>
   );
 };
 
-export default RegistrarUsuario;
+export default Registrar;

@@ -27,14 +27,58 @@
   justify-content: space-between;
 }
 
-.card a {
-  width: 5rem;
-  text-decoration: none;
-  color: #8257e5;
-  height: 20px;
-  margin-left: 5rem;
-  border: #8257e5;
-  border-style: outset;
-  border-width: 2px;
-  border-radius: 12px;
+
+
+
+.iniciarConversa {
+  background-color: var(--color-purple);
+  height: 28px;
+  padding: 3px;
+  font-size: 13px;
+  width: 200px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  
+  
 }
+.iniciarConversa a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.iniciarConversa:hover{
+  background:var(--color-purple-hover);
+}
+.button{
+  margin-top: 5px;
+
+  
+}
+.perfil{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  
+  }
+  
+  .perfil h1{
+    padding-top: 10px;
+    font-size: 18px;
+    width: 100%;
+    padding-right: 75px;
+  }
+  .perfil img{
+    width: 4.5em;
+    padding: 2px;
+    border: 2px solid var(--color-orange);
+    border-radius: 50%;
+  }
+  .perfil p{
+    font-size: 14px;
+    color:black;
+    font-weight: bold;
+  
+  
+  }

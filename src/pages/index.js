@@ -50,7 +50,7 @@ const Home = () => {
 
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.inciarConversa}>
+                <button className={styles.iniciarConversa}>
                   <Link href="/perfil">
                     <a>Ver Perfil</a>
                   </Link>
@@ -80,7 +80,7 @@ const Home = () => {
 
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.inciarConversa}>
+                <button className={styles.iniciarConversa}>
                   <Link href="/perfil">
                     <a>Ver Perfil</a>
                   </Link>
@@ -110,7 +110,7 @@ const Home = () => {
 
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.inciarConversa}>
+                <button className={styles.iniciarConversa}>
                   <Link href="/perfil">
                     <a>Ver Perfil</a>
                   </Link>

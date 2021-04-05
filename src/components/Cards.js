@@ -6,19 +6,23 @@ const Cards = ({ perfilUsuarios }) => (
     {perfilUsuarios.map((perfil) => (
       <div className={styles.card} key={perfil.pessoa.id}>
         <section>
-          <div className="foto-perfil">
+        <div className={styles.perfil}>
+          <div>         
             <img src="img/pessoa1.svg" alt="Pessoa"></img>
+            </div> 
+          <h1>{perfil.pessoa.nome}</h1>
           </div>
-          <h3>{perfil.pessoa.nome}</h3>
-          <span>Idade: {perfil.pessoa.idade}</span>
+          <p>Idade: {perfil.pessoa.idade}</p>
           <br />
-          <span>valor contribuição: {perfil.valor_contribuicao}</span>
+          <p>valor contribuição: {perfil.valor_contribuicao}</p>
           <br />
 
           {perfil.localidades.map((local) => (
             <span key={perfil.pessoa.id}>Localidades: {local.nome}</span>
           ))}
         </section>
+        <div className={styles.button}>
+        <button className={styles.iniciarConversa}>
         <Link
           key={perfil.pessoa.id}
           href="/perfil/[id]}"
@@ -26,6 +30,8 @@ const Cards = ({ perfilUsuarios }) => (
         >
           <a>Ver perfil</a>
         </Link>
+        </button>
+        </div>
       </div>
     ))}
   </div>

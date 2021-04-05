@@ -5,6 +5,24 @@ POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "joao_user",
-    "password": "testU1234"
+    "username": "jonatas",
+    "password": "linux"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Silva",
+    "password": "Linuxlinux"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Melo",
+    "password": "Linuxlinux"
 }

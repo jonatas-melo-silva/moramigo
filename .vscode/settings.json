@@ -4,12 +4,15 @@
     "MORAMIGO",
     "Pefil",
     "Rodape",
+    "Solicitacao",
+    "Solicitacoes",
     "contribuicao",
     "descricao",
     "genero",
     "ocupacao",
     "perfils",
     "restricoes",
+    "usuario",
     "usuarios"
   ]
 }

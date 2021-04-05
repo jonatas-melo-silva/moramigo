@@ -1,0 +1,80 @@
+.imgPerfil {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgPerfil h1 {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.imgPerfil img {
+  width: 5em;
+  padding: 2px;
+  border: 2px solid var(--color-purple);
+  border-radius: 50%;
+}
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  color: gray;
+}
+
+.card {
+  background-color: white;
+  display: grid;
+  cursor: pointer;
+  border: 1px solid rgb(170, 165, 165);
+  margin-top: 20px;
+  height: 262px;
+  width: 250px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+
+.card p {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card span {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.card h1 {
+  color: black;
+  font-weight: bold;
+}
+
+.btn_verPefil {
+  background-color: white;
+  margin-top: 16px;
+  padding: 3px;
+  font-size: 13px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  border: 2px solid var(--color-purple);
+}
+
+.btn_verPefil a {
+  color: var(--color-purple);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn_verPefil a:hover {
+  color: rgb(38, 116, 189);
+}

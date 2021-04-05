@@ -33,7 +33,7 @@ const Perfil = () => {
         
         <form className={styles.formProfile} >
         <fieldset>
-          <legend>Detalhes</legend>
+          <legend>Dados do perfil</legend>
           <div className={styles.separator} id={styles.light}></div>
 
             <div className={styles.inputWrapper}>
@@ -72,13 +72,21 @@ const Perfil = () => {
                 />
             </div>
 
-            <div className={styles.inputWrapper}>
-              <label>Sexo</label>
+            <div className={styles.inputRadio}>
+              <label>Sexo</label><br></br>
+              <label>Masculino</label>
               <input
-                  name="name"
-                  placeholder="Digite seu sexo"
+                  name="name"                  
                   id="input"
-                                  
+                  type="radio"
+                  value="Masculino"               
+                />
+                <label>Feminino</label>
+              <input
+                  name="name"                  
+                  id="input"
+                  type="radio"
+                  value="Masculino"               
                 />
           </div>
     
@@ -101,11 +109,15 @@ const Perfil = () => {
           <div className={styles.dividirForm}>
             <div className={styles.inputWrapper}>
               <label>Bairro</label>
-              <input
-                  name="name"
-                  placeholder="Digite seu bairro"
-                  id="input"                
-                />
+              <select
+                  name="name"                  
+                  id="input"                                 
+                >
+                <option value="Tirol">Tirol</option>
+                <option value="Tirol">Bairro Vermelho</option>
+                <option value="Tirol">Bernardo Vieira</option>
+                </select>
+                
             </div>    
             <div className={styles.inputWrapper}>
               <label>Valor que deseja Contribuir</label>
@@ -118,7 +130,7 @@ const Perfil = () => {
             
             <div className={styles.inputWrapper}>
               <label>Genero de Pessoas</label>
-              <input
+              <select
                   name="name"
                   placeholder="Digite seu gênero companheiro"
                   id="input"                
@@ -135,15 +147,20 @@ const Perfil = () => {
           <div className={styles.dividirForm}>
             <div className={styles.inputWrapper}>
               <label>Animais</label>
-              <input
+              <select
                   name="name"
                   placeholder=""
                   id="input"                
-                />
+                >
+                  <option value="">Selecione</option>
+              <option value="S">Com animais</option>
+              <option value="N">Sem animais</option>
+              <option value="T">Tanto faz</option>
+              </select>
             </div>    
             <div className={styles.inputWrapper}>
               <label>Bebidas Alcolicas</label>
-              <input
+              <select
                   name="name"
                   placeholder=""
                   id="input"                
@@ -152,7 +169,7 @@ const Perfil = () => {
             
             <div className={styles.inputWrapper}>
               <label>Fumantes</label>
-              <input
+              <select
                   name="name"
                   placeholder=""
                   id="input"                
@@ -160,7 +177,7 @@ const Perfil = () => {
             </div>    
             <div className={styles.inputWrapper}>
               <label>Visitas</label>
-              <input
+              <select
                   name="name"
                   placeholder=""
                   id="input"                
@@ -168,7 +185,7 @@ const Perfil = () => {
             </div>    
             <div className={styles.inputWrapper}>
               <label>Festas</label>
-              <input
+              <select
                   name="name"
                   placeholder=""
                   id="input"                

@@ -142,6 +142,18 @@
       margin-bottom: 10px;
       
   }
+  .inputRadio input{
+      margin: 10px;
+      margin-top: 10px;    
+}
+  .inputWrapper select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    margin-bottom: 10px;
+    
+}
   .inputWrapper textarea{
     width: 100%;
     padding: 8px;

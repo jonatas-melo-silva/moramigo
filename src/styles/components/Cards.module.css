@@ -1,0 +1,86 @@
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+  color: rgb(0, 0, 0);
+  min-height: 308px;
+}
+
+.card {
+  background-color: var(--color-roxo);
+  display: grid;
+  cursor: pointer;
+  padding:7px;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 20px;
+  height: 200px;
+  width: 250px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card img {
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+.iniciarConversa {
+  background-color: var(--color-purple);
+  height: 28px;
+  padding: 3px;
+  font-size: 13px;
+  width: 200px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  
+  
+}
+.iniciarConversa a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.iniciarConversa:hover{
+  background:var(--color-purple-hover);
+}
+.button{
+  margin-top: 5px;
+
+  
+}
+.perfil{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  
+  }
+  
+  .perfil h1{
+    padding-top: 10px;
+    font-size: 18px;
+    width: 100%;
+    padding-right: 70px;
+  }
+  .perfil img{
+    width: 4.5em;
+    padding: 2px;
+    border: 2px solid var(--color-orange);
+    border-radius: 50%;
+  }
+  .perfil p{
+    font-size: 14px;
+    color:black;
+    font-weight: bold;
+    
+  
+  }

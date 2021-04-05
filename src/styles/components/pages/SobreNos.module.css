@@ -1,0 +1,27 @@
+.imagem img{
+    margin: 5px;
+    display: grid;  
+    width: 50em;      
+    float: left;
+}
+
+.container{
+    min-height: 600px;
+    height: 100%;
+}
+
+.sntxt{
+    color:black;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 50em;
+    padding: 100px;
+    text-align: justify;
+    flex-direction: column;
+    line-height: 25px;
+    float: right;
+    font-family: alegreya;
+    font-weight: bold;
+}
+
+  

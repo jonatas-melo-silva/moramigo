@@ -79,9 +79,11 @@ const Perfil = ({ user }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
-                    <span key={user.id}>
+                    
+                    {/* <span key={user.id}>
                       {user.restricoes.localidades[0].nome}
-                    </span>
+                    </span> */}
+                    
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>valor que deseja Contribuir</label>

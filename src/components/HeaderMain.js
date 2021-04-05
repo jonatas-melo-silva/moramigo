@@ -12,7 +12,7 @@ const HeaderMain = () => {
         </div>
 
         <div className={styles.menu}>
-        <Link href="/sobrenos">
+        <Link href="/sobreNos">
             <a>Sobre nós</a>
           </Link>
           <Link href="/buscarPessoas">

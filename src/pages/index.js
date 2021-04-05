@@ -32,62 +32,93 @@ const Home = () => {
         <div className={styles.cards}>
           <div className={styles.card}>
             <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="Pessoa" />
-                <h1>Rafael Rufino</h1>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
               </div>
-              <p> 22 anos</p>
+              
+
               <span>
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
-              <span> Bairro: Alecrim</span>
-              <button className={styles.btn_verPefil}>
-                <Link href="/perfil/[id]}">
-                  <a>Ver Perfil</a>
-                </Link>
-              </button>
-            </section>
-          </div>
 
+              <span> Bairro: Alecrim</span>
+              <div className={styles.button}>
+                <button className={styles.inciarConversa}>
+                  <Link href="/perfil">
+                    <a>Ver Perfil</a>
+                  </Link>
+                </button>
+              </div>
+            </section>
+            
+          
+          </div>
           <div className={styles.card}>
             <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="Pessoa" />
-                <h1>Jonatas soares</h1>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
               </div>
-              <p> 22 anos</p>
+              
+
               <span>
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
-              <span> Bairro: Alecrim</span>
-              <button className={styles.btn_verPefil}>
-                <Link href="/perfil/[id]}">
-                  <a>Ver Perfil</a>
-                </Link>
-              </button>
-            </section>
-          </div>
 
+              <span> Bairro: Alecrim</span>
+              <div className={styles.button}>
+                <button className={styles.inciarConversa}>
+                  <Link href="/perfil">
+                    <a>Ver Perfil</a>
+                  </Link>
+                </button>
+              </div>
+            </section>
+            
+          
+          </div>
           <div className={styles.card}>
             <section>
-              <div className={styles.imgPerfil}>
-                <img src="img/pessoa1.svg" alt="Pessoa" />
-                <h1>Rômulo Silva</h1>
+              <div className={styles.perfil}>
+                <div>
+                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div>
+                  <h1>Rafael Rufino</h1>
+                  <p>25 Anos</p>
+                </div>
               </div>
-              <p> 22 anos</p>
+              
+
               <span>
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
+
               <span> Bairro: Alecrim</span>
-              <button className={styles.btn_verPefil}>
-                <Link href="/perfil/[id]}">
-                  <a>Ver Perfil</a>
-                </Link>
-              </button>
+              <div className={styles.button}>
+                <button className={styles.inciarConversa}>
+                  <Link href="/perfil">
+                    <a>Ver Perfil</a>
+                  </Link>
+                </button>
+              </div>
             </section>
+            
+          
           </div>
         </div>
       </div>

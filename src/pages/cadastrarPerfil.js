@@ -37,7 +37,7 @@ const Perfil = () => {
           <div className={styles.separator} id={styles.light}></div>
 
             <div className={styles.inputWrapper}>
-              <label for="name">Usuario</label>
+              <label for="name">Nome</label>
               <input
                   name="name"
                   placeholder="Digite seu nome"
@@ -113,9 +113,10 @@ const Perfil = () => {
                   name="name"                  
                   id="input"                                 
                 >
+                <option value="">Selecione</option>
                 <option value="Tirol">Tirol</option>
-                <option value="Tirol">Bairro Vermelho</option>
-                <option value="Tirol">Bernardo Vieira</option>
+                <option value="Bairro Vermelho">Bairro Vermelho</option>
+                <option value="Bernardo Vieira">Bernardo Vieira</option>
                 </select>
                 
             </div>    
@@ -134,7 +135,13 @@ const Perfil = () => {
                   name="name"
                   placeholder="Digite seu gênero companheiro"
                   id="input"                
-                />
+                  >
+                  <option value="">Selecione</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                  <option value="O">Outro</option>
+                  <option value="T">Tanto faz</option>
+                </select>
             </div>
           </div> 
         </fieldset>
@@ -161,35 +168,43 @@ const Perfil = () => {
             <div className={styles.inputWrapper}>
               <label>Bebidas Alcolicas</label>
               <select
-                  name="name"
-                  placeholder=""
-                  id="input"                
-                />
+                 >
+                 <option value="">Selecione</option>
+                 <option value="S">Podem beber</option>
+                 <option value="N">Sem bebidas</option>
+                 <option value="T">Tanto faz</option>
+               </select>
             </div>  
             
             <div className={styles.inputWrapper}>
               <label>Fumantes</label>
               <select
-                  name="name"
-                  placeholder=""
-                  id="input"                
-                />
+                  >
+                  <option value="">Selecione</option>
+                  <option value="S">Podem fumar</option>
+                  <option value="N">Sem Fumantes</option>
+                  <option value="T">Tanto faz</option>
+                </select>
             </div>    
             <div className={styles.inputWrapper}>
               <label>Visitas</label>
               <select
-                  name="name"
-                  placeholder=""
-                  id="input"                
-                />
+                  >
+                  <option value="">Selecione</option>
+                  <option value="S">Podem receber visitas</option>
+                  <option value="N">Sem receber visitas</option>
+                  <option value="T">Tanto faz</option>
+                </select>
             </div>    
             <div className={styles.inputWrapper}>
               <label>Festas</label>
               <select
-                  name="name"
-                  placeholder=""
-                  id="input"                
-                />
+                  >
+                  <option value="">Selecione</option>
+                  <option value="S">Podem ter festa</option>
+                  <option value="N">Sem festas</option>
+                  <option value="T">Tanto faz</option>
+                </select>
             </div>  
           </div>  
         </fieldset>

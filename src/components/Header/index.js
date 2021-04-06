@@ -10,7 +10,7 @@ const MyHeader = () => {
   // console.log(user)
 
   const onClick = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     logout()
   }
   return (

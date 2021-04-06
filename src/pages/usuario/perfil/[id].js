@@ -1,12 +1,16 @@
 import styles from "../../../styles/pages/perfil.module.css";
-import Head from "../../../components/Head"
-import Header from "../../../components/Header"
+import Head from "../../../components/Head";
+import Header from "../../../components/Header";
 import Rodape from "../../../components/Rodape";
 import api from "../../../services/api";
+import AuthContext from "../../../contexts/auth";
 
-const title = 'Moramigo | Perfil'
+import { useContext } from "react";
+
+const title = "Moramigo | Perfil";
 
 const Perfil = ({ user }) => {
+  const { logado } = useContext(AuthContext);
 
   return (
     <>
@@ -19,16 +23,25 @@ const Perfil = ({ user }) => {
             <img src="/img/pessoa1.svg" alt="Foto"></img>
             <h2 key={user.id}>{user.nome}</h2>
 
-            <button className={styles.button} id={styles.btnDemostrarInteresse}>
-              Demostrar Interesse
-            </button>
-            <button
-              className={styles.button}
-              id={styles.btnConversar}
-              type="submit"
-            >
-              Iniciar Conversar
-            </button>
+            {logado ? (
+              <>
+                <button
+                  className={styles.button}
+                  id={styles.btnDemostrarInteresse}
+                >
+                  Demostrar Interesse
+                </button>
+                <button
+                  className={styles.button}
+                  id={styles.btnConversar}
+                  type="submit"
+                >
+                  Iniciar Conversar
+                </button>
+              </>
+            ) : (
+              <h2>Faça o login para mais opções</h2>
+            )}
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>
@@ -79,11 +92,10 @@ const Perfil = ({ user }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
-                    
+
                     {/* <span key={user.id}>
                       {user.restricoes.localidades[0].nome}
                     </span> */}
-                    
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>valor que deseja Contribuir</label>

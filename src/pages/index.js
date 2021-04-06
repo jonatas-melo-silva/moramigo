@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import Cards from "../components/Cards";
 
 import { perfilFetch } from '../hooks/perfilFetch'
-// import api from "../services/api";
 
 const title = "Moramigo";
 
@@ -28,18 +27,12 @@ const Home = () => {
         </div>
       </div>
       {!data ? (
-        <p>Carregando</p>
+        <h2>Carregando...</h2>
         ) : (
         <Cards perfis={data} />
       )}
     </Layout>
   );
 };
-
-// Home.getInitialProps = async () => {
-//   const url = "busca/";
-//   const response = await api.get(url);
-//   return { perfis: response.data };
-// };
 
 export default Home;

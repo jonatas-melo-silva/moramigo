@@ -4,6 +4,7 @@ import MyHead from "next/head";
 const Head = ({ title }) => {
   return (
     <MyHead>
+      {" "}
       <title>{title}</title>
     </MyHead>
   );

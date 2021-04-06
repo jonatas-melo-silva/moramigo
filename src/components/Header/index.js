@@ -23,7 +23,7 @@ const MyHeader = () => {
         </div>
 
         <div className={styles.menu}>
-          <Link href="/">
+          <Link href="/sobrenos">
             <a>Sobre - Nós</a>
           </Link>
           <Link href="/buscar/pessoas">

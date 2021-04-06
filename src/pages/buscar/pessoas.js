@@ -136,7 +136,7 @@ const BuscarPessoas = ({ data }) => {
         </form>
       </div>
       {!perfis ? (
-        <p>Carregando</p>
+        <h2>Carregando...</h2>
         ) : (
         <Cards perfis={perfis} />
       )}

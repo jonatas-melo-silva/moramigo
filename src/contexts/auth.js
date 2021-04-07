@@ -1,27 +1,22 @@
 import api from '../services/api'
 
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect , useContext } from "react";
 import { useRouter } from 'next/router'
 
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState(null)
   const router = useRouter()
 
   useEffect(() => {
     async function loadStoreData() {
-      const storageNome = await localStorage.getItem('@RNAuth:nome')
-      const storageId = await localStorage.getItem('@RNAuth:id')
-      const storageToken = await localStorage.getItem('@RNAuth:token')
+      const storageUser = await localStorage.getItem('@RNMoramigo:userData')
+      const storageToken = await localStorage.getItem('@RNMoramigo:token')
 
-      if (storageNome && storageId && storageToken) {
-        const data = {
-          nome: storageNome,
-          pessoa_1: storageId,
-          token: storageToken,
-        }
-        setUser(data)
+      if (storageUser && storageToken) {
+        api.defaults.headers.authorization = `Token ${storageToken}`
+        setUser(JSON.parse(storageUser))
         router.push("/")
       }
     }
@@ -29,28 +24,40 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const logar = async ({ values }) => {
-    const url = "login";
-    const response = await api.post(url, values)
-    setUser(response.data)
+    try {
+      const url = "login";
+      const response = await api.post(url, values)
+      const userData = {
+        nome: response.data.nome,
+        id: response.data.pessoa_id
+      }
+      setUser(userData)
 
-    await localStorage.setItem('@RNAuth:nome', response.data.nome)
-    await localStorage.setItem('@RNAuth:id',response.data.pessoa_1)
-    await localStorage.setItem('@RNAuth:token',response.data.token)
+      api.defaults.headers.authorization = `Token ${response.data.token}`
 
+      await localStorage.setItem('@RNMoramigo:userData', JSON.stringify(userData));
+      await localStorage.setItem('@RNMoramigo:token',response.data.token)
+
+    } catch (err) {
+
+    }
   }
 
   const logout = () => {
     localStorage.clear()
-    setUser({})
+    setUser(null)
   }
 
   return (
     <AuthContext.Provider
-    value={{ logado: !!user.token, user, logar, logout }}
+    value={{ logado: !!user, user, logar, logout }}
   >
     {children}
   </AuthContext.Provider>
   )
 }
 
-export default AuthContext;
+export const useAuth = () => {
+  const context = useContext(AuthContext)
+  return context;
+}

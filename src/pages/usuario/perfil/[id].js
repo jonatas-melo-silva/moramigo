@@ -3,14 +3,12 @@ import Head from "../../../components/Head";
 import Header from "../../../components/Header";
 import Rodape from "../../../components/Rodape";
 import api from "../../../services/api";
-import AuthContext from "../../../contexts/auth";
-
-import { useContext } from "react";
+import { useAuth } from "../../../contexts/auth";
 
 const title = "Moramigo | Perfil";
 
 const Perfil = ({ user }) => {
-  const { logado } = useContext(AuthContext);
+  const { logado } = useAuth();
 
   return (
     <>
@@ -23,25 +21,18 @@ const Perfil = ({ user }) => {
             <img src="/img/pessoa1.svg" alt="Foto"></img>
             <h2 key={user.id}>{user.nome}</h2>
 
-            {logado ? (
-              <>
-                <button
-                  className={styles.button}
-                  id={styles.btnDemostrarInteresse}
-                >
-                  Demostrar Interesse
-                </button>
-                <button
-                  className={styles.button}
-                  id={styles.btnConversar}
-                  type="submit"
-                >
-                  Iniciar Conversar
-                </button>
-              </>
-            ) : (
-              <h2>Faça o login para mais opções</h2>
-            )}
+            <button className={styles.button} id={styles.btnDemostrarInteresse}>
+              {logado
+                ? "Demostrar Interesse"
+                : "Faça o login para demostrar interesse"}
+            </button>
+            {/* <button
+              className={styles.button}
+              id={styles.btnConversar}
+              type="submit"
+            >
+              Iniciar Conversar
+            </button> */}
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>
@@ -93,6 +84,9 @@ const Perfil = ({ user }) => {
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
 
+                    {user.restricoes.localidades.map((local) => (
+                      <span>{local.nome}</span>
+                    ))}
                     {/* <span key={user.id}>
                       {user.restricoes.localidades[0].nome}
                     </span> */}

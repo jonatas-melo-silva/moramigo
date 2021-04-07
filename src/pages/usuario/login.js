@@ -1,10 +1,10 @@
 import styles from "../../styles/pages/login.module.css";
 import Layout from "../../components/Layout"
-import AuthContext from '../../contexts/auth'
+import { useAuth } from '../../contexts/auth'
 
 import { useRouter } from 'next/router'
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 const initialState = () => {
   return {username: '', password: ''}
@@ -13,7 +13,7 @@ const initialState = () => {
 const title = 'Moramigo | Login'
 
 const Login = () => {
-  const { logado, user, logar } = useContext(AuthContext)
+  const { logar } = useAuth()
   const [values, setValues] = useState(initialState);
   const router = useRouter()
 

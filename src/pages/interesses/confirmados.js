@@ -11,7 +11,9 @@ const Confirmados = () => {
       <div className={styles.container}>
         <div className={styles.links}>
           <nav>
-            <a href="/interesses/solicitacoes">Solicitação de Interesses</a>
+            <Link href="/interesses/solicitacoes">
+              <a>Solicitação de Interesses</a>
+            </Link>
             <a className={styles.active}>
               Interesses Confirmados
             </a>

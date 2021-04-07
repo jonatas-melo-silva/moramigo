@@ -23,6 +23,7 @@ const MyHeader = () => {
         </div>
 
         <div className={styles.menu}>
+        
           <Link href="/sobrenos">
             <a>Sobre - Nós</a>
           </Link>
@@ -34,6 +35,7 @@ const MyHeader = () => {
             <Link href="/interesses/solicitacoes">
               <a>Meus interesses</a>
             </Link>
+           
             <Link href="/usuario/login">
               <a onClick={onClick}>Sair</a>
             </Link>

@@ -8,14 +8,20 @@ const Cards = ({ perfis }) => {
       {perfis.map((perfil) => (
         <div className={styles.card} key={perfil.pessoa.id}>
           <section>
-            <div className={styles.imgPerfil}>
-              <img src="/img/pessoa1.svg" alt="Pessoa" />
-              <h1> {perfil.pessoa.nome}</h1>
-            </div>
-            <p>Idade: {perfil.pessoa.idade}</p>
+          <div className={styles.perfil}>
+                <div>
+                  <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+                </div>
+                <div className={styles.perfilIdade}>
+                <h1> {perfil.pessoa.nome}</h1>
+                <p>Idade: {perfil.pessoa.idade}</p>
+                </div>
+              </div>
+              
             <span>Valor contribuição: {perfil.valor_contribuicao}</span>
             <span>Bairro: {perfil.localidades[0].nome}</span>
 
+    
             <Link
               key={perfil.pessoa.id}
               href="/usuario/perfil/[id]}"
@@ -25,6 +31,10 @@ const Cards = ({ perfis }) => {
                 <a>Ver perfil</a>
               </button>
             </Link>
+
+
+
+            
           </section>
         </div>
       ))}

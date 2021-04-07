@@ -1,6 +1,5 @@
 .imagem img{
-    margin: 5px;
-    display: grid;  
+    display: flex;  
     width: 50em;      
     float: left;
 }
@@ -10,18 +9,17 @@
     height: 100%;
 }
 
-.sntxt{
+.textosn{
     color:black;
-    margin-top: 50px;
     margin-right: 50px;
-    width: 50em;
     padding: 100px;
     text-align: justify;
-    flex-direction: column;
     line-height: 25px;
-    float: right;
     font-family: alegreya;
-    font-weight: bold;
+    /* font-weight: bold; */
+    display:flex;
+	justify-content:space-around;
 }
+
 
   

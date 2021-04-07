@@ -1,45 +1,47 @@
-import styles from "../../styles/components/Perfil.module.css";
-import Rodape from "../../components/Rodape";
-import api from "../../services/api";
+import styles from "../../../styles/pages/perfil.module.css";
+import Head from "../../../components/Head";
+import Header from "../../../components/Header";
+import Rodape from "../../../components/Rodape";
+import api from "../../../services/api";
+import AuthContext from "../../../contexts/auth";
 
-import Link from "next/link";
-import Head from "next/head";
+import { useContext } from "react";
+
+const title = "Moramigo | Perfil";
 
 const Perfil = ({ user }) => {
+  const { logado } = useContext(AuthContext);
+
   return (
     <>
-      <Head>
-        <title>Moramigo | Perfil</title>
-      </Head>
-
+      <Head title={title} />
       <div className={styles.pageProfile}>
-        <header className={styles.pageHeader} id={styles.inner}>
-          <div className={styles.container}>
-            <Link href="/">
-              <a className={styles.back}>
-                <img src="../img/back.svg" alt="voltar" />
-              </a>
-            </Link>
-
-            <h1>Perfil</h1>
-          </div>
-        </header>
+        <Header />
 
         <div className={styles.container}>
           <div className={styles.card}>
-            <img src="../img/pessoa1.svg" alt="Foto"></img>
+            <img src="/img/pessoa1.svg" alt="Foto"></img>
             <h2 key={user.id}>{user.nome}</h2>
 
-            <button className={styles.button} id={styles.btnDemostrarInteresse}>
-              Demostrar Interesse
-            </button>
-            <button
-              className={styles.button}
-              id={styles.btnConversar}
-              type="submit"
-            >
-              Iniciar Conversar
-            </button>
+            {logado ? (
+              <>
+                <button
+                  className={styles.button}
+                  id={styles.btnDemostrarInteresse}
+                >
+                  Demostrar Interesse
+                </button>
+                <button
+                  className={styles.button}
+                  id={styles.btnConversar}
+                  type="submit"
+                >
+                  Iniciar Conversar
+                </button>
+              </>
+            ) : (
+              <h2>Faça o login para mais opções</h2>
+            )}
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>
@@ -90,9 +92,10 @@ const Perfil = ({ user }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
-                    <span key={user.id}>
+
+                    {/* <span key={user.id}>
                       {user.restricoes.localidades[0].nome}
-                    </span>
+                    </span> */}
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>valor que deseja Contribuir</label>

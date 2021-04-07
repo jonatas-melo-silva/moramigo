@@ -1,0 +1,220 @@
+/* ==== main ======*/
+.containerMain {
+    flex: 1;
+  }
+  
+  
+  .separator {
+    height: 1px;
+    background-color:red;
+    margin: 1rem 0;
+    background-color: #E1E3E5;
+  }
+  
+  
+  #light{
+    background-color: #E1E3E5;
+  }
+  
+  /* basic classes */
+  .container {
+    width: min(1440px, 90vw);
+    margin: 0 auto;
+    display: flex;
+    margin-top: 2rem;
+  }
+  
+  .pageProfile .pageHeader ~ .container {
+    display: flex;
+  }
+  /* ==== page-header ======*/
+  
+  .pageHeader {
+    background: var(--color-primary);
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  #inner {
+    height: 5.5rem;
+    margin-bottom: 4rem;
+  }
+  
+  #inner .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+  
+  #inner h1 {
+    margin: 0 auto;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: var(--color-header-inner-title);
+  }
+  /* ==== button ======*/
+  .button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.313rem;
+    border: 0;
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    text-transform: uppercase;
+    transition: all .2s;
+    cursor:pointer;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+  
+  }
+  
+  .button{
+    line-height: 1.5rem;
+  }
+  
+  
+  #btnConversar{
+    background: var(--color-purple);
+    color: var(--color-text);
+    margin-left:4px;
+  }
+  
+  #btnConversar:hover {
+    background-color: var(--color-purple-hover);
+  }
+  
+  #btnDemostrarInteresse{
+    border: 1px solid gray;
+    background-color: white;
+    color: blue;
+  }
+  #btnDemostrarInteresse:hover{
+    color: #8257e5;
+  }
+  /* ==== form ======*/
+  .formProfile  fieldset {
+    border: none;
+  }
+  
+  .formProfile  fieldset + fieldset {
+    margin-top: 1rem;
+  }
+  
+  .formProfile  fieldset legend {
+    color: var(--color-purple);
+  
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.625rem;
+  }
+  
+  .formProfile  label {
+    display: inline-block;
+    font-family: IBM Plex Sans;
+    font-weight: 500;
+    color: #787880;
+  
+    margin-bottom: 1rem;
+    
+  }
+  
+  .dividirForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .inputWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    
+  }
+  .inputWrapper input{
+      width: 100%;
+      padding: 8px;
+      border-radius: 10px;
+      border:1px solid #ccc;
+      margin-bottom: 10px;
+      
+  }
+  .inputRadio input{
+      margin: 10px;
+      margin-top: 10px;    
+}
+  .inputWrapper select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    margin-bottom: 10px;
+    
+}
+  .inputWrapper textarea{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    margin-bottom: 10px;
+    
+}
+  .inputWrapper span{
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: black;
+  }
+  .inputWrapper p{
+    border: 1px solid#E1E3E5;
+    padding: 1rem;
+    border-radius: 4px;
+    color: gray;
+  
+  }
+  
+  
+  
+  /* form .input-wrapper {
+    
+  } */
+  
+  
+  
+  /* ==== profile ======*/
+  .card {
+    background: var(--color-card-background);
+    color: var(--color-card-title);
+    border: 1px solid #E1E3E6;
+    border-radius: .313rem;
+    width: 28rem;
+    margin-right: 5rem;
+    
+    text-align: center;
+    padding: 2.875rem 1.625rem; 
+  }
+  
+  .card img {
+    border-radius: 50%;
+    border: .25rem var(--color-secondary) solid;
+    width: 11.25rem;
+    height: 11.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card h2 {
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+    margin-bottom: 3.875rem;
+  }
+  .card p {
+    margin-bottom: 1.75rem;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }

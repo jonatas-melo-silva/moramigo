@@ -1,15 +1,15 @@
+import styles from "../../styles/pages/buscar-pessoas.module.css";
+import Layout from "../../components/Layout";
+import Cards from "../../components/Cards";
+import api from "../../services/api";
+
 import { useState } from "react";
-import Head from "next/head";
 
-import styles from "../styles/components/pages/BuscarPessoas.module.css";
-import HeaderMain from "../components/HeaderMain";
-import Cards from "../components/Cards";
-import Rodape from "../components/Rodape";
-import api from "../services/api";
+const title = "Moramigo | Buscar Pessoas";
 
-const BuscarPessoas = () => {
+const BuscarPessoas = ({ data }) => {
   const [filtros, setFiltros] = useState({});
-  const [perfilUsuarios, setPerfilUsuarios] = useState([]);
+  const [perfis, setPerfis] = useState(data);
 
   const handleChange = (event) => {
     if (event.target.name == "localidades" && event.target.value == "") {
@@ -23,15 +23,11 @@ const BuscarPessoas = () => {
     event.preventDefault();
     const url = "busca/";
     const response = await api.get(url, { params: filtros });
-    setPerfilUsuarios(response.data);
+    setPerfis(response.data);
   };
 
   return (
-    <>
-      <Head>
-        <title>Moramigo | Buscar Pessoas</title>
-      </Head>
-      <HeaderMain />
+    <Layout title={title}>
       <div className={styles.forms}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div>
@@ -139,11 +135,19 @@ const BuscarPessoas = () => {
           </button>
         </form>
       </div>
-
-      <Cards perfilUsuarios={perfilUsuarios} />
-      <Rodape />
-    </>
+      {!perfis ? (
+        <h2>Carregando...</h2>
+        ) : (
+        <Cards perfis={perfis} />
+      )}
+    </Layout>
   );
+};
+
+BuscarPessoas.getInitialProps = async () => {
+  const url = "busca/";
+  const response = await api.get(url);
+  return { data: response.data };
 };
 
 export default BuscarPessoas;

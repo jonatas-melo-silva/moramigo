@@ -1,17 +1,3 @@
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#bannerImg {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
 .imgPerfil {
   display: flex;
   justify-content: center;
@@ -29,29 +15,6 @@
   border: 2px solid var(--color-purple);
   border-radius: 50%;
 }
-
-#bannerImg img {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.textoTitulo {
-  position: absolute;
-  margin-top: 244px;
-  text-align: center;
-}
-
-.textoTitulo h1 {
-  color: rgb(112, 111, 111);
-  font-size: 24px;
-  padding: 10px;
-  width: 550px;
-  border: solid 3px #ff9a00;
-  background-color: #dccea1;
-  border-radius: 20px;
-}
-
 .cards {
   max-width: 800px;
   margin: 0 auto;

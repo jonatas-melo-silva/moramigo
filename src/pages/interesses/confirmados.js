@@ -1,23 +1,21 @@
+import styles from "../../styles/pages/confirmados.module.css";
+import Layout from "../../components/Layout"
+
 import Link from "next/link";
-import Head from "next/head";
-import styles from "../styles/components/pages/MeusInteresses.module.css";
-import HeaderMain from "../components/HeaderMain";
-import Rodape from "../components/Rodape";
 
-const SolicitacaoInteresses = () => {
+const title = 'Moramigo | Meus Interesses'
+
+const Confirmados = () => {
   return (
-    <>
+    <Layout title={title}>
       <div className={styles.container}>
-        <Head>
-          <title>Moramigo | Meus Interesses</title>
-        </Head>
-        <HeaderMain />
-
         <div className={styles.links}>
-          <a href="/meusInteresses" className={styles.active}>
-            Solicitação de Interesses
-          </a>
-          <a href="/interessesConfirmados">Interesses Confirmados</a>
+          <nav>
+            <a href="/interesses/solicitacoes">Solicitação de Interesses</a>
+            <a className={styles.active}>
+              Interesses Confirmados
+            </a>
+          </nav>
         </div>
 
         <div className={styles.cards}>
@@ -25,7 +23,7 @@ const SolicitacaoInteresses = () => {
             <section>
               <div className={styles.perfil}>
                 <div>
-                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                  <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
                 </div>
                 <div>
                   <h1>Rafael Rufino</h1>
@@ -42,16 +40,12 @@ const SolicitacaoInteresses = () => {
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
+
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.btnAceitar}>
+                <button className={styles.inciarConversa}>
                   <Link href="/perfil">
-                    <a>Aceitar</a>
-                  </Link>
-                </button>
-                <button className={styles.btnCancelar}>
-                  <Link href="/perfil">
-                    <a>Cancelar</a>
+                    <a>Iniciar Conversa</a>
                   </Link>
                 </button>
               </div>
@@ -61,7 +55,7 @@ const SolicitacaoInteresses = () => {
             <section>
               <div className={styles.perfil}>
                 <div>
-                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                  <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
                 </div>
                 <div>
                   <h1>Rafael Rufino</h1>
@@ -78,16 +72,12 @@ const SolicitacaoInteresses = () => {
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
+
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.btnAceitar}>
+                <button className={styles.inciarConversa}>
                   <Link href="/perfil">
-                    <a>Aceitar</a>
-                  </Link>
-                </button>
-                <button className={styles.btnCancelar}>
-                  <Link href="/perfil">
-                    <a>Cancelar</a>
+                    <a>Iniciar Conversa</a>
                   </Link>
                 </button>
               </div>
@@ -97,7 +87,7 @@ const SolicitacaoInteresses = () => {
             <section>
               <div className={styles.perfil}>
                 <div>
-                  <img src="img/pessoa1.svg" alt="MorAmigo | Banner" />
+                  <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
                 </div>
                 <div>
                   <h1>Rafael Rufino</h1>
@@ -114,16 +104,12 @@ const SolicitacaoInteresses = () => {
                 Olá moramigo, estou precisando de um colega para dividir uma
                 moradia.
               </span>
+
               <span> Bairro: Alecrim</span>
               <div className={styles.button}>
-                <button className={styles.btnAceitar}>
+                <button className={styles.inciarConversa}>
                   <Link href="/perfil">
-                    <a>Aceitar</a>
-                  </Link>
-                </button>
-                <button className={styles.btnCancelar}>
-                  <Link href="/perfil">
-                    <a>Cancelar</a>
+                    <a>Iniciar Conversa</a>
                   </Link>
                 </button>
               </div>
@@ -131,9 +117,8 @@ const SolicitacaoInteresses = () => {
           </div>
         </div>
       </div>
-      <Rodape />
-    </>
+    </Layout>
   );
 };
 
-export default SolicitacaoInteresses;
+export default Confirmados;

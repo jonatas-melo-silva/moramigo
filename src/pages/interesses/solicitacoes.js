@@ -13,7 +13,9 @@ const Solicitacoes = () => {
           <a className={styles.active}>
             Solicitação de Interesses
           </a>
-          <a href="/interesses/confirmados">Interesses Confirmados</a>
+          <Link href="/interesses/confirmados">
+            <a >Interesses Confirmados</a>
+          </Link>
         </div>
 
         <div className={styles.cards}>

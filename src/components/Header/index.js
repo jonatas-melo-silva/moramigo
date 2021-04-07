@@ -1,16 +1,14 @@
 import styles from "./Header.module.css";
-import AuthContext from '../../contexts/auth'
+import {useAuth} from '../../contexts/auth'
 
-import { useContext } from "react";
 import Link from "next/link";
 
 const MyHeader = () => {
-  const { logado, logout, user } = useContext(AuthContext)
-  console.log(logado)
+  const { logado, logout, user } = useAuth()
   // console.log(user)
+  // console.log(logado)
 
   const onClick = (event) => {
-    // event.preventDefault();
     logout()
   }
   return (
@@ -23,19 +21,19 @@ const MyHeader = () => {
         </div>
 
         <div className={styles.menu}>
-        
+
           <Link href="/sobrenos">
             <a>Sobre - Nós</a>
           </Link>
           <Link href="/buscar/pessoas">
             <a>Buscar Pessoas</a>
           </Link>
-          {(logado == true) ? (
+          {(logado) ? (
             <>
             <Link href="/interesses/solicitacoes">
               <a>Meus interesses</a>
             </Link>
-           
+
             <Link href="/usuario/login">
               <a onClick={onClick}>Sair</a>
             </Link>

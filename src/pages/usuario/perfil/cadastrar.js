@@ -4,7 +4,7 @@ import Head from "../../../components/Head";
 import Header from "../../../components/Header";
 import Rodape from "../../../components/Rodape";
 
-const title = "Moramigo | Cadastre - se";
+const title = "Moramigo | Cadastrar - Perfil";
 
 const Perfil = () => {
   return (

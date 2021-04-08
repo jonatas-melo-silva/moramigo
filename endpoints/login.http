@@ -5,8 +5,17 @@ POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "jonatas",
-    "password": "linux"
+  "username": "jonatas",
+  "password": "linux"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Melo",
+    "password": "Linuxlinux"
 }
 
 ###
@@ -18,11 +27,14 @@ content-type: application/json
     "password": "Linuxlinux"
 }
 
+
 ###
-POST http://127.0.0.1:8000/api/v1/login HTTP/1.1
+POST http://127.0.0.1:8000/api/v1/interesses HTTP/1.1
 content-type: application/json
+Authorization: Token dde9b45a66c3b8df195d868c6a4401408aa4b644
 
 {
-    "username": "Melo",
-    "password": "Linuxlinux"
+  "origem": 1,
+  "destino": 2,
+  "aceito": false
 }

@@ -1,6 +1,10 @@
 import styles from "../styles/pages/index.module.css";
 import Layout from "../components/Layout";
 import Cards from "../components/Cards";
+import Image from 'next/image'
+
+
+
 
 import { perfilFetch } from '../hooks/perfilFetch'
 
@@ -13,8 +17,9 @@ const Home = () => {
     <Layout title={title}>
       <div className={styles.banner}>
         <div id={styles.bannerImg}>
-          <img src="img/banner.svg" alt="MorAmigo | Banner" />
 
+          <img src="/img/banner.svg" alt="MorAmigo | Banner" />
+          
           <div className={styles.textoTitulo}>
             <h1>
               Encontrar uma galera bacana

@@ -6,11 +6,11 @@
 }
 .menu {
   display: flex;
-
+  align-items: center;
   justify-content: space-around;
 
   width: 680px;
-  margin-right:50px;
+  margin-right:20px;
 }
 .containerHeader .menu a {
   text-decoration: none;
@@ -25,6 +25,49 @@
   color: white;
 }
 
+/* 
+ * avatar
+/* -------------------------------------------------- */
 
+#avatarProfile {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
 
+  font-family: IBM Plex Sans;
+  text-align: right;
+}
 
+#avatarProfile p {
+  margin-top: 16px;
+  font-size: 1.25rem; /* 20px of 16px root*/
+  /*line-height: 1.875rem; 30px of 16px root*/
+  margin-right: 1rem;
+
+  font-weight: 600;
+}
+
+#avatarProfile span {
+  display: block;
+  color:var(--color-orange);
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.875rem; /* 14px of 16px root*/
+  /*line-height: 1.5rem; 24px of 16px root*/
+
+  font-weight: 400;
+}
+
+#avatarProfile p span:hover {
+  text-decoration: underline;
+
+  color:var(--color-secondary);
+}
+
+#avatarProfile img {
+  width: 3rem; /* 64px of 16px root*/
+  height: 3rem; /* 64px of 16px root*/
+  border-radius: 50%;
+  border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
+}

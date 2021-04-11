@@ -17,10 +17,12 @@
     font-size: 18px;
   }
   .perfil img{
-    width: 4.5em;
-    padding: 2px;
-    border: 2px solid var(--color-orange);
+    width: 4rem; /* 64px of 16px root*/
+    height: 4rem; /* 64px of 16px root*/
     border-radius: 50%;
+    border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
+    
+
   }
   .perfil p{
     font-size: 14px;
@@ -55,11 +57,17 @@
   
   .card span {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     line-height: 25px;
-    font-size: 14px;
+    font-size: 12px;
   
+  }
+  .conteudoCard{
+   
+    height: 20%;
+    justify-content: center;
+  
+
   }
   
   

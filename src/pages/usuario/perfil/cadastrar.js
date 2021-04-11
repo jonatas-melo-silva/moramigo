@@ -61,34 +61,35 @@ const Perfil = () => {
                       id="input"
                     />
                   </div>
-
-                  <div className={styles.inputRadio}>
-                    <label>Sexo</label>
-                    <br></br>
-                    <label>Masculino</label>
-                    <input
-                      name="name"
-                      id="input"
-                      type="radio"
-                      value="Masculino"
-                    />
-                    <label>Feminino</label>
-                    <input
-                      name="name"
-                      id="input"
-                      type="radio"
-                      value="Masculino"
-                    />
-                  </div>
-
                   <div className={styles.inputWrapper}>
-                    <label>Ocupação/ Serviço</label>
+                    <label>Ocupação / Serviço</label>
                     <input
                       name="name"
                       placeholder="Digite sua ocupação"
                       id="input"
                     />
                   </div>
+
+                  <div className={styles.inputRadio}>
+                    <label>Sexo</label>
+                    <br></br>
+                    <span>Masculino</span>
+                    <input
+                      name="name"
+                      id="input"
+                      type="radio"
+                      value="Masculino"
+                    />
+                    <span>Feminino</span>
+                    <input
+                      name="name"
+                      id="input"
+                      type="radio"
+                      value="Masculino"
+                    />
+                  </div>
+
+                
                 </div>
               </fieldset>
 

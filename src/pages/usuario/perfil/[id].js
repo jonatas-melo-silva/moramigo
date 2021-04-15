@@ -4,11 +4,24 @@ import Header from "../../../components/Header";
 import Rodape from "../../../components/Rodape";
 import api from "../../../services/api";
 import { useAuth } from "../../../contexts/auth";
+import { useInterest } from "../../../contexts/interest";
+
+import Link from "next/link";
 
 const title = "Moramigo | Perfil";
 
-const Perfil = ({ user }) => {
-  const { logado } = useAuth();
+const Perfil = ({ User }) => {
+  const { logado, user } = useAuth();
+  const { solicitar } = useInterest();
+
+  const onClick = async () => {
+    const solicitacao = await {
+      origem: user.id,
+      destino: User.id,
+      aceito: false,
+    };
+    solicitar(solicitacao);
+  };
 
   return (
     <>
@@ -17,15 +30,28 @@ const Perfil = ({ user }) => {
         <Header />
 
         <div className={styles.container}>
-          <div className={styles.card}>
+          <div className={styles.card} key={User.id}>
             <img src="/img/pessoa1.svg" alt="Foto"></img>
-            <h2 key={user.id}>{user.nome}</h2>
+            <h2>{User.nome}</h2>
 
-            <button className={styles.button} id={styles.btnDemostrarInteresse}>
-              {logado
-                ? "Demostrar Interesse"
-                : "Faça o login para demostrar interesse"}
-            </button>
+            {logado && User.id != user.id ? (
+              <button
+                className={styles.button}
+                id={styles.btnDemostrarInteresse}
+                onClick={onClick}
+              >
+                Demostrar Interesse
+              </button>
+            ) : (
+              <Link href="/usuario/login">
+                <button
+                  className={styles.button}
+                  id={styles.btnDemostrarInteresse}
+                >
+                  Faça o login para demostrar interesse
+                </button>
+              </Link>
+            )}
             {/* <button
               className={styles.button}
               id={styles.btnConversar}
@@ -42,13 +68,13 @@ const Perfil = ({ user }) => {
 
                 <div className={styles.inputWrapper}>
                   <label name="nome">Usuário</label>
-                  <span key={user.id}>{user.nome}</span>
+                  <span>{User.nome}</span>
                 </div>
 
                 <div className={styles.inputWrapper}>
                   <label name="descricao">Descrição</label>
 
-                  <p key={user.id}>{user.descricao}</p>
+                  <p>{User.descricao}</p>
                 </div>
               </fieldset>
               <fieldset>
@@ -59,17 +85,17 @@ const Perfil = ({ user }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Idade</label>
-                    <span key={user.id}>{user.idade}</span>
+                    <span>{User.idade}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Sexo</label>
-                    <span key={user.id}>{user.genero}</span>
+                    <span>{User.genero}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Ocupação/ Serviço</label>
-                    <span key={user.id}>{user.ocupacao}</span>
+                    <span>{User.ocupacao}</span>
                   </div>
                 </div>
               </fieldset>
@@ -84,23 +110,18 @@ const Perfil = ({ user }) => {
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
 
-                    {user.restricoes.localidades.map((local) => (
-                      <span>{local.nome}</span>
+                    {User.restricoes.localidades.map((local) => (
+                      <span key={local.nome}>{local.nome}</span>
                     ))}
-                    {/* <span key={user.id}>
-                      {user.restricoes.localidades[0].nome}
-                    </span> */}
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>valor que deseja Contribuir</label>
-                    <span key={user.id}>
-                      {user.restricoes.valor_contribuicao}
-                    </span>
+                    <span>{User.restricoes.valor_contribuicao}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Genero de Pessoas</label>
-                    <span key={user.id}>{user.restricoes.genero_colega}</span>
+                    <span>{User.restricoes.genero_colega}</span>
                   </div>
                 </div>
               </fieldset>
@@ -114,24 +135,24 @@ const Perfil = ({ user }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Animais</label>
-                    <span key={user.id}>{user.restricoes.animais}</span>
+                    <span>{User.restricoes.animais}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Bebidas Alcoólicas</label>
-                    <span key={user.id}>{user.restricoes.bebidas}</span>
+                    <span>{User.restricoes.bebidas}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Fumantes</label>
-                    <span key={user.id}>{user.restricoes.fumantes}</span>
+                    <span>{User.restricoes.fumantes}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Visitas</label>
-                    <span key={user.id}>{user.restricoes.visitas}</span>
+                    <span>{User.restricoes.visitas}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Festas</label>
-                    <span key={user.id}>{user.restricoes.festas}</span>
+                    <span>{User.restricoes.festas}</span>
                   </div>
                 </div>
               </fieldset>
@@ -150,9 +171,9 @@ export async function getStaticProps(context) {
   const url = "pessoas/";
   const id = context.params.id;
   const response = await api.get(url + id);
-  const user = await response.data;
+  const User = await response.data;
   return {
-    props: { user, revalidate: 1 },
+    props: { User, revalidate: 1 },
   };
 }
 

@@ -135,19 +135,19 @@ const BuscarPessoas = ({ data }) => {
           </button>
         </form>
       </div>
-      {!perfis ? (
-        <h2>Carregando...</h2>
-        ) : (
-        <Cards perfis={perfis} />
-      )}
+      {!perfis ? <h2>Carregando...</h2> : <Cards perfis={perfis} />}
     </Layout>
   );
 };
 
 BuscarPessoas.getInitialProps = async () => {
-  const url = "busca/";
-  const response = await api.get(url);
-  return { data: response.data };
+  try {
+    const url = "busca/";
+    const response = await api.get(url);
+    return { data: response.data };
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 export default BuscarPessoas;

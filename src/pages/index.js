@@ -1,25 +1,19 @@
 import styles from "../styles/pages/index.module.css";
 import Layout from "../components/Layout";
 import Cards from "../components/Cards";
-import Image from 'next/image'
 
-
-
-
-import { perfilFetch } from '../hooks/perfilFetch'
+import { perfilFetch } from "../hooks/perfilFetch";
 
 const title = "Moramigo";
 
 const Home = () => {
-  const { data } = perfilFetch('busca/')
-
+  const { data } = perfilFetch("busca/");
   return (
     <Layout title={title}>
       <div className={styles.banner}>
         <div id={styles.bannerImg}>
-
           <img src="/img/banner.svg" alt="MorAmigo | Banner" />
-          
+
           <div className={styles.textoTitulo}>
             <h1>
               Encontrar uma galera bacana
@@ -31,11 +25,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {!data ? (
-        <h2>Carregando...</h2>
-        ) : (
-        <Cards perfis={data} />
-      )}
+      {!data ? <h2>Carregando...</h2> : <Cards perfis={data} />}
     </Layout>
   );
 };

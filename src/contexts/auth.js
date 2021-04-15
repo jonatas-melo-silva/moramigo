@@ -1,13 +1,12 @@
 import api from '../services/api'
 
 import { createContext, useState, useEffect , useContext } from "react";
-import { useRouter } from 'next/router'
 
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
-  const router = useRouter()
+  const [token, setToken] = useState(null)
 
   useEffect(() => {
     async function loadStoreData() {
@@ -15,9 +14,8 @@ export const AuthProvider = ({ children }) => {
       const storageToken = await localStorage.getItem('@RNMoramigo:token')
 
       if (storageUser && storageToken) {
-        api.defaults.headers.authorization = `Token ${storageToken}`
         setUser(JSON.parse(storageUser))
-        router.push("/")
+        setToken(storageToken)
       }
     }
     loadStoreData()
@@ -33,13 +31,15 @@ export const AuthProvider = ({ children }) => {
       }
       setUser(userData)
 
-      api.defaults.headers.authorization = `Token ${response.data.token}`
+      const Token = `Token ${response.data.token}`
+      setToken(Token)
 
       await localStorage.setItem('@RNMoramigo:userData', JSON.stringify(userData));
-      await localStorage.setItem('@RNMoramigo:token',response.data.token)
+      await localStorage.setItem('@RNMoramigo:token',Token)
 
+      return response.status
     } catch (err) {
-
+      console.error(err);
     }
   }
 
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-    value={{ logado: !!user, user, logar, logout }}
+    value={{ logado: !!user, user, logar, logout, token }}
   >
     {children}
   </AuthContext.Provider>

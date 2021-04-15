@@ -24,8 +24,10 @@ const Login = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    logar({values})
-    router.push("/")
+    const status = await logar({values})
+    if (status == 200){
+      router.push("/")
+    }
   }
 
   return (

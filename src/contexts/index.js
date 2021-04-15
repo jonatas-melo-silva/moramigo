@@ -1,11 +1,12 @@
-import { AuthProvider } from './auth'
+import { AuthProvider } from "./auth";
+import { InterestProvider } from "./interest";
 
 const ContextProvider = ({ children }) => {
   return (
     <AuthProvider>
-      {children}
+      <InterestProvider>{children}</InterestProvider>
     </AuthProvider>
-  )
-}
+  );
+};
 
-export default ContextProvider
+export default ContextProvider;

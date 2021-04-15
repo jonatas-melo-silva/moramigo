@@ -1,8 +1,11 @@
 import styles from "./Cards.module.css";
+import { useAuth } from "../../contexts/auth";
 
 import Link from "next/link";
 
 const Cards = ({ perfis }) => {
+  const { logado, user } = useAuth();
+
   return (
     <div className={styles.cards}>
       {perfis.map((perfil) => (
@@ -17,24 +20,32 @@ const Cards = ({ perfis }) => {
                 <p>Idade: {perfil.pessoa.idade}</p>
               </div>
             </div>
-            <div className = {styles.conteudoCard}>
+            <div className={styles.conteudoCard}>
               <span>Valor contribuição: {perfil.valor_contribuicao}</span>
               <span>
-                Bairro: { perfil.localidades.map((local) => (
-                  <>{local.nome}, </>
+                Bairro:{" "}
+                {perfil.localidades.map((local) => (
+                  <span key={local.nome}>{local.nome}</span>
                 ))}
               </span>
             </div>
-          
-            <Link
-              key={perfil.pessoa.id}
-              href="/usuario/perfil/[id]}"
-              as={`/usuario/perfil/${perfil.pessoa.id}`}
-            >
-              <button className={styles.btn_verPefil}>
-                <a>Ver perfil</a>
-              </button>
-            </Link>
+
+            {logado && perfil.pessoa.id == user.id ? (
+              <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
+                <button className={styles.btn_verPefil}>
+                  <a>Ver perfil</a>
+                </button>
+              </Link>
+            ) : (
+              <Link
+                href="/usuario/perfil/[id]}"
+                as={`/usuario/perfil/${perfil.pessoa.id}`}
+              >
+                <button className={styles.btn_verPefil}>
+                  <a>Ver perfil</a>
+                </button>
+              </Link>
+            )}
           </section>
         </div>
       ))}

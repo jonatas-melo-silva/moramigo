@@ -17,15 +17,15 @@ const Cards = ({ perfis }) => {
                 <p>Idade: {perfil.pessoa.idade}</p>
               </div>
             </div>
-
-            <span>Valor contribuição: {perfil.valor_contribuicao}</span>
-            <span>
-              Bairro:
-              {perfil.localidades.map((local) => (
-                <>{local.nome}, </>
-              ))}
-            </span>
-
+            <div className = {styles.conteudoCard}>
+              <span>Valor contribuição: {perfil.valor_contribuicao}</span>
+              <span>
+                Bairro: { perfil.localidades.map((local) => (
+                  <>{local.nome}, </>
+                ))}
+              </span>
+            </div>
+          
             <Link
               key={perfil.pessoa.id}
               href="/usuario/perfil/[id]}"

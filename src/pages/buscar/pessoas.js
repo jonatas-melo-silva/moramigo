@@ -9,7 +9,7 @@ const title = "Moramigo | Buscar Pessoas";
 
 const BuscarPessoas = ({ data }) => {
   const [filtros, setFiltros] = useState({});
-  const [perfis, setPerfis] = useState(data);
+  const [perfis, setPerfis] = useState(data.perfils);
 
   const handleChange = (event) => {
     if (event.target.name == "localidades" && event.target.value == "") {
@@ -124,9 +124,11 @@ const BuscarPessoas = ({ data }) => {
               value={filtros.localidades || ""}
             >
               <option value="">Selecione</option>
-              <option value="1">Bernado Viera</option>
-              <option value="2">Bairro Vermelho</option>
-              <option value="3">Tirol</option>
+              {data.bairros.map(local => (
+                <>
+                <option key={local.id} value={local.id}>{local.nome}</option>
+                </>
+              ))}
             </select>
           </div>
 
@@ -142,9 +144,20 @@ const BuscarPessoas = ({ data }) => {
 
 BuscarPessoas.getInitialProps = async () => {
   try {
+    const urlBairros = 'bairros/'
+    const responseBairros = await api.get(urlBairros)
+    const bairros = responseBairros.data
+
     const url = "busca/";
-    const response = await api.get(url);
-    return { data: response.data };
+    const responsePerfils = await api.get(url);
+    const perfils = responsePerfils.data
+
+    const data = {
+      "perfils": perfils,
+      "bairros": bairros
+    }
+
+    return { data };
   } catch (err) {
     console.error(err);
   }

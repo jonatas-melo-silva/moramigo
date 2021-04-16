@@ -29,10 +29,11 @@ export const InterestProvider = ({ children }) => {
     }
   };
 
-  const aceitar = async ( id ) => {
+  const aceitar = async ( id, body ) => {
     try {
-      const url = "aceitar-interesse";
-      const response = await apiAuth.put(url + id);
+      await console.log(`aceitar: ${id} ${body}`);
+      const url = "aceitar-interesse/";
+      const response = await apiAuth.put(url + id, body);
       console.log(response.status);
     } catch (err) {
       console.error(err);
@@ -41,7 +42,8 @@ export const InterestProvider = ({ children }) => {
 
   const recusar = async ( id ) => {
     try {
-      const url = "recusar-interesse";
+      await console.log("recusar: "+id)
+      const url = "recusar-interesse/";
       const response = await apiAuth.delete(url + id);
       console.log(response.status);
     } catch (err) {

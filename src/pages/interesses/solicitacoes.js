@@ -8,8 +8,21 @@ import Link from "next/link";
 const title = "Moramigo | Meus Interesses";
 
 const Solicitacoes = () => {
-  const { pendentes, listarConfirmados } = useInterest();
+  const { pendentes, listarPendentes, listarConfirmados, aceitar, recusar } = useInterest();
   const { user } = useAuth();
+
+  const onClickAceitar = async (id, origem_id) => {
+    const body = await {
+      origem: origem_id,
+      destino: user.id,
+      aceito: true,
+    };
+    aceitar(id, body)
+  };
+
+  const onClickRecusar = (id) => {
+    recusar(id)
+  };
 
   return (
     <Layout title={title}>
@@ -22,7 +35,6 @@ const Solicitacoes = () => {
         </div>
 
         <div className={styles.cards}>
-          {console.log(pendentes)}
           {pendentes.map((p) => (
             <>
               <div className={styles.card} key={p.origem.id}>
@@ -54,16 +66,22 @@ const Solicitacoes = () => {
                     ))}
                   </span>
                   <div className={styles.button}>
-                    <button className={styles.btnAceitar}>
-                      <Link href="/perfil">
+                    <Link href="/interesses/confirmados">
+                      <button
+                        className={styles.btnAceitar}
+                        onClick={onClickAceitar.bind(this, p.id, p.origem.id)}
+                      >
                         <a>Aceitar</a>
-                      </Link>
-                    </button>
-                    <button className={styles.btnCancelar}>
-                      <Link href="/perfil">
+                      </button>
+                    </Link>
+                    <Link href="">
+                      <button
+                        className={styles.btnCancelar}
+                        onClick={onClickRecusar.bind(this, p.id)}
+                      >
                         <a>Cancelar</a>
-                      </Link>
-                    </button>
+                      </button>
+                    </Link>
                   </div>
                 </section>
               </div>

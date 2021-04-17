@@ -48,6 +48,7 @@ header {
   width: 12rem;
   height: 7rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 html,

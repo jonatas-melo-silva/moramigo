@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 .containerHeader {
   display: flex;
   align-items: center;
@@ -9,8 +11,8 @@
   align-items: center;
   justify-content: space-around;
 
-  width: 680px;
-  margin-right:20px;
+  width: 750px;
+ 
 }
 .containerHeader .menu a {
   text-decoration: none;
@@ -23,6 +25,34 @@
 .containerHeader .menu a:hover {
   background-color: var(--color-orange);
   color: white;
+}
+/*color margin so no ultimo elemento*/
+
+.containerHeader .menu  a{
+
+  text-decoration: none;
+  color: #777;
+  position: relative;
+}
+
+
+/*pseu do elemento*/
+.containerHeader .menu a::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--color-orange);
+  position: absolute;
+  left:0;
+  bottom: -4px;
+
+}
+
+/*efeito de transição com pseu do elemento*/
+.containerHeader .menu a:hover::after{
+  width: 100%;
+  transition: width 700ms ease-in-out;
+
 }
 
 /* 
@@ -61,13 +91,16 @@
 
 #avatarProfile p span:hover {
   text-decoration: underline;
+  text-align: center;
 
   color:var(--color-secondary);
 }
 
 #avatarProfile img {
-  width: 3rem; /* 64px of 16px root*/
-  height: 3rem; /* 64px of 16px root*/
+  width: 2.5rem; /* 64px of 16px root*/
+  height: 2.5rem; /* 64px of 16px root*/
   border-radius: 50%;
   border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
 }
+
+/* ===========  Minha conta =================== */

@@ -2,8 +2,13 @@ import styles from "../../styles/pages/solicitacoes.module.css";
 import Layout from "../../components/Layout";
 import { useInterest } from "../../contexts/interest";
 import { useAuth } from "../../contexts/auth";
-
 import Link from "next/link";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+      
 
 const title = "Moramigo | Meus Interesses";
 
@@ -58,20 +63,22 @@ const Solicitacoes = () => {
                   </div>
 
                   <span>{p.origem.descricao}</span>
-
-                  <span>
-                    Bairro:{" "}
+                <div className={styles.cardSolicitacao}>
+                <span>
+                <FontAwesomeIcon icon="home"/>: {" "}
                     {p.origem.restricoes.localidades.map((local) => (
-                      <span key={local.nome}>{local.nome}</span>
+                      <span key={local.nome}>{local.nome}, </span>
                     ))}
                   </span>
+                </div>
+
                   <div className={styles.button}>
                     <Link href="/interesses/confirmados">
                       <button
                         className={styles.btnAceitar}
                         onClick={onClickAceitar.bind(this, p.id, p.origem.id)}
                       >
-                        <a>Aceitar</a>
+                        <a><FontAwesomeIcon icon="check-circle"/> Aceitar</a>
                       </button>
                     </Link>
                     <Link href="">
@@ -79,7 +86,7 @@ const Solicitacoes = () => {
                         className={styles.btnCancelar}
                         onClick={onClickRecusar.bind(this, p.id)}
                       >
-                        <a>Cancelar</a>
+                        <a><FontAwesomeIcon icon="times-circle"/> Cancelar</a>
                       </button>
                     </Link>
                   </div>

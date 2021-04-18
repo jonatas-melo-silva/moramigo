@@ -7,12 +7,11 @@
 .verPerfil{
 display: grid;
 grid-template-columns: 1fr 2fr;
-padding-bottom: 10px;
-
-
-
-
+padding-bottom: 25px;
 }
+
+
+
 .verPerfil a{
 padding-top: 4px;
 
@@ -71,14 +70,22 @@ align-items: center;
   padding: 5px;
 }
 
-
-.card span {
+.cardConfirmar{
   display: flex;
-  justify-content: center;
+  height: 20%;
   flex-direction: column;
-  line-height: 25px;
-  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}
 
+
+.cardConfirmar span {
+  line-height: 25px;
+  font-size: 12px;
+
+}
+.cardConfirmar p {
+margin: 0 auto;
 }
 
 
@@ -88,7 +95,7 @@ align-items: center;
 }
 /* === button Aceitar == */
 .button{
-  margin-top: 20px;
+  margin-top: 28px;
 
   
 }

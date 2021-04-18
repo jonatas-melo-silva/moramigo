@@ -6,6 +6,11 @@ import { useRouter } from 'next/router'
 import Link from "next/link";
 import { useState } from "react";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 const initialState = () => {
   return {username: '', password: ''}
 }
@@ -47,14 +52,14 @@ const Login = () => {
 
           <form onSubmit={onSubmit}>
             <fieldset>
-              <span>Faça seu login</span>
+              <span><FontAwesomeIcon icon="user-lock"/> Faça seu login</span>
 
               <hr />
 
               <div className={styles.inputBlock}>
                 <label name="username"></label>
 
-                <input
+                <input 
                   placeholder="Digite seu usuario"
                   id="username"
                   type="text"

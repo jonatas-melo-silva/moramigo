@@ -3,6 +3,11 @@ import Layout from "../../components/Layout"
 
 import Link from "next/link";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 const title = 'Moramigo | Cadastre - se'
 
 const Registrar = () => {
@@ -22,7 +27,7 @@ const Registrar = () => {
 
           <form action="">
             <fieldset>
-              <span>Criar conta</span>
+              <span><FontAwesomeIcon icon="user-lock"/> Criar conta</span>
 
               <hr />
 

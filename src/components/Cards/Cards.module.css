@@ -55,28 +55,29 @@
   }
   
   
-  .card span {
-    display: flex;
-    flex-direction: column;
-    line-height: 25px;
+  .conteudoCard span {
+    margin: 0 auto;
+    line-height: 20px;
     font-size: 12px;
   
   }
   .conteudoCard{
-   
+    display: flex;
     height: 20%;
+    flex-direction: column;
     justify-content: center;
-  
-
+    align-items: center;
+    margin-bottom:20px;
+   
   }
-  
+
   
   .card h1{
     color: black;
     font-weight: bold;
   }
 .btn_verPefil {
-  margin-top:30px;
+ 
   background-color: white;
   height: 28px;
   padding: 3px;
@@ -89,6 +90,9 @@
 }
 
 .btn_verPefil a {
+ align-items:center;
+ text-align:center;
+
   color: var(--color-purple);
   text-decoration: none;
   font-weight: bold;

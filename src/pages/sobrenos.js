@@ -27,7 +27,7 @@ const SobreNos = () => {
               apresentada pela primeira vez no início de 2020, por um integrante
               que não faz mais parte da equipe. Durante esse tempo já
               enfrentamos muitas dificuldades, como por exemplo a pandemia que
-              paralisou por quase 1 (um) ano o andamento das atividades e fez
+              paralisou por quase 1 ano o andamento das atividades e fez
               com que precisássemos trabalhar remotamente. Alguns integrantes
               deixaram o grupo, e por um tempo trabalhamos apenas com 3
               integrantes. Mas com dedicação e esforço de todos estamos

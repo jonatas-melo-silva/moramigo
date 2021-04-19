@@ -2,8 +2,13 @@ import styles from "../../styles/pages/confirmados.module.css";
 import Layout from "../../components/Layout";
 import { useInterest } from "../../contexts/interest";
 import { useAuth } from "../../contexts/auth";
-
 import Link from "next/link";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 
 const title = "Moramigo | Meus Interesses";
 
@@ -43,22 +48,24 @@ const Confirmados = () => {
                         href="/usuario/perfil/[id]}"
                         as={`/usuario/perfil/${c.origem.id}`}
                       >
-                        <a>Ver Perfil</a>
+                        <a><FontAwesomeIcon icon="user"/> Ver Perfil</a>
                       </Link>
                     </div>
-
+                  <div className= {styles.cardConfirmar}>
                     <span>{c.origem.descricao}</span>
 
                     <span>
-                      Bairro:{" "}
+                    <FontAwesomeIcon icon="home"/>: {" "}
                       {c.origem.restricoes.localidades.map((local) => (
-                        <span key={local.nome}>{local.nome}</span>
+                        <span key={local.nome}> {local.nome},</span>
                       ))}
                     </span>
+                  </div>
+
                     <div className={styles.button}>
                       <button className={styles.inciarConversa}>
                         <Link href="/perfil">
-                          <a>Iniciar Conversa</a>
+                          <a><FontAwesomeIcon icon="comment-alt"/> Iniciar Conversa</a>
                         </Link>
                       </button>
                     </div>
@@ -84,19 +91,21 @@ const Confirmados = () => {
                         <a>Ver Perfil</a>
                       </Link>
                     </div>
+                    <div className= {styles.cardConfirmar}>
+                      <span>{c.destino.descricao}</span>
+                
+                      <p>
+                      <FontAwesomeIcon icon="home"/>: {" "}
+                        {c.destino.restricoes.localidades.map((local) => (
+                          <span key={local.nome}> {local.nome},</span>
+                        ))}
+                      </p>
+                    </div>
 
-                    <span>{c.destino.descricao}</span>
-
-                    <span>
-                      Bairro:{" "}
-                      {c.destino.restricoes.localidades.map((local) => (
-                        <span key={local.nome}>{local.nome}</span>
-                      ))}
-                    </span>
                     <div className={styles.button}>
                       <button className={styles.inciarConversa}>
                         <Link href="/perfil">
-                          <a>Iniciar Conversa</a>
+                          <a><FontAwesomeIcon icon="comment-alt"/> Iniciar Conversa</a>
                         </Link>
                       </button>
                     </div>

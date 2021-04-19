@@ -2,8 +2,13 @@ import styles from "../../styles/pages/buscar-pessoas.module.css";
 import Layout from "../../components/Layout";
 import Cards from "../../components/Cards";
 import api from "../../services/api";
-
 import { useState } from "react";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 
 const title = "Moramigo | Buscar Pessoas";
 
@@ -133,7 +138,7 @@ const BuscarPessoas = ({ data }) => {
           </div>
 
           <button type="submit" className={styles.btnBuscarPessoas}>
-            Buscar
+          <FontAwesomeIcon icon="search"/> Buscar
           </button>
         </form>
       </div>

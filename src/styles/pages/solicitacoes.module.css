@@ -72,12 +72,27 @@
   }
   
   .card span {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     line-height: 25px;
-    font-size: 14px;
+    font-size: 12px;
   
+  }
+  .cardSolicitacao{
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .cardSolicitacao span {
+    text-align: center;
+    font-size: 12px;
+  
+  }
+  .cardSolicitacao{
+    margin: 0 auto;
+    text-align: center;
   }
   
   
@@ -87,7 +102,7 @@
   }
   /* === button Aceitar == */
   .button{
-    margin-top: 20px;
+    margin-top: 22px;
  
     
   }

@@ -13,7 +13,7 @@ library.add(fas);
 const title = "Moramigo | Meus Interesses";
 
 const Confirmados = () => {
-  const { listarPendentes, confirmados } = useInterest();
+  const { listarPendentes, listarConfirmados, confirmados } = useInterest();
   const { user } = useAuth();
 
   return (
@@ -24,7 +24,9 @@ const Confirmados = () => {
             <Link href="/interesses/solicitacoes">
               <a onClick={listarPendentes}>Solicitação de Interesses</a>
             </Link>
-            <a className={styles.active}>Interesses Confirmados</a>
+            <Link href="/interesses/confirmados">
+              <a onClick={listarConfirmados} className={styles.active}>Interesses Confirmados</a>
+            </Link>
           </nav>
         </div>
 
@@ -93,7 +95,7 @@ const Confirmados = () => {
                     </div>
                     <div className= {styles.cardConfirmar}>
                       <span>{c.destino.descricao}</span>
-                
+
                       <p>
                       <FontAwesomeIcon icon="home"/>: {" "}
                         {c.destino.restricoes.localidades.map((local) => (

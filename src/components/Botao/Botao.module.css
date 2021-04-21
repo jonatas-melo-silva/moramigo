@@ -1,0 +1,29 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.313rem;
+  border: 0;
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  transition: all .2s;
+  cursor:pointer;
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+
+}
+
+.button{
+  line-height: 1.5rem;
+}
+
+#btnDemostrarInteresse{
+  border: 1px solid gray;
+  background-color: white;
+  color: blue;
+}
+#btnDemostrarInteresse:hover{
+  color: #8257e5;
+}

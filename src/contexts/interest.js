@@ -6,6 +6,7 @@ import { createContext, useState, useContext } from "react";
 const InterestContext = createContext({});
 
 export const InterestProvider = ({ children }) => {
+  const [mensagem, setMensagem] = useState('')
   const [pendentes, setPendentes] = useState([]);
   const [confirmados, setConfirmados] = useState([]);
 
@@ -18,12 +19,23 @@ export const InterestProvider = ({ children }) => {
     },
   });
 
-  const solicitar = async ( solicitacao ) => {
+  const verificarSolicitacao = async (id_destino) => {
     try {
-      console.log(solicitacao)
+      const url = "verificar-interesse/";
+      const response = await apiAuth.get(url + id_destino);
+      console.log(`verificar interesse ${response.status}`)
+      setMensagem(response.data.message)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const solicitar = async ( body ) => {
+    try {
+      console.log(body)
       const url = "interesses";
-      const response = await apiAuth.post(url, solicitacao);
-      console.log(response.status);
+      const response = await apiAuth.post(url, body);
+      console.log(`solicitar interesse ${response.status}`);
     } catch (err) {
       console.error(err);
     }
@@ -83,6 +95,8 @@ export const InterestProvider = ({ children }) => {
         confirmados,
         listarPendentes,
         listarConfirmados,
+        verificarSolicitacao,
+        mensagem,
       }}
     >
       {children}

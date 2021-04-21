@@ -8,7 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
-      
+
 
 const title = "Moramigo | Meus Interesses";
 
@@ -33,67 +33,75 @@ const Solicitacoes = () => {
     <Layout title={title}>
       <div className={styles.container}>
         <div className={styles.links}>
-          <a className={styles.active}>Solicitação de Interesses</a>
+          <Link href="/interesses/solicitacoes">
+            <a onClick={listarPendentes} className={styles.active}>Solicitação de Interesses</a>
+          </Link>
           <Link href="/interesses/confirmados">
             <a onClick={listarConfirmados}>Interesses Confirmados</a>
           </Link>
         </div>
 
         <div className={styles.cards}>
-          {pendentes.map((p) => (
+          {pendentes.length == 0 ? (
+            <h1>Sem Solicitações</h1>
+          ):(
             <>
-              <div className={styles.card} key={p.origem.id}>
-                <section>
-                  <div className={styles.perfil}>
-                    <div>
-                      <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+            {pendentes.map((p) => (
+              <>
+                <div className={styles.card} key={p.origem.id}>
+                  <section>
+                    <div className={styles.perfil}>
+                      <div>
+                        <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+                      </div>
+                      <div>
+                        <h1>{p.origem.nome}</h1>
+                        <p>{p.origem.idade}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h1>{p.origem.nome}</h1>
-                      <p>{p.origem.idade}</p>
+                    <div className={styles.verPerfil}>
+                      <Link
+                        href="/usuario/perfil/[id]}"
+                        as={`/usuario/perfil/${p.origem.id}`}
+                      >
+                        <a>Ver Perfil</a>
+                      </Link>
                     </div>
-                  </div>
-                  <div className={styles.verPerfil}>
-                    <Link
-                      href="/usuario/perfil/[id]}"
-                      as={`/usuario/perfil/${p.origem.id}`}
-                    >
-                      <a>Ver Perfil</a>
-                    </Link>
+
+                    <span>{p.origem.descricao}</span>
+                  <div className={styles.cardSolicitacao}>
+                  <span>
+                  <FontAwesomeIcon icon="home"/>: {" "}
+                      {p.origem.restricoes.localidades.map((local) => (
+                        <span key={local.nome}>{local.nome}, </span>
+                      ))}
+                    </span>
                   </div>
 
-                  <span>{p.origem.descricao}</span>
-                <div className={styles.cardSolicitacao}>
-                <span>
-                <FontAwesomeIcon icon="home"/>: {" "}
-                    {p.origem.restricoes.localidades.map((local) => (
-                      <span key={local.nome}>{local.nome}, </span>
-                    ))}
-                  </span>
+                    <div className={styles.button}>
+                      <Link href="/interesses/confirmados">
+                        <button
+                          className={styles.btnAceitar}
+                          onClick={onClickAceitar.bind(this, p.id, p.origem.id)}
+                        >
+                          <a><FontAwesomeIcon icon="check-circle"/> Aceitar</a>
+                        </button>
+                      </Link>
+                      <Link href="">
+                        <button
+                          className={styles.btnCancelar}
+                          onClick={onClickRecusar.bind(this, p.id)}
+                        >
+                          <a><FontAwesomeIcon icon="times-circle"/> Cancelar</a>
+                        </button>
+                      </Link>
+                    </div>
+                  </section>
                 </div>
-
-                  <div className={styles.button}>
-                    <Link href="/interesses/confirmados">
-                      <button
-                        className={styles.btnAceitar}
-                        onClick={onClickAceitar.bind(this, p.id, p.origem.id)}
-                      >
-                        <a><FontAwesomeIcon icon="check-circle"/> Aceitar</a>
-                      </button>
-                    </Link>
-                    <Link href="">
-                      <button
-                        className={styles.btnCancelar}
-                        onClick={onClickRecusar.bind(this, p.id)}
-                      >
-                        <a><FontAwesomeIcon icon="times-circle"/> Cancelar</a>
-                      </button>
-                    </Link>
-                  </div>
-                </section>
-              </div>
+              </>
+            ))}
             </>
-          ))}
+          )}
         </div>
       </div>
     </Layout>

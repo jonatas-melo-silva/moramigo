@@ -19,11 +19,22 @@
   line-height: 1.5rem;
 }
 
-#btnDemostrarInteresse{
+#buttonEffect{
   border: 1px solid gray;
   background-color: white;
   color: blue;
 }
-#btnDemostrarInteresse:hover{
+
+#buttonEffect:hover{
   color: #8257e5;
+}
+
+#conversationButtonEffect{
+  background: var(--color-purple);
+  color: var(--color-text);
+  margin-left:4px;
+}
+
+#conversationButtonEffect:hover {
+  background-color: var(--color-purple-hover);
 }

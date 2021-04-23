@@ -1,0 +1,123 @@
+.card {
+  background-color: white;
+  display: grid;
+  cursor: pointer;
+  border: 1px solid rgb(170, 165, 165);
+  margin-top: 20px;
+  height: 230px;
+  width: 250px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+
+.card span {
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.card h1 {
+  color: black;
+  font-weight: bold;
+}
+
+.perfil {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.perfil img {
+  width: 4.5em;
+  padding: 2px;
+  border: 2px solid var(--color-orange);
+  border-radius: 50%;
+}
+
+.perfil h1 {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.perfil p {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.verPerfil {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-bottom: 10px;
+}
+.verPerfil a {
+  padding-top: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-purple);
+}
+
+.cardContent {
+  display: flex;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContent span {
+  line-height: 25px;
+  font-size: 12px;
+}
+.cardContent p {
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: 22px;
+}
+
+.btnAceitar {
+  background-color: #39c915;
+  height: 25px;
+  padding: 3px;
+  font-size: 13px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  margin-right: 8px;
+}
+
+.btnAceitar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btnAceitar:hover {
+  background: #2bb309;
+}
+
+/*== button Cancelar*/
+.btnCancelar {
+  height: 25px;
+  background-color: #e83f5b;
+  padding: 3px;
+  font-size: 13px;
+  width: 100px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+}
+
+.btnCancelar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btnCancelar:hover {
+  background-color: #d82a47;
+}

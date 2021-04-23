@@ -1,42 +1,42 @@
-import styles from "../../styles/pages/login.module.css";
-import Layout from "../../components/Layout"
-import { useAuth } from '../../contexts/auth'
-
-import { useRouter } from 'next/router'
-import Link from "next/link";
-import { useState } from "react";
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas);
 
-const initialState = () => {
-  return {username: '', password: ''}
-}
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-const title = 'Moramigo | Login'
+import { Layout } from "../../components/Layout";
+import { useAuth } from "../../contexts/auth";
+
+import styles from "../../styles/pages/login.module.css";
+
+const initialState = () => {
+  return { username: "", password: "" };
+};
+
+const title = "Moramigo | Login";
 
 const Login = () => {
-  const { logar } = useAuth()
+  const { logar } = useAuth();
   const [values, setValues] = useState(initialState);
-  const router = useRouter()
+  const router = useRouter();
 
   const onChange = (event) => {
-    const { name, value } = event.target
-    setValues({ ...values, [name]: value })
-  }
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const status = await logar({values})
-    if (status == 200){
-      router.push("/")
+    const status = await logar({ values });
+    if (status == 200) {
+      router.push("/");
     }
-  }
+  };
 
   return (
-
     <Layout title={title}>
       <div className={styles.telaLogin}>
         <div className={styles.imglogo}>
@@ -52,14 +52,16 @@ const Login = () => {
 
           <form onSubmit={onSubmit}>
             <fieldset>
-              <span><FontAwesomeIcon icon="user-lock"/> Faça seu login</span>
+              <span>
+                <FontAwesomeIcon icon="user-lock" /> Faça seu login
+              </span>
 
               <hr />
 
               <div className={styles.inputBlock}>
                 <label name="username"></label>
 
-                <input 
+                <input
                   placeholder="Digite seu usuario"
                   id="username"
                   type="text"

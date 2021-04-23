@@ -1,12 +1,13 @@
-import styles from "../../styles/pages/registrar.module.css";
-import Layout from "../../components/Layout"
-
-import Link from "next/link";
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
+
+import Link from "next/link";
+
+import {Layout} from "../../components/Layout"
+
+import styles from "../../styles/pages/registrar.module.css";
 
 const title = 'Moramigo | Cadastre - se'
 

@@ -1,8 +1,8 @@
-import styles from "../../../styles/pages/cadastrar-perfil.module.css";
+import { Head } from "../../../components/Head";
+import { Header } from "../../../components/Header";
+import { Footer } from "../../../components/Footer";
 
-import Head from "../../../components/Head";
-import Header from "../../../components/Header";
-import Rodape from "../../../components/Rodape";
+import styles from "../../../styles/pages/cadastrar-perfil.module.css";
 
 const title = "Moramigo | Cadastrar - Perfil";
 
@@ -88,8 +88,6 @@ const Perfil = () => {
                       value="Masculino"
                     />
                   </div>
-
-                
                 </div>
               </fieldset>
 
@@ -196,7 +194,7 @@ const Perfil = () => {
           </main>
         </div>
       </div>
-      <Rodape />
+      <Footer />
     </>
   );
 };

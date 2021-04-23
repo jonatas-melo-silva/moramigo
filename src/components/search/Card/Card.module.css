@@ -1,0 +1,42 @@
+/* ===== card ====*/
+.cardContainer {
+  background-color: white;
+  display: grid;
+  cursor: pointer;
+  border: 1px solid rgb(170, 165, 165);
+  margin-top: 20px;
+  height: 220px;
+  width: 250px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+.cardContainer h1 {
+  color: black;
+  font-weight: bold;
+}
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.cardContent img {
+  width: 4rem; /* 64px of 16px root*/
+  height: 4rem; /* 64px of 16px root*/
+  border-radius: 50%;
+  border: 0.156rem solid #f1972c; /* 2.5px of 16px root*/
+}
+.idadeContent {
+  padding-right: 40px;
+}
+.idadeContent h1 {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.idadeContent p {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}

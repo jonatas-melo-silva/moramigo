@@ -20,13 +20,14 @@ export const InterestProvider = ({ children }) => {
   });
 
   const verificarSolicitacao = async (id_destino) => {
+    console.log('interest')
     try {
       const url = "verificar-interesse/";
       const response = await apiAuth.get(url + id_destino);
       console.log(`verificar interesse ${response.status}`)
       setMensagem(response.data.message)
     } catch (error) {
-      console.log(error);
+      console.error(error)
     }
   }
 

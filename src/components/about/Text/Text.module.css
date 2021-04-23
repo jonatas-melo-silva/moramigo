@@ -1,0 +1,15 @@
+.text {
+  color: #696969;
+  padding-left: 50px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+  text-align: justify;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.text h1 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: var(--color-purple);
+}

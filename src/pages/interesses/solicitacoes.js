@@ -1,108 +1,18 @@
-import styles from "../../styles/pages/solicitacoes.module.css";
 import Layout from "../../components/Layout";
-import { useInterest } from "../../contexts/interest";
-import { useAuth } from "../../contexts/auth";
-import Link from "next/link";
+import NavBar from "../../components/interest/pending/NavBar";
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-library.add(fas);
-
+import styles from "../../styles/pages/solicitacoes.module.css";
+import Cards from "../../components/interest/pending/Cards";
 
 const title = "Moramigo | Meus Interesses";
 
 const Solicitacoes = () => {
-  const { pendentes, listarPendentes, listarConfirmados, aceitar, recusar } = useInterest();
-  const { user } = useAuth();
-
-  const onClickAceitar = async (id, origem_id) => {
-    const body = await {
-      origem: origem_id,
-      destino: user.id,
-      aceito: true,
-    };
-    aceitar(id, body)
-  };
-
-  const onClickRecusar = (id) => {
-    recusar(id)
-  };
-
   return (
     <Layout title={title}>
       <div className={styles.container}>
-        <div className={styles.links}>
-          <Link href="/interesses/solicitacoes">
-            <a onClick={listarPendentes} className={styles.active}>Solicitação de Interesses</a>
-          </Link>
-          <Link href="/interesses/confirmados">
-            <a onClick={listarConfirmados}>Interesses Confirmados</a>
-          </Link>
-        </div>
+        <NavBar />
 
-        <div className={styles.cards}>
-          {pendentes.length == 0 ? (
-            <h1>Sem Solicitações</h1>
-          ):(
-            <>
-            {pendentes.map((p) => (
-              <>
-                <div className={styles.card} key={p.origem.id}>
-                  <section>
-                    <div className={styles.perfil}>
-                      <div>
-                        <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
-                      </div>
-                      <div>
-                        <h1>{p.origem.nome}</h1>
-                        <p>{p.origem.idade}</p>
-                      </div>
-                    </div>
-                    <div className={styles.verPerfil}>
-                      <Link
-                        href="/usuario/perfil/[id]}"
-                        as={`/usuario/perfil/${p.origem.id}`}
-                      >
-                        <a>Ver Perfil</a>
-                      </Link>
-                    </div>
-
-                    <span>{p.origem.descricao}</span>
-                  <div className={styles.cardSolicitacao}>
-                  <span>
-                  <FontAwesomeIcon icon="home"/>: {" "}
-                      {p.origem.restricoes.localidades.map((local) => (
-                        <span key={local.nome}>{local.nome}, </span>
-                      ))}
-                    </span>
-                  </div>
-
-                    <div className={styles.button}>
-                      <Link href="/interesses/confirmados">
-                        <button
-                          className={styles.btnAceitar}
-                          onClick={onClickAceitar.bind(this, p.id, p.origem.id)}
-                        >
-                          <a><FontAwesomeIcon icon="check-circle"/> Aceitar</a>
-                        </button>
-                      </Link>
-                      <Link href="">
-                        <button
-                          className={styles.btnCancelar}
-                          onClick={onClickRecusar.bind(this, p.id)}
-                        >
-                          <a><FontAwesomeIcon icon="times-circle"/> Cancelar</a>
-                        </button>
-                      </Link>
-                    </div>
-                  </section>
-                </div>
-              </>
-            ))}
-            </>
-          )}
-        </div>
+        <Cards />
       </div>
     </Layout>
   );

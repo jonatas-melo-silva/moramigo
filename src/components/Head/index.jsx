@@ -1,7 +1,10 @@
+import { memo } from "react";
+
 import ProtoTypes from "prop-types";
 import MyHead from "next/head";
 
-const Head = ({ title }) => {
+export const Head = ({ title }) => {
+  console.log("Head")
   return (
     <MyHead>
       {" "}
@@ -14,4 +17,4 @@ Head.protoTypes = {
   title: ProtoTypes.string.isRequired,
 };
 
-export default Head;
+export default memo(Head);

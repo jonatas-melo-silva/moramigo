@@ -1,5 +1,5 @@
+import { Cards } from "../../components/search/Cards"
 import Layout from "../../components/Layout"
-import Cards from "../../components/Cards";
 
 import { perfilFetch } from '../../hooks/perfilFetch'
 
@@ -16,7 +16,7 @@ const BuscarPessoas = () => {
       {!data ? (
         <p>Carregando...</p>
         ) : (
-        <Cards perfis={data} />
+        <Cards perfis={data}/>
       )}
     </Layout>
   )

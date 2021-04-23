@@ -1,12 +1,24 @@
-import styles from "../../styles/pages/perfil.module.css";
+import api from "../../services/api";
+
+import { useAuth } from "../../contexts/auth";
 import Head from "../../components/Head";
 import Header from "../../components/Header";
-import Rodape from "../../components/Rodape";
-import api from "../../services/api";
+import Footer from "../../components/Footer";
+import NotFound from "../404";
+
+import styles from "../../styles/pages/perfil.module.css";
 
 const title = "Moramigo | Perfil";
 
 const DetalharPerfil = ({ User }) => {
+  const { logado, user } = useAuth();
+
+  if (logado == false) {
+    console.log('não')
+    return <NotFound />;
+  } else if (logado && user.id != User.id) {
+    return <NotFound />;
+  }
 
   return (
     <>
@@ -17,7 +29,7 @@ const DetalharPerfil = ({ User }) => {
         <div className={styles.container}>
           <div className={styles.card} key={User.id}>
             <img src="/img/pessoa1.svg" alt="Foto"></img>
-            <h2 >{User.nome}</h2>
+            <h2>{User.nome}</h2>
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>
@@ -27,13 +39,13 @@ const DetalharPerfil = ({ User }) => {
 
                 <div className={styles.inputWrapper}>
                   <label name="nome">Usuário</label>
-                  <span >{User.nome}</span>
+                  <span>{User.nome}</span>
                 </div>
 
                 <div className={styles.inputWrapper}>
                   <label name="descricao">Descrição</label>
 
-                  <p >{User.descricao}</p>
+                  <p>{User.descricao}</p>
                 </div>
               </fieldset>
               <fieldset>
@@ -44,17 +56,17 @@ const DetalharPerfil = ({ User }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Idade</label>
-                    <span >{User.idade}</span>
+                    <span>{User.idade}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Sexo</label>
-                    <span >{User.genero}</span>
+                    <span>{User.genero}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Ocupação/ Serviço</label>
-                    <span >{User.ocupacao}</span>
+                    <span>{User.ocupacao}</span>
                   </div>
                 </div>
               </fieldset>
@@ -70,19 +82,17 @@ const DetalharPerfil = ({ User }) => {
                     <label>Bairro</label>
 
                     {User.restricoes.localidades.map((local) => (
-                      <span key={local.nome} >{local.nome}</span>
+                      <span key={local.nome}>{local.nome}</span>
                     ))}
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>valor que deseja Contribuir</label>
-                    <span >
-                      {User.restricoes.valor_contribuicao}
-                    </span>
+                    <span>{User.restricoes.valor_contribuicao}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Genero de Pessoas</label>
-                    <span >{User.restricoes.genero_colega}</span>
+                    <span>{User.restricoes.genero_colega}</span>
                   </div>
                 </div>
               </fieldset>
@@ -96,24 +106,24 @@ const DetalharPerfil = ({ User }) => {
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Animais</label>
-                    <span >{User.restricoes.animais}</span>
+                    <span>{User.restricoes.animais}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Bebidas Alcoólicas</label>
-                    <span >{User.restricoes.bebidas}</span>
+                    <span>{User.restricoes.bebidas}</span>
                   </div>
 
                   <div className={styles.inputWrapper}>
                     <label>Fumantes</label>
-                    <span >{User.restricoes.fumantes}</span>
+                    <span>{User.restricoes.fumantes}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Visitas</label>
-                    <span >{User.restricoes.visitas}</span>
+                    <span>{User.restricoes.visitas}</span>
                   </div>
                   <div className={styles.inputWrapper}>
                     <label>Festas</label>
-                    <span >{User.restricoes.festas}</span>
+                    <span>{User.restricoes.festas}</span>
                   </div>
                 </div>
               </fieldset>
@@ -122,9 +132,8 @@ const DetalharPerfil = ({ User }) => {
             <br></br>
           </main>
         </div>
-
       </div>
-      <Rodape />
+      <Footer />
     </>
   );
 };

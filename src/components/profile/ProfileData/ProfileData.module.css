@@ -1,0 +1,63 @@
+fieldset {
+  border: none;
+}
+
+fieldset + fieldset {
+  margin-top: 1rem;
+}
+
+fieldset legend {
+  color: var(--color-purple);
+  padding-top:10px;
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.625rem;
+}
+
+.separator {
+  height: 1px;
+  background-color:red;
+  margin: 1rem 0;
+  background-color: #E1E3E5;
+}
+
+#light{
+  background-color: #E1E3E5;
+}
+
+label {
+  display: inline-block;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  color: #787880;
+
+  margin-bottom: 1rem;
+}
+
+.inputWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper label {
+  display: inline-block;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  color: #787880;
+
+  margin-bottom: 1rem;
+}
+
+.inputWrapper span{
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: black;
+}
+.inputWrapper p{
+  border: 1px solid#E1E3E5;
+  padding: 1rem;
+  border-radius: 4px;
+  color: gray;
+
+}

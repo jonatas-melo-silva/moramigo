@@ -1,15 +1,19 @@
-import React from "react";
+import React, { memo }from "react";
+import Link from "next/link";
 
-import styles from "./Botao.module.css";
+import { useAuth } from "../../../contexts/auth";
+import { useInterest } from "../../../contexts/interest";
 
-import {useAuth} from "../../contexts/auth"
-import { useInterest } from "../../contexts/interest";
+import styles from "./ShowInterest.module.css";
 
-export function Botao({User}) {
-  const { user } = useAuth();
+export function ShowInterest({ User }) {
+  const { logado, user } = useAuth();
   const { solicitar, verificarSolicitacao, mensagem } = useInterest();
 
-  verificarSolicitacao(User.id)
+  if (logado) {
+    console.log('show interest')
+    verificarSolicitacao(User.id);
+  }
 
   const onClick = async () => {
     const body = await {
@@ -32,30 +36,43 @@ export function Botao({User}) {
     }).then((message) => alert("Solicitação enviada!"));
   };
 
-  if (mensagem === 'Amigos'){
+  if (logado && mensagem === "Amigos") {
     return (
-      <button className={styles.button} id={styles.btnDemostrarInteresse}>
+      <button className={styles.button} id={styles.conversationButtonEffect}>
         {mensagem}
       </button>
     );
-  }else if (mensagem === 'Solicitação pendente'){
+  } else if (logado && mensagem === "Solicitação pendente") {
     return (
-      <button className={styles.button} id={styles.btnDemostrarInteresse}>
+      <button className={styles.button} id={styles.buttonEffect}>
         {mensagem}
       </button>
     );
-  }else if (mensagem === 'Solicitação enviada'){
+  } else if (logado && mensagem === "Solicitação enviada") {
     return (
-      <button className={styles.button} id={styles.btnDemostrarInteresse}>
+      <button className={styles.button} id={styles.buttonEffect}>
         {mensagem}
+      </button>
+    );
+  } else if (logado && mensagem === "Demonstrar interesse") {
+    return (
+      <button
+        onClick={onClick}
+        className={styles.button}
+        id={styles.buttonEffect}
+      >
+        Demostrar interesse
       </button>
     );
   } else {
     return (
-      <button onClick={onClick} className={styles.button} id={styles.btnDemostrarInteresse}>
-        Demostrar interesse
-      </button>
-    )
+      <Link href="/usuario/login">
+        <button className={styles.button} id={styles.buttonEffect}>
+          Faça o login para demostrar interesse
+        </button>
+      </Link>
+    );
   }
-
 }
+
+export default memo(ShowInterest)

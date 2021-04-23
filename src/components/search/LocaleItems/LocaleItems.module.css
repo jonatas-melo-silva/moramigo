@@ -1,0 +1,13 @@
+.content span {
+  margin: 0 auto;
+  line-height: 20px;
+  font-size: 12px;
+}
+.content {
+  display: flex;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}

@@ -28,7 +28,7 @@
   --color-badge-progress-background: #E8F8E8;
   --color-badge-done-text: var(--color-delete);
   --color-badge-done-background:#FAECEB;
-  --color-header-inner-title: var(--color-card-label);
+  --color-header-title: var(--color-card-label);
   --color-background: #f2f3f5;
   --color-orange: #ff9a00;
   --color-purple: #8257e5;

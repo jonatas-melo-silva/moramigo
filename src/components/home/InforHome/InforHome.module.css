@@ -1,0 +1,62 @@
+.textInform{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: 100px;
+  background-color: var(--color-orange);
+  text-align: -webkit-center;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.card1{
+  background-color: var(--color-orange);
+
+}
+
+.card1 .span{
+  background-color: var(--color-background);
+  text-align: center;
+  margin-left: 60px;
+
+}
+
+.card2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 10px 0px 10px 100px;
+  justify-content: center;
+
+}
+.card2 p{
+  color: white;
+  font-weight: bold;
+}
+.span {
+
+  font-weight: bold;
+  font-size: 1.8rem;
+  border-radius: 4px;
+  padding: 5px;
+
+}
+
+.span span:first-child {
+  color: var(--color-purple);
+
+}
+
+.span span:last-child {
+  color: var(--color-badge-progress-text);
+}
+
+
+.card2 img{
+  width:3.5rem;
+
+
+}
+
+

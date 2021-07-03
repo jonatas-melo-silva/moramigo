@@ -1,6 +1,6 @@
 .cardsContainer {
   max-width: 800px;
-  margin: 30px auto;
+  margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 26px;

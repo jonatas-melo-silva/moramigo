@@ -1,12 +1,12 @@
 .viewProfile {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding-bottom: 25px;
+  padding-bottom: 1rem;
 }
 
 .viewProfile a {
   padding-top: 4px;
-
+  padding-left:21px;
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;

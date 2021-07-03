@@ -51,10 +51,12 @@ export const Header = () => {
               <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
                 <div id={styles.avatarProfile}>
                   <p>
-                    {user.nome}
-                    <span>Ver perfil</span>
+                   Olá, {user.nome}
+
+                    {/* <span>Ver perfil</span> */}
+
                   </p>
-                  <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+                  <img src="/img/pessoa1.svg" alt="Foto Usúario" />
                 </div>
               </Link>
 

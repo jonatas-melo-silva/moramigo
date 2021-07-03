@@ -11,18 +11,18 @@ export function Card({ perfil }) {
       <section>
         <div className={styles.profileData}>
           <div>
-            <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+            <img src="/img/pessoa1.svg" alt="Foto usuario" />
           </div>
           <div>
             <h1>{perfil.nome}</h1>
-            <p>{perfil.idade}</p>
+            <p>{perfil.idade} Anos</p>
           </div>
         </div>
 
         <ViewProfile idOrigem={perfil.id} />
 
         <div className={styles.cardContent}>
-          <span>Descrição: {perfil.descricao}</span>
+          <span>{perfil.descricao}</span>
 
           <LocaleItems localidades={perfil.restricoes.localidades} />
         </div>

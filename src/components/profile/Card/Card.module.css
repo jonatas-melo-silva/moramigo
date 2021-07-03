@@ -4,9 +4,11 @@
   border: 1px solid #e1e3e6;
   border-radius: 0.313rem;
   width: 28rem;
+
   margin-right: 8rem;
   text-align: center;
   padding: 2.875rem 1.625rem;
+  margin-top: 20px;
 }
 
 .cardContainer img {
@@ -18,7 +20,7 @@
 }
 
 .cardContainer h2 {
-  font-family: IBM Plex Sans;
+  font-family:  'Roboto', sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 1.875rem;
@@ -27,7 +29,7 @@
 
 .cardContainer p {
   margin-bottom: 1.75rem;
-  font-family: Inter;
+  font-family:  'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.875rem;

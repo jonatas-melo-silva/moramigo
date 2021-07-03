@@ -12,34 +12,24 @@
   justify-content: space-around;
 
   width: 750px;
- 
+
 }
 .containerHeader .menu a {
   text-decoration: none;
-  color: gray;
   padding: 8px;
-  font-size: 18px;
-
-}
-
-.containerHeader .menu a:hover {
-  background-color: var(--color-orange);
-  color: white;
-}
-/*color margin so no ultimo elemento*/
-
-.containerHeader .menu  a{
-
-  text-decoration: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
   color: #777;
+  padding:0 0 0 0;
   position: relative;
-}
 
+}
 
 /*pseu do elemento*/
 .containerHeader .menu a::after{
   content: "";
   width: 0;
+  display: flex;
   height: 2px;
   background-color: var(--color-orange);
   position: absolute;
@@ -55,52 +45,48 @@
 
 }
 
-/* 
+/*
  * avatar
 /* -------------------------------------------------- */
-
+.perfil{
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
 #avatarProfile {
   display: flex;
   align-items: center;
   color: var(--color-white);
   text-decoration: none;
-
-  font-family: IBM Plex Sans;
+  font-family: "Roboto", sans-serif;
   text-align: right;
 }
 
 #avatarProfile p {
-  margin-top: 16px;
-  font-size: 1.25rem; /* 20px of 16px root*/
-  /*line-height: 1.875rem; 30px of 16px root*/
+  font-size: 1rem;
   margin-right: 1rem;
 
-  font-weight: 600;
 }
 
 #avatarProfile span {
   display: block;
-  color:var(--color-orange);
+  color:var(--color-purple);
+  font-weight: bold;
   text-align: center;
-  font-weight: normal;
-  font-size: 0.875rem; /* 14px of 16px root*/
-  /*line-height: 1.5rem; 24px of 16px root*/
+  font-size: 0.7rem;
 
-  font-weight: 400;
 }
 
 #avatarProfile p span:hover {
-  text-decoration: underline;
   text-align: center;
-
-  color:var(--color-secondary);
+  filter: brightness(0.9);
 }
 
 #avatarProfile img {
-  width: 2.5rem; /* 64px of 16px root*/
-  height: 2.5rem; /* 64px of 16px root*/
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
+  border: 0.156rem solid #F1972C;
 }
 
 /* ===========  Minha conta =================== */

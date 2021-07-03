@@ -3,9 +3,9 @@
   height: 28px;
   padding: 3px;
   font-size: 13px;
-  width: 200px;
+  width: 150px;
   border: 0;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: 700ms;
   border: 2px solid var(--color-purple);
 }
@@ -20,5 +20,5 @@
 }
 
 .button a:hover {
-  color: rgb(38, 116, 189);
+  filter:brightness(90%);
 }

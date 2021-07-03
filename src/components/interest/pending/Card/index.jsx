@@ -36,7 +36,7 @@ function Card({ perfil }) {
         <section>
           <div className={styles.perfil}>
             <div>
-              <img src="/img/pessoa1.svg" alt="MorAmigo | Banner" />
+              <img src="/img/pessoa1.svg" alt="Foto Usuario" />
             </div>
             <div>
               <h1>{perfil.origem.nome}</h1>
@@ -46,7 +46,7 @@ function Card({ perfil }) {
           <ViewProfile idOrigem={perfil.origem.id} />
 
           <div className={styles.cardContent}>
-            <span>Descrição: {perfil.origem.descricao}</span>
+            <span>{perfil.origem.descricao}</span>
             <LocaleItems localidades={perfil.origem.restricoes.localidades} />
           </div>
 

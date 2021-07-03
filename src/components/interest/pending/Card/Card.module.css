@@ -6,14 +6,11 @@
   margin-top: 20px;
   height: 230px;
   width: 250px;
-  border-radius: 4px;
+
+  border-radius: 20px;
   text-align: center;
   padding: 5px;
-}
-
-.card span {
-  line-height: 25px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .card h1 {
@@ -30,6 +27,7 @@
 .perfil img {
   width: 4.5em;
   padding: 2px;
+  margin-left:20px;
   border: 2px solid var(--color-orange);
   border-radius: 50%;
 }
@@ -67,8 +65,8 @@
 }
 
 .cardContent span {
-  line-height: 25px;
-  font-size: 12px;
+  font-size: 0.7rem;
+  padding: 0 5px 5px 5px;
 }
 .cardContent p {
   margin: 0 auto;
@@ -97,7 +95,7 @@
 }
 
 .btnAceitar:hover {
-  background: #2bb309;
+  filter: brightness(0.9);
 }
 
 /*== button Cancelar*/
@@ -116,8 +114,9 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 200ms;
 }
 
 .btnCancelar:hover {
-  background-color: #d82a47;
+  filter: brightness(0.9);
 }

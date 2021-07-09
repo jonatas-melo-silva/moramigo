@@ -12,7 +12,7 @@
   --color-text: #FCFDFF;
   --color-primary: #41414C;
   --color-secondary: #F1972C;
-  --color-secondary-hover: #FA9C2D;
+  --color-secondary-hover: #F1972C;
   --color-input-background: #F8F8FC;
   --color-button-text: #FFFFFF;
   --color-hairline-in-dark: #4F4F5B;
@@ -30,7 +30,7 @@
   --color-badge-done-background:#FAECEB;
   --color-header-title: var(--color-card-label);
   --color-background: #f2f3f5;
-  --color-orange: #ff9a00;
+  --color-orange: #FF9000;
   --color-purple: #8257e5;
   --color-purple-hover:#6b35e9;
 
@@ -40,31 +40,40 @@ body, #root{
   width: 100%;
 
 }
+
 @media (max-width: 1080px){
   html{
     font-size: 93.75%;
+
   }
+
 }
-  @media (max-width: 720px){
+  @media (max-width: 1210px){
     html{
+      width: 1200px;
+      font-size:87.5%;
+  };
 
-       font-size:87.5%;
-  }
 }
 
-
-header {
-  height: 80px;
+header{
+  position: fixed;
+  top:0px;
+  height: 60px;
+  padding: 0 1rem;
+  /* border-bottom: 1px solid #474a4d; */
   background-color: white;
-  border-bottom: 6px solid var(--color-orange);
+  /* border-bottom: 6px solid var(--color-orange); */
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11rem;
-  height: 72px;
-  margin-left: 1rem;
+  width: 9rem;
+  height: 58px;
+
   cursor: pointer;
 }
 

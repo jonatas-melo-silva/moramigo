@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.containerHeader {
+.container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
+  justify-content: center;
+
+}
+.navbar{
+  display: flex;
   justify-content: space-between;
+  width: 976px;
   margin: 0 auto;
 }
-.menu {
+.navMenu {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-
-  width: 750px;
-
+  gap: 1.8rem;
+  transition: 200ms;
 }
-.containerHeader .menu a {
+.contaPerfil,.conta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: 200ms;
+}
+.conta, .navMenu{
+  gap: 3rem;
+}
+
+.navMenu a:hover, .conta a:hover{
+  color: rgb(94, 91, 91);
+  filter:brightness(90%);
+}
+.conta a, .navMenu a {
   text-decoration: none;
   padding: 8px;
   font-size: 16px;
@@ -25,68 +46,24 @@
 
 }
 
+
 /*pseu do elemento*/
-.containerHeader .menu a::after{
+.container  .conta a::after, .navMenu a::after{
   content: "";
   width: 0;
   display: flex;
   height: 2px;
-  background-color: var(--color-orange);
+  background-color: var(--color-secondary-hover);
   position: absolute;
   left:0;
-  bottom: -4px;
+  bottom: -1.3rem;
 
 }
 
 /*efeito de transição com pseu do elemento*/
-.containerHeader .menu a:hover::after{
+.container .contaPerfil a:hover::after, .conta a:hover::after, .navMenu a:hover::after{
   width: 100%;
   transition: width 700ms ease-in-out;
 
 }
 
-/*
- * avatar
-/* -------------------------------------------------- */
-.perfil{
-display: flex;
-justify-content: center;
-flex-direction: row;
-}
-#avatarProfile {
-  display: flex;
-  align-items: center;
-  color: var(--color-white);
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-align: right;
-}
-
-#avatarProfile p {
-  font-size: 1rem;
-  margin-right: 1rem;
-
-}
-
-#avatarProfile span {
-  display: block;
-  color:var(--color-purple);
-  font-weight: bold;
-  text-align: center;
-  font-size: 0.7rem;
-
-}
-
-#avatarProfile p span:hover {
-  text-align: center;
-  filter: brightness(0.9);
-}
-
-#avatarProfile img {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 0.156rem solid #F1972C;
-}
-
-/* ===========  Minha conta =================== */

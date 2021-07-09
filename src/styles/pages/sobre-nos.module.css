@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 600px;
+  width: 1000px;
   height: 100%;
-  margin: 40px auto;
+  margin: 60px auto;
 }

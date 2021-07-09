@@ -1,12 +1,13 @@
 .aboutUsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   min-height: 600px;
   height: 100%;
   margin: 40px auto;
 }
 
 .image img {
-  width: 45em;
-  margin: 0 auto;
+  width: 30em;
+ margin-right: 40px;
+  margin: 60px auto;
 }

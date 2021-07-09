@@ -1,8 +1,8 @@
 .cardsContainer {
-  max-width: 800px;
-  margin: 0px auto;
+  max-width: 967px;
+  margin: 1rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
   color: gray;
 }

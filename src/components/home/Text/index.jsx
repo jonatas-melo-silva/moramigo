@@ -5,13 +5,13 @@ import styles from "./Text.module.css"
 export function Text() {
   return (
     <div className={styles.text}>
-      <h1>
+      <span>
         Encontrar uma galera bacana
         <br />
         Para compartilhar moradia
         <br />
         Não precisa ser uma tarefa difícil.
-      </h1>
+      </span>
     </div>
   );
 }

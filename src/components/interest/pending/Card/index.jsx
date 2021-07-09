@@ -40,7 +40,7 @@ function Card({ perfil }) {
             </div>
             <div>
               <h1>{perfil.origem.nome}</h1>
-              <p>{perfil.origem.idade}</p>
+              <p>{perfil.origem.idade} Anos</p>
             </div>
           </div>
           <ViewProfile idOrigem={perfil.origem.id} />

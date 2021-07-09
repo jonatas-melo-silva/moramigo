@@ -6,6 +6,7 @@ import  Banner  from "../components/home/Banner";
 import  Cards  from "../components/search/Cards";
 import InforHome from "../components/home/InforHome";
 import TextContainer from "../components/home/TextContainer";
+import { Paginacao } from "../components/Paginacao";
 
 const title = "Moramigo";
 
@@ -17,6 +18,8 @@ const Home = () => {
       <InforHome/>
       <TextContainer/>
       <Cards perfis={data} />
+      <Paginacao/>
+
     </Layout>
   );
 };

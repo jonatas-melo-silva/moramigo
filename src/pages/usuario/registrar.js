@@ -14,7 +14,7 @@ const title = 'Moramigo | Cadastre - se'
 const Registrar = () => {
   return (
     <Layout title={title}>
-      <div className={styles.telaLogin}>
+      <div className={styles.telaRegister}>
         <div className={styles.imglogo}>
           <h1>Faça seu cadastro na Plataforma</h1>
 
@@ -23,7 +23,7 @@ const Registrar = () => {
           </div>
         </div>
 
-        <div className={styles.formLogin}>
+        <div className={styles.formRegister}>
           <img src="/img/imgForm.svg" alt="imgBannerForm" />
 
           <form action="">

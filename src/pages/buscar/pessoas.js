@@ -12,6 +12,8 @@ import  Cards  from "../../components/search/Cards";
 
 import styles from "../../styles/pages/buscar-pessoas.module.css";
 
+import { Paginacao } from "../../components/Paginacao";
+
 const title = "Moramigo | Buscar Pessoas";
 
 const BuscarPessoas = ({ data }) => {
@@ -147,6 +149,7 @@ const BuscarPessoas = ({ data }) => {
         </form>
       </div>
       {!perfis ? <h2>Carregando...</h2> : <Cards perfis={perfis} />}
+      <Paginacao/>
     </Layout>
   );
 };

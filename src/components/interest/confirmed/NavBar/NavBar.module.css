@@ -1,21 +1,24 @@
 .links{
-  font-size: 22px;
+
   text-align: center;
+  margin-top: 4rem;
   padding-top: 40px;
   height: 100px;
   background-color: white;
+
 }
 
 /*color margin so no ultimo elemento*/
 .links a + a{
   margin-left: 32px;
 
+
 }
 .links a{
-
+  font-size: 1.2rem;
   text-decoration: none;
   color: #777;
-  position: relative;
+
 }
 .links a.active{
   font-weight: bold;

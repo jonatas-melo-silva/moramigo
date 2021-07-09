@@ -7,10 +7,10 @@ export function InforHome(){
     <div className={styles.textInform}>
     <div className={styles.card1}>
 
-    <div className={styles.span}>
-      <span>Nossos</span><br/>
-      <span>Benefícios</span>
-    </div>
+      <div className={styles.span}>
+        <span>Nossos</span><br/>
+        <span>Benefícios</span>
+      </div>
 
     </div>
     <div className={styles.card2}>

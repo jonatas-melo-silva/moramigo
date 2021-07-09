@@ -3,10 +3,11 @@
   background-color: white;
   height: 220px;
   border-bottom: 10px solid var(--color-orange);
+  margin-top: 4rem;
 }
 
 .form {
-  max-width: 800px;
+  max-width: 967px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -40,6 +41,7 @@
   background-color: #8257e5;
   border-radius: 4px;
   border: 0;
+
   cursor: pointer;
   font: 700 1rem Archico;
   color: #ffffff;

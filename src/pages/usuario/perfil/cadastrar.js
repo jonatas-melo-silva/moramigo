@@ -4,7 +4,7 @@ import { Footer } from "../../../components/Footer";
 
 import styles from "../../../styles/pages/cadastrar-perfil.module.css";
 
-const title = "Moramigo | Cadastrar - Perfil";
+const title = "Cadastrar - Perfil";
 
 const Perfil = () => {
   return (

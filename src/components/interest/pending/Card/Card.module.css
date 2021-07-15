@@ -1,3 +1,4 @@
+
 .card {
   background-color: white;
   display: grid;
@@ -66,7 +67,8 @@
 
 .cardContent span {
   font-size: 0.7rem;
-  padding: 0 5px 5px 5px;
+  padding: 0 4px 4px 4px;
+  height:140px;
 }
 .cardContent p {
   margin: 0 auto;
@@ -77,7 +79,7 @@
 }
 
 .btnAceitar {
-  background-color: #39c915;
+  background-color: var(--color-button-green);
   height: 25px;
   padding: 3px;
   font-size: 13px;

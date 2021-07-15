@@ -36,7 +36,9 @@ export function ShowInterest({ User }) {
     }).then((message) => alert("Solicitação enviada!"));
   };
 
+
   if (logado && mensagem === "Amigos") {
+
     return (
       <button className={styles.button} id={styles.conversationButtonEffect}>
         {mensagem}
@@ -67,12 +69,13 @@ export function ShowInterest({ User }) {
   } else {
     return (
       <Link href="/usuario/login">
-        <button className={styles.button} id={styles.buttonEffect}>
-          Faça o login para demostrar interesse
+        <button  id={styles.buttonEffect}>
+         <a>Faça o login para demostrar interesse</a>
         </button>
       </Link>
     );
   }
 }
+
 
 export default memo(ShowInterest)

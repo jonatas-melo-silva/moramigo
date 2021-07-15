@@ -39,81 +39,81 @@ export const Header = () => {
 
   return (
     <>
-      <header className={styles.container}>
+      <header className={styles.headerContainer}>
           <Navbar >
-          <nav className={styles.navbar}>
-        <div className="logo">
-          <Link href="/">
-            <img src="/img/logo.svg" alt="MorAmigo" />
-          </Link>
-        </div>
+          <nav className={styles.headerContente}>
+            <div className="logo">
+              <Link href="/">
+                <img src="/img/logo.svg" alt="MorAmigo" />
+              </Link>
+            </div>
 
-        <div className={styles.navMenu}>
-          <Link href="/sobrenos" className={styles.active}>
-            <a>
-              {" "}
-              <FontAwesomeIcon icon="home" /> Sobre - Nós
-            </a>
-          </Link>
-          <Link href="/buscar/pessoas">
-            <a>
-              <FontAwesomeIcon icon="user-friends" /> Buscar Pessoas
-            </a>
-          </Link>
-
-          {logado ? (
-
-              <Link href="/interesses/solicitacoes">
-                <a onClick={listarPendentes}>
-                  <FontAwesomeIcon icon="user-friends" /> Meus interesses
+            <div className={styles.navMenu}>
+              <Link href="/sobrenos" className={styles.active}>
+                <a>
+                  {" "}
+                  <FontAwesomeIcon icon="home" /> Sobre - Nós
+                </a>
+              </Link>
+              <Link href="/buscar/pessoas">
+                <a>
+                  <FontAwesomeIcon icon="user-friends" /> Buscar Pessoas
                 </a>
               </Link>
 
-          ) : (
-            <>
+              {logado ? (
 
-            </>
-          )}
-      </div>
+                  <Link href="/interesses/solicitacoes">
+                    <a onClick={listarPendentes}>
+                      <FontAwesomeIcon icon="user-friends" /> Meus interesses
+                    </a>
+                  </Link>
 
-          {logado ? (
-            <>
+              ) : (
+                <>
 
-            <div className={styles.contaPerfil}>
-            <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
-                  <p>
-                  Olá, {user.nome}
-
-                    {/* <span>Ver perfil</span> */}
-
-                  </p>
-                </Link>
-                  {/* <NavItem/> */}
-                  <NavItem icon={<Img />}>
-                    <DropdownMenu></DropdownMenu>
-                  </NavItem>
-
-            </div>
-
-            </>
-
-          ):(
-            <div className={styles.conta}>
-              <Link href="/usuario/login">
-              <a>
-                <FontAwesomeIcon icon="sign-in-alt" /> Entrar
-              </a>
-            </Link>
-
-            <Link href="/usuario/registrar">
-              <a>
-                {" "}
-                <FontAwesomeIcon icon="file-alt" /> Cadastre-se
-              </a>
-            </Link>
+                </>
+              )}
           </div>
 
-          )}
+              {logado ? (
+                <>
+
+                <div className={styles.contaPerfil}>
+                <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
+                      <p>
+                      Olá, {user.nome}
+
+                        {/* <span>Ver perfil</span> */}
+
+                      </p>
+                    </Link>
+                      {/* <NavItem/> */}
+                      <NavItem icon={<Img />}>
+                        <DropdownMenu></DropdownMenu>
+                      </NavItem>
+
+                </div>
+
+                </>
+
+              ):(
+                <div className={styles.conta}>
+                  <Link href="/usuario/login">
+                  <a>
+                    <FontAwesomeIcon icon="sign-in-alt" /> Entrar
+                  </a>
+                </Link>
+
+                <Link href="/usuario/registrar">
+                  <a>
+                    {" "}
+                    <FontAwesomeIcon icon="file-alt" /> Cadastre-se
+                  </a>
+                </Link>
+              </div>
+
+              )}
         </nav>
 
 

@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.container {
+.headerContainer {
   width: 100%;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
 
 }
-.navbar{
+.headerContente{
   display: flex;
   justify-content: space-between;
   width: 976px;
@@ -20,6 +19,7 @@
   gap: 1.8rem;
   transition: 200ms;
 }
+
 .contaPerfil,.conta{
   display: flex;
   justify-content: center;
@@ -44,26 +44,34 @@
   padding:0 0 0 0;
   position: relative;
 
+
 }
 
-
 /*pseu do elemento*/
-.container  .conta a::after, .navMenu a::after{
+.containerHeader .contaPerfil a::after, .conta a::after, .navMenu a::after{
   content: "";
   width: 0;
   display: flex;
-  height: 2px;
+  height: 3px;
   background-color: var(--color-secondary-hover);
   position: absolute;
   left:0;
-  bottom: -1.3rem;
+  border-radius: 3px 3px 0 0;
+  bottom: -1.5rem;
 
 }
 
 /*efeito de transição com pseu do elemento*/
-.container .contaPerfil a:hover::after, .conta a:hover::after, .navMenu a:hover::after{
+.containerHeader .contaPerfil a:hover::after, .conta a:hover::after, .navMenu a:hover::after{
   width: 100%;
   transition: width 700ms ease-in-out;
 
 }
 
+/* @media (max-width: 900px){
+  .headerContainer{
+    width: 100%;
+
+};
+
+} */

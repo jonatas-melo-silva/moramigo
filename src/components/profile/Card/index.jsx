@@ -12,6 +12,7 @@ export function Card({ User }) {
         <h2>{User.nome}</h2>
 
         <ShowInterest User={User} />
+
       </div>
     </>
   )

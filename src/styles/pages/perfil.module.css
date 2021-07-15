@@ -77,24 +77,6 @@
 }
 
 
-#btnConversar{
-  background: var(--color-purple);
-  color: var(--color-text);
-  margin-left:4px;
-}
-
-#btnConversar:hover {
-  background-color: var(--color-purple-hover);
-}
-
-#btnDemostrarInteresse{
-  border: 1px solid gray;
-  background-color: white;
-  color: blue;
-}
-#btnDemostrarInteresse:hover{
-  color: #8257e5;
-}
 /* ==== form ======*/
 .formProfile  fieldset {
   border: none;
@@ -164,7 +146,7 @@
   padding: 2.875rem 1.625rem;
 }
 
-.card img {
+.card:first-child img {
   border-radius: 50%;
   border: .25rem var(--color-secondary) solid;
   width: 7rem;
@@ -185,4 +167,30 @@
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.875rem;
+}
+.buttonProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+}
+.buttonProfile:last-child img{
+  width:1.4rem;
+  border: 0;
+  margin:0;
+  padding: 0;
+  height:35px;
+}
+.buttonProfile a{
+  margin: 0;
+  padding: 0;
+  height: 0px;
+}
+
+.buttonProfile button{
+  margin-top: 0;
+  padding: 0;
+  height: 35px;
 }

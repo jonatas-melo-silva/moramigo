@@ -27,12 +27,14 @@
   margin-bottom: 0.1rem;
 }
 
-@media (max-width: 800px){
+/*Responsividade*/
+ @media (max-width: 900px){
   .banner{
     width: 100%;
   }
   #image{
-    width: 100%;
+    width: 1200px;
   }
 
 }
+

@@ -2,39 +2,53 @@
   padding: 0.5rem 1rem;
   border-radius: 0.313rem;
   border: 0;
-  font-family: IBM Plex Sans;
+  display: grid;
   font-weight: 700;
   font-size: 0.875rem;
-  line-height: 1.625rem;
+  height: 35px;
   text-transform: uppercase;
   transition: all .2s;
   cursor:pointer;
-  display: inline-flex;
+
   justify-content:center;
   align-items: center;
 
 }
 
-.button{
-  line-height: 1.5rem;
+#buttonEffect{
+  background: transparent;
+  border: 0;
 }
 
-#buttonEffect{
-  border: 1px solid gray;
+#buttonEffect  a{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 320px;
+  margin-left: 5px;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  font-weight: 700;
   background-color: white;
-  color: blue;
 }
 
 #buttonEffect:hover{
-  color: #8257e5;
+  filter: brightness(95%);
 }
 
+
 #conversationButtonEffect{
+  margin-top: 14px;
   background: var(--color-purple);
   color: var(--color-text);
   margin-left:4px;
+  transition: filter 200ms;
 }
 
 #conversationButtonEffect:hover {
-  background-color: var(--color-purple-hover);
+ filter: brightness(0.9);
 }

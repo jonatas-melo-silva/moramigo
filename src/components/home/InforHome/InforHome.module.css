@@ -50,12 +50,74 @@
 }
 
 .span span:last-child {
-  color: var(--color-badge-progress-text);
+  color: var(--color-button-green);
 }
 
 
 .card2 img{
   width:3.5rem;
+
+
+}
+
+
+/*Resposividade*/
+@media (max-width: 970px){
+
+  .card1{
+
+    margin-left: 10px;
+  }
+}
+@media (max-width: 900px){
+  .textInform{
+    width:100%;
+
+
+  }
+  .card1{
+    width:150px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  .card2{
+    gap: 2em;
+    padding-left: 0px;
+
+  }
+  .card2 p{
+    font-size: 0.8rem;
+  }
+
+
+}
+
+
+@media (max-width: 700px){
+  .textInform{
+    width:100%;
+
+
+  }
+  .card1{
+    width:110px;
+    margin-left: 10px;
+
+  }
+  .card1 span{
+    font-size: 1.4rem;
+
+
+  }
+  .card2{
+    gap: 1em;
+    padding-left: 0px;
+
+  }
+
+  .card2 img{
+    width: 3em;
+  }
 
 
 }

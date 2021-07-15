@@ -11,11 +11,25 @@
   text-align: center;
 }
 
-@media (max-width: 850px){
+
+/*Resposividade*/
+@media (max-width: 900px){
   .footerContainer{
     width: 100%;
+  }
 
+}
 
+@media (max-width: 600px){
+  .footerContainer{
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 400px){
+  .footerContainer{
+   font-size: 0.8rem;
   }
 
 }

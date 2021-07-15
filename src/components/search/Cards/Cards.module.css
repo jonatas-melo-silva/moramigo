@@ -7,3 +7,33 @@
   gap: 1rem;
   color: gray;
 }
+
+
+/*Responsividade*/
+
+@media (max-width: 1010px){
+  .cardsContainer{
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:center;
+    width: 750px;
+  }
+
+
+}
+@media (max-width: 790px){
+  .cardsContainer{
+    grid-template-columns: 1fr 1fr;
+    justify-content:center;
+    width: 400px;
+  }
+
+
+}
+@media (max-width: 500px){
+  .cardsContainer{
+    grid-template-columns: 1fr ;
+    width: 200px;
+  }
+
+
+}

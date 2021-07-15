@@ -5,6 +5,7 @@ import Head from "../../../components/Head";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import ShowInterest from "../../../components/profile/ShowInterest";
+import StartConversation from "../../../components/interest/confirmed/startConversation";
 import NotFound from "../../404";
 
 import styles from "../../../styles/pages/perfil.module.css";
@@ -32,7 +33,21 @@ const Perfil = ({ User = null }) => {
             <img src="/img/pessoa1.svg" alt="Foto"></img>
             <h2>{User.nome}</h2>
 
-            <ShowInterest User={User} />
+              <div className={styles.buttonProfile}>
+                  <>
+              {logado ? (
+                <>
+                  <StartConversation/>
+                  <ShowInterest User={User} />
+                </>
+              ):(
+                <ShowInterest User={User} />
+              )}
+
+                </>
+              </div>
+
+
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>

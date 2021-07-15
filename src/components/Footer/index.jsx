@@ -7,7 +7,9 @@ export const Footer = () => {
   return (
       <footer>
         <div className={styles.footerContainer}>
-          <p>@Copyright - Todos os direitos reservados</p>
+          <p>Copyright © 2021 - Moramigo -
+          Todos os direitos reservados.</p>
+
         </div>
       </footer>
   );

@@ -22,6 +22,7 @@
 .telaLogin img{
     align-items: center;
     width: 20em;
+    margin-left: 1.5rem;
 }
 /* ==== form de login*/
 .formLogin{
@@ -48,6 +49,8 @@
 }
 .formLogin fieldset span{
     color: var(--color-orange);
+    display: block;
+    text-align: center;
 }
 .formLogin hr{
     margin-top:2px;

@@ -56,13 +56,13 @@ const Login = () => {
                 <FontAwesomeIcon icon="user-lock" /> Faça seu login
               </span>
 
-              <hr />
+
 
               <div className={styles.inputBlock}>
                 <label name="username"></label>
 
                 <input
-                  placeholder="Digite seu usuario"
+                  placeholder="Digite seu usuario *"
                   id="username"
                   type="text"
                   name="username"
@@ -75,7 +75,7 @@ const Login = () => {
               <div className={styles.inputBlock}>
                 <label name="senha"></label>
                 <input
-                  placeholder="Digite sua senha"
+                  placeholder="Digite sua senha *"
                   id="password"
                   type="password"
                   name="password"

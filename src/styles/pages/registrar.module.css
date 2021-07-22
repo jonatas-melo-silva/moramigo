@@ -22,6 +22,7 @@
 .telaRegister img{
     align-items: center;
     width: 20em;
+    margin-left: 1.4rem;
 }
 /* ==== form de Cadastre-se*/
 
@@ -48,9 +49,9 @@ color: var(--color-card-label);
     border: 0;
 }
 .formRegister fieldset span{
-
-
     color: var(--color-orange);
+    display: block;
+    text-align: center;
 }
 .formRegister hr{
     margin-top:2px;

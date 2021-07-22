@@ -30,14 +30,14 @@ const Registrar = () => {
             <fieldset>
               <span><FontAwesomeIcon icon="user-lock"/> Criar conta</span>
 
-              <hr />
+
 
               <div className={styles.inputBlock}>
                 <label for="username"></label>
 
                 <input
                   name="username"
-                  placeholder="Digite seu usuario"
+                  placeholder="Digite seu usuario *"
                   id="name"
                   required
                 />
@@ -47,7 +47,7 @@ const Registrar = () => {
                 <label for="senha"></label>
                 <input
                   name="senha"
-                  placeholder="Digite sua senha"
+                  placeholder="Digite sua senha *"
                   type="password"
                   required
                 />
@@ -57,7 +57,7 @@ const Registrar = () => {
                 <label for="confirmeSenha"></label>
                 <input
                   name="confirmeSenha"
-                  placeholder="Confirme sua senha"
+                  placeholder="Confirme sua senha *"
                   type="password"
                   required
                 />

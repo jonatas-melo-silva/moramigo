@@ -16,7 +16,7 @@ export function TextContainer(){
 
     <div className={styles.buttonDescription}>
       <div className={styles.description}>
-      <p>DESTAGUES</p>
+      <p>DESTAQUES</p>
       </div>
 
     </div>

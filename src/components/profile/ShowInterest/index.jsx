@@ -46,13 +46,13 @@ export function ShowInterest({ User }) {
     );
   } else if (logado && mensagem === "Solicitação pendente") {
     return (
-      <button className={styles.button} id={styles.buttonEffect}>
+      <button  id={styles.buttonSolicitacaoPendente}>
         {mensagem}
       </button>
     );
   } else if (logado && mensagem === "Solicitação enviada") {
     return (
-      <button className={styles.button} id={styles.buttonEffect}>
+      <button id={styles.buttonSolicitacaoInteresse}>
         {mensagem}
       </button>
     );
@@ -60,8 +60,7 @@ export function ShowInterest({ User }) {
     return (
       <button
         onClick={onClick}
-        className={styles.button}
-        id={styles.buttonEffect}
+        id={styles.buttonDemostrarInteresse}
       >
         Demostrar interesse
       </button>
@@ -69,9 +68,9 @@ export function ShowInterest({ User }) {
   } else {
     return (
       <Link href="/usuario/login">
-        <button  id={styles.buttonEffect}>
+        <div id= {styles.buttonEffect }>
          <a>Faça o login para demostrar interesse</a>
-        </button>
+        </div>
       </Link>
     );
   }

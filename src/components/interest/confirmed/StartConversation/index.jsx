@@ -6,7 +6,7 @@ export function StartConversation() {
   return (
     <div className={styles.button}>
       <button className={styles.startConversation}>
-        <Link href="https://api.whatsapp.com/send?1=pt_BR&phone=55">
+        <Link href="#">
           <a target="_blank">
             <img src="/img/Whatsapp.svg" alt="Whatsapp" /> Iniciar Conversa
           </a>

@@ -136,7 +136,7 @@ const DetalharPerfil = ({ User }) => {
       <Footer />
     </>
   );
-};
+}
 
 export async function getStaticProps(context) {
   const url = "pessoas/";

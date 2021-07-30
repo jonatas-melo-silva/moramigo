@@ -1,16 +1,15 @@
-import api from "../../../services/api";
+import api from '../../../services/api';
 
-import { useAuth } from "../../../contexts/auth";
-import Head from "../../../components/Head";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
-import ShowInterest from "../../../components/profile/ShowInterest";
-import StartConversation from "../../../components/interest/confirmed/startConversation";
-import NotFound from "../../404";
+import { useAuth } from '../../../contexts/auth';
+import Head from '../../../components/Head';
+import Header from '../../../components/Header';
+import Footer from '../../../components/Footer';
+import ShowInterest from '../../../components/profile/ShowInterest';
+import NotFound from '../../404';
 
-import styles from "../../../styles/pages/perfil.module.css";
+import styles from '../../../styles/pages/perfil.module.css';
 
-const title = "Moramigo | Perfil";
+const title = 'Moramigo | Perfil';
 
 const Perfil = ({ User = null }) => {
   const { logado, user } = useAuth();
@@ -33,21 +32,9 @@ const Perfil = ({ User = null }) => {
             <img src="/img/pessoa1.svg" alt="Foto"></img>
             <h2>{User.nome}</h2>
 
-              <div className={styles.buttonProfile}>
-                  <>
-              {logado ? (
-                <>
-                  <StartConversation/>
-                  <ShowInterest User={User} />
-                </>
-              ):(
-                <ShowInterest User={User} />
-              )}
-
-                </>
-              </div>
-
-
+            <div className={styles.buttonProfile}>
+              <ShowInterest User={User} />
+            </div>
           </div>
           <main className={styles.containerMain}>
             <form className={styles.formProfile}>
@@ -69,7 +56,7 @@ const Perfil = ({ User = null }) => {
               <fieldset>
                 <legend>Dados Pessoais</legend>
                 <div className={styles.separator} id={styles.light}>
-                  {" "}
+                  {' '}
                 </div>
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
@@ -92,14 +79,14 @@ const Perfil = ({ User = null }) => {
               <fieldset>
                 <legend>Interesse</legend>
                 <div className={styles.separator} id={styles.light}>
-                  {" "}
+                  {' '}
                 </div>
 
                 <div className={styles.dividirForm}>
                   <div className={styles.inputWrapper}>
                     <label>Bairro</label>
 
-                    {User.restricoes.localidades.map((local) => (
+                    {User.restricoes.localidades.map(local => (
                       <span key={local.nome}>{local.nome}</span>
                     ))}
                   </div>
@@ -118,7 +105,7 @@ const Perfil = ({ User = null }) => {
               <fieldset>
                 <legend>Restrições</legend>
                 <div className={styles.separator} id={styles.light}>
-                  {" "}
+                  {' '}
                 </div>
 
                 <div className={styles.dividirForm}>
@@ -158,12 +145,12 @@ const Perfil = ({ User = null }) => {
 
 export async function getStaticProps(context) {
   try {
-    const url = "pessoas/";
+    const url = 'pessoas/';
     const id = context.params.id;
     const response = await api.get(url + id);
     const User = await response.data;
     return {
-      props: { User, revalidate: 1 },
+      props: { User, revalidate: 1 }
     };
   } catch (error) {
     console.error(error);
@@ -171,16 +158,16 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const url = "pessoas/";
+  const url = 'pessoas/';
   const response = await api.get(url);
   const users = await response.data.slice(0, 5);
-  const paths = users.map((user) => {
+  const paths = users.map(user => {
     return { params: { id: String(user.id) } };
   });
 
   return {
     paths: paths,
-    fallback: true,
+    fallback: true
   };
 }
 

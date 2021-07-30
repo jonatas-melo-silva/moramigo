@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "cypress:server": "start-server-and-test dev 3000 cypress:open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "husky": {
     "hooks": {
@@ -25,7 +28,9 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "D": "^1.0.0",
     "axios": "^0.21.1",
+    "babel-plugin-istanbul": "^6.0.0",
     "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -34,6 +39,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.14.5",
+    "@cypress/code-coverage": "^3.9.9",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
@@ -41,6 +47,7 @@
     "@types/react": "^17.0.14",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
+    "cypress": "^8.0.0",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -50,6 +57,7 @@
     "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.0.1",
+    "start-server-and-test": "^1.13.1",
     "typescript": "^4.3.5"
   }
 }

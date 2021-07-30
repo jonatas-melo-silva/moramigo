@@ -62,6 +62,7 @@ const Login = () => {
                 <label name="username"></label>
 
                 <input
+                  data-cy="nome-do-usuario"
                   placeholder="Digite seu usuario *"
                   id="username"
                   type="text"
@@ -75,6 +76,7 @@ const Login = () => {
               <div className={styles.inputBlock}>
                 <label name="senha"></label>
                 <input
+                  data-cy="senha-do-usuario"
                   placeholder="Digite sua senha *"
                   id="password"
                   type="password"
@@ -91,7 +93,7 @@ const Login = () => {
 
               <div className={styles.btnEntrar}>
                 <button type="submit">
-                  <a>Entrar</a>
+                  <a data-cy="entrar-btn">Entrar</a>
                 </button>
               </div>
 

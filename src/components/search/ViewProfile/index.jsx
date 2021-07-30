@@ -1,14 +1,14 @@
-import React, {memo} from "react";
-import Link from "next/link";
+import React, { memo } from 'react';
+import Link from 'next/link';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
 
-import { useAuth } from "../../../contexts/auth";
+import { useAuth } from '../../../contexts/auth';
 
-import styles from "./ViewProfile.module.css";
+import styles from './ViewProfile.module.css';
 
 export function ViewProfile({ idDestino }) {
   const { logado, user } = useAuth();
@@ -17,7 +17,7 @@ export function ViewProfile({ idDestino }) {
     return (
       <div>
         <Link href="/usuario/[id]" as={`/usuario/${user.id}`}>
-          <button className={styles.button}>
+          <button data-cy="ver-perfil-btn" className={styles.button}>
             <a>
               <FontAwesomeIcon icon="user" /> Ver perfil
             </a>
@@ -29,7 +29,7 @@ export function ViewProfile({ idDestino }) {
     return (
       <div>
         <Link href="/usuario/perfil/[id]" as={`/usuario/perfil/${idDestino}`}>
-          <button className={styles.button}>
+          <button data-cy="ver-perfil-btn" className={styles.button}>
             <a>
               <FontAwesomeIcon icon="user" /> Ver perfil
             </a>
@@ -40,4 +40,4 @@ export function ViewProfile({ idDestino }) {
   }
 }
 
-export default memo(ViewProfile)
+export default memo(ViewProfile);

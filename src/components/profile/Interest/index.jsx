@@ -1,7 +1,0 @@
-// export fuction Interest(){
-//   return()
-
-
-//   ;
-
-// };

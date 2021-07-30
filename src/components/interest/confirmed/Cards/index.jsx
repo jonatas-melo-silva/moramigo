@@ -19,13 +19,13 @@ export function Cards() {
 
   if (confirmados.length == 0) {
     return (
-      <div className={styles.cardsContainer}>
-        <h1>Buscando Confirmados....</h1>
+      <div data-cy="mensagem-de-aviso" className={styles.cardsContainer}>
+        <h1>Você ainda não tem interesses confirmados.</h1>
       </div>
     );
   } else {
     return (
-      <div className={styles.cardsContainer}>
+      <div data-cy="lista-interesses-confirmados" className={styles.cardsContainer}>
         {confirmados.map((perfil) => (
           <>
             {user.nome != perfil.origem.nome ? (

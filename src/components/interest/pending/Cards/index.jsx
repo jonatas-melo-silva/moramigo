@@ -19,15 +19,15 @@ export function Cards() {
 
   if (pendentes.length == 0) {
     return (
-      <div className={styles.cardsContainer}>
-        <h1>Buscando Solicitações....</h1>
+      <div data-cy="mensagem-de-aviso" className={styles.cardsContainer}>
+        <h1>Você ainda não recebeu solicitações de interesse.</h1>
       </div>
     );
   } else {
     return (
-      <div className={styles.cardsContainer}>
+      <div data-cy="lista-de-solicitacoes" className={styles.cardsContainer}>
         <>
-          {pendentes.map((perfil) => (
+          {pendentes.map(perfil => (
             <Card perfil={perfil} />
           ))}
         </>

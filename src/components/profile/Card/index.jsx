@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ShowInterest } from "../ShowInterest"
+import { ShowInterest } from '../ShowInterest';
 
-export import { styles } from './Card.module.css';
+import { styles } from './Card.module.css';
 
 export function Card({ User }) {
   return (
@@ -12,8 +12,7 @@ export function Card({ User }) {
         <h2>{User.nome}</h2>
 
         <ShowInterest User={User} />
-
       </div>
     </>
-  )
+  );
 }

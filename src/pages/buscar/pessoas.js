@@ -39,7 +39,7 @@ const BuscarPessoas = () => {
       }
     }
     inicializar();
-  }, [perfis]);
+  }, []);
 
   const handleChange = event => {
     if (event.target.name == 'localidades' && event.target.value == '') {

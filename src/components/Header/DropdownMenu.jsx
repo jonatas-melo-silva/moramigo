@@ -1,28 +1,26 @@
 import { CSSTransition } from 'react-transition-group';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import React, { useState, useEffect, useRef } from 'react';
-import styles from "./Dropdown.module.css";
-import { useAuth } from "../../contexts/auth";
-import { useInterest } from "../../contexts/interest";
+import styles from './Dropdown.module.css';
+import { useAuth } from '../../contexts/auth';
+import { useInterest } from '../../contexts/interest';
 
-import Link from "next/link";
-
+import Link from 'next/link';
 
 export function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
-  const [menuHeight, setMenuHeight] = useState(null);
+  const [setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
-  const { logado, logout, user } = useAuth();
+  const { logout, user } = useAuth();
   const { listarPendentes } = useInterest();
   const onClickSair = () => {
-  logout();
-  }
+    logout();
+  };
 
   useEffect(() => {
-    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
-  }, [])
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
+  }, []);
 
   function calcHeight(el) {
     const height = el.offsetHeight;
@@ -31,7 +29,8 @@ export function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href=""
+      <a
+        href=""
         className={styles.menuItem}
         onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
       >
@@ -43,13 +42,13 @@ export function DropdownMenu() {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-
       <CSSTransition
         in={activeMenu === 'main'}
         timeout={500}
         classNames={styles.menuPrimary}
         unmountOnExit
-        onEnter={calcHeight}>
+        onEnter={calcHeight}
+      >
         <div className={styles.menuDropdown}>
           <DropdownItem>
             <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
@@ -69,22 +68,22 @@ export function DropdownMenu() {
 
           <DropdownItem>
             <Link href="/interesses/solicitacoes">
-                <a onClick={listarPendentes}>
-                  <FontAwesomeIcon icon="user-friends" /> Meus interesses
-                </a>
-              </Link>
+              <a onClick={listarPendentes}>
+                <FontAwesomeIcon icon="user-friends" /> Meus interesses
+              </a>
+            </Link>
           </DropdownItem>
 
           <DropdownItem>
-              <Link href="/usuario/login">
-                    <a onClick={onClickSair}>
-                        <FontAwesomeIcon icon="sign-out-alt" />Sair
-                    </a>
-              </Link>
+            <Link href="/usuario/login">
+              <a onClick={onClickSair}>
+                <FontAwesomeIcon icon="sign-out-alt" />
+                Sair
+              </a>
+            </Link>
           </DropdownItem>
         </div>
       </CSSTransition>
-
     </div>
   );
 }
@@ -102,10 +101,7 @@ export function NavItem(props) {
 
   return (
     <li className={styles.navItem}>
-      <div
-        className={styles.imgButton}
-        onClick={() => setOpen(!open)}
-        >
+      <div className={styles.imgButton} onClick={() => setOpen(!open)}>
         {props.icon}
       </div>
 
@@ -113,5 +109,3 @@ export function NavItem(props) {
     </li>
   );
 }
-
-

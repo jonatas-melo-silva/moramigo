@@ -1,11 +1,10 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-import Head from "../Head";
-import Header from "../Header";
-import Footer from "../Footer";
+import Head from '../Head';
+import Header from '../Header';
+import Footer from '../Footer';
 
 export const Layout = ({ children, title }) => {
-  console.log("Layout");
   return (
     <>
       <Head title={title} />

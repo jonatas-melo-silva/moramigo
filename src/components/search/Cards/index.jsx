@@ -7,8 +7,7 @@ import styles from './Cards.module.css';
 import { useAuth } from '../../../contexts/auth';
 
 export const Cards = ({ perfis }) => {
-  const { logado, user } = useAuth();
-  console.log('Cards');
+  const { user } = useAuth();
   if (!perfis) {
     return <h2>Carregando...</h2>;
   }

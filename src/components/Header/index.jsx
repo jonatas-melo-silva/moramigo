@@ -24,13 +24,8 @@ function Img() {
 }
 
 export const Header = () => {
-  console.log('Header');
-  const { logado, logout, user } = useAuth();
+  const { logado, user } = useAuth();
   const { listarPendentes } = useInterest();
-
-  const onClickSair = () => {
-    logout();
-  };
 
   return (
     <>
@@ -46,7 +41,6 @@ export const Header = () => {
             <div className={styles.navMenu}>
               <Link href="/sobrenos" className={styles.active}>
                 <a>
-                  {' '}
                   <FontAwesomeIcon icon="home" /> Sobre - Nós
                 </a>
               </Link>
@@ -56,16 +50,12 @@ export const Header = () => {
                 </a>
               </Link>
 
-              {logado ? (
+              {logado && (
                 <Link href="/interesses/solicitacoes">
-                  <a
-                  data-cy="meus-interesses-link"
-                  onClick={listarPendentes}>
+                  <a data-cy="meus-interesses-link" onClick={listarPendentes}>
                     <FontAwesomeIcon icon="user-friends" /> Meus interesses
                   </a>
                 </Link>
-              ) : (
-                <></>
               )}
             </div>
 
@@ -73,12 +63,8 @@ export const Header = () => {
               <>
                 <div className={styles.contaPerfil}>
                   <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
-                    <p>
-                      Olá, {user.nome}
-                      {/* <span>Ver perfil</span> */}
-                    </p>
+                    <p>Olá, {user.nome}</p>
                   </Link>
-                  {/* <NavItem/> */}
                   <NavItem icon={<Img />}>
                     <DropdownMenu></DropdownMenu>
                   </NavItem>
@@ -94,7 +80,6 @@ export const Header = () => {
 
                 <Link href="/usuario/registrar">
                   <a>
-                    {' '}
                     <FontAwesomeIcon icon="file-alt" /> Cadastre-se
                   </a>
                 </Link>

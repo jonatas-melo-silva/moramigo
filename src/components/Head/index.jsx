@@ -4,10 +4,8 @@ import ProtoTypes from "prop-types";
 import MyHead from "next/head";
 
 export const Head = ({ title }) => {
-  console.log("Head")
   return (
     <MyHead>
-      {" "}
       <title>{title}</title>
     </MyHead>
   );

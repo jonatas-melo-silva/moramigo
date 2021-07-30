@@ -1,6 +1,5 @@
-import { perfilFetch } from '../hooks/perfilFetch';
-import { memo } from 'react';
-
+import { memo, useEffect, useState } from 'react';
+import api from '../services/api';
 import Layout from '../components/Layout';
 import Banner from '../components/home/Banner';
 import Cards from '../components/search/Cards';
@@ -11,7 +10,21 @@ import { Paginacao } from '../components/Paginacao';
 const title = 'Moramigo';
 
 const Home = () => {
-  const { data } = perfilFetch('busca/');
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function inicializar() {
+      try {
+        const url = 'busca/';
+        const responsePerfils = await api.get(url);
+        setData(responsePerfils.data);
+      } catch (error) {
+        setData(undefined);
+      }
+    }
+    inicializar();
+  }, []);
+
   return (
     <Layout title={title}>
       <Banner />

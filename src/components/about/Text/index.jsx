@@ -1,9 +1,8 @@
-import React, { memo } from "react";
+import React, { memo } from 'react';
 
-import styles from "./Text.module.css";
+import styles from './Text.module.css';
 
 export function Text() {
-  console.log("Text")
   return (
     <section>
       <div className={styles.text}>
@@ -35,4 +34,4 @@ export function Text() {
   );
 }
 
-export default memo(Text)
+export default memo(Text);

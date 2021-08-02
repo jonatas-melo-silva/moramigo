@@ -7,7 +7,7 @@ context('Meus interesses', () => {
     cy.get('[data-cy=nome-do-usuario]').type('Dudu');
     cy.get('[data-cy=senha-do-usuario]').type('Dudu2021');
     cy.get('[data-cy=entrar-btn]').click();
-    
+
     cy.visit('/');
   });
 

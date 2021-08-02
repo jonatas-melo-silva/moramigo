@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# This App was built with Next.js
 
-## Começando
+### Steps to start the project
 
-First, run the development server:
+### Pre requisites:
+
+1. Install Docker
+2. Install Docker Compose
+
+### Start the project:
 
 ```bash
-npm run dev
+docker-compose up
 # or
-yarn dev
+docker-compose up -d
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Used Technologies:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+ - [Docker](https://www.docker.com/)
+ - [Docker Compose](https://docs.docker.com/compose/)
+ - [Next.js](https://nextjs.org/)
+ - [Node.js](https://nodejs.org/)
+ - [react](https://facebook.github.io/react/)
+ - [Html5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+ - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+ - [jest](https://facebook.github.io/jest/)
+ - [cypress](https://www.cypress.io/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Dependencies:
 
-## Learn More
+ - [Next.js](https://www.npmjs.com/package/next)
+ - [react](https://www.npmjs.com/package/react)
+ - [react-dom](https://www.npmjs.com/package/react-dom)
+ - [react-transition-group](https://www.npmjs.com/package/react-transition-group)
+ - [swr](https://www.npmjs.com/package/swr)
+ - [axios](https://www.npmjs.com/package/axios)
+ - [babel-plugin-istanbul](https://www.npmjs.com/package/babel-plugin-istanbul)
 
-To learn more about Next.js, take a look at the following resources:
+## Dependency of development:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ - [typescript](https://www.npmjs.com/package/typescript)
+ - [jest](https://www.npmjs.com/package/jest)
+ - [cypress](https://www.npmjs.com/package/eslint)
+ - [eslint](https://www.npmjs.com/package/axios)
+ - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)
+ - [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
+ - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+ - [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+ - [jest-styled-components](https://www.npmjs.com/package/jest-styled-components)
+ - [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
+ - [@babel/preset-typescript](https://www.npmjs.com/package/@babel/preset-typescript)
+ - [@cypress/code-coverage](https://www.npmjs.com/package/@cypress/code-coverage)
+ - [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)
+ - [@testing-library/react](https://www.npmjs.com/package/@testing-library/react)
+ - [@types/jest](https://www.npmjs.com/package/@types/jest)
+ - [@types/node](https://www.npmjs.com/package/@types/node)
+ - [@types/react](https://www.npmjs.com/package/@types/react)
+ - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+ - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

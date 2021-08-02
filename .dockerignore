@@ -1,0 +1,14 @@
+/.jest/
+/.next/
+/.nyc_output/
+/.vscode/
+coverage/
+cypress/
+endpoints/
+node_modules/
+.editorconfig
+.eslintrc.json
+.prettierrc
+.gitignore
+cypress.json
+jest.config.json

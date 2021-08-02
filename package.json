@@ -11,8 +11,7 @@
     "test:watch": "yarn test --watch",
     "cypress:server": "start-server-and-test dev 3000 cypress:open",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "commit": "npx git-cz"
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

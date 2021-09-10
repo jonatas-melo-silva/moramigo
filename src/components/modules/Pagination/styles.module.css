@@ -1,0 +1,38 @@
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 5rem;
+  gap: 20px;
+}
+
+.paginacao a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: white;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-orange);
+  color: var(--color-purple);
+}
+.paginacao .icon {
+  margin: 5px;
+}
+.paginacao p {
+  background: white;
+  padding: 7px 10px 7px 10px;
+  color: var(--color-purple);
+  border-radius: 4px;
+  border: 1px solid var(--color-orange);
+}
+
+.paginacao a:hover {
+  filter: brightness(0.9);
+}

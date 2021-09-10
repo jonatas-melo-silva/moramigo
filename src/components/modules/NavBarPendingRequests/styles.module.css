@@ -1,0 +1,64 @@
+.links {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 4rem;
+  height: 100px;
+  background-color: white;
+  padding-top: 40px;
+}
+
+/*color margin so no ultimo elemento*/
+.links a + a {
+  margin-left: 32px;
+}
+.links a {
+  font-size: 1rem;
+  border: 1px solid var(--color-purple);
+  padding: 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #777;
+  font-weight: bold;
+}
+.links a.active {
+  color: var(--color-purple);
+  border: 1px solid var(--color-purple);
+}
+
+.links a:hover {
+  color: var(--color-purple);
+}
+
+/*pseu do elemento*/
+.links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--color-purple);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+/*efeito de transição com pseu do elemento*/
+.links a:hover::after {
+  width: 100%;
+  transition: width 700ms ease-in-out;
+}
+
+@media (max-width: 400px) {
+  .links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 40px 10px 40px;
+  }
+  .links a + a {
+    margin-left: 40px;
+  }
+  .links {
+    height: 120px;
+  }
+}

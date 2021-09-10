@@ -1,21 +1,27 @@
-import { CSSTransition } from 'react-transition-group';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './Dropdown.module.css';
-import { useAuth } from '../../contexts/auth';
-import { useInterest } from '../../contexts/interest';
-
 import Link from 'next/link';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CSSTransition } from 'react-transition-group';
+
+import { useAuth } from '../../contexts/AuthUserContext';
+import { useInterest } from '../../contexts/interest';
+import { encodeId } from '../../libs';
+
+import styles from './Dropdown.module.css';
 
 export function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState('main');
-  const [setMenuHeight] = useState(null);
+  const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
-  const { logout, user } = useAuth();
+  const { authUser, signOut } = useAuth();
+
   const { listarPendentes } = useInterest();
+
+  const formattedName = name => name.replaceAll('-', ' ');
+
   const onClickSair = () => {
-    logout();
+    signOut();
   };
 
   useEffect(() => {
@@ -51,7 +57,12 @@ export function DropdownMenu() {
       >
         <div className={styles.menuDropdown}>
           <DropdownItem>
-            <Link href="/usuario/[id]}" as={`/usuario/${user.id}`}>
+            <Link
+              href="/usuario/[slug]/"
+              as={`/usuario/${formattedName(authUser.name)}-${encodeId(
+                authUser.id
+              )}/`}
+            >
               <a>
                 <FontAwesomeIcon icon="user" /> Perfil
               </a>
@@ -59,7 +70,7 @@ export function DropdownMenu() {
           </DropdownItem>
 
           <DropdownItem>
-            <Link href="/buscar/pessoas">
+            <Link href="/buscarpessoas/" as={'/buscarpessoas/'}>
               <a>
                 <FontAwesomeIcon icon="user-friends" /> Buscar Pessoas
               </a>
@@ -67,7 +78,10 @@ export function DropdownMenu() {
           </DropdownItem>
 
           <DropdownItem>
-            <Link href="/interesses/solicitacoes">
+            <Link
+              href="/interesses/solicitacoes/"
+              as={'/interesses/solicitacoes/'}
+            >
               <a onClick={listarPendentes}>
                 <FontAwesomeIcon icon="user-friends" /> Meus interesses
               </a>
@@ -75,7 +89,7 @@ export function DropdownMenu() {
           </DropdownItem>
 
           <DropdownItem>
-            <Link href="/usuario/login">
+            <Link href="/login/">
               <a onClick={onClickSair}>
                 <FontAwesomeIcon icon="sign-out-alt" />
                 Sair
@@ -98,11 +112,16 @@ export function Navbar(props) {
 // abrir o Dropdown
 export function NavItem(props) {
   const [open, setOpen] = useState(false);
+  const { authUser } = useAuth();
 
   return (
     <li className={styles.navItem}>
       <div className={styles.imgButton} onClick={() => setOpen(!open)}>
-        {props.icon}
+        {authUser.avatar ? (
+          <img src={`${authUser.avatar}`} alt="Avatar perfil"></img>
+        ) : (
+          <img src="/img/pessoa1.svg" alt="Avatar perfil"></img>
+        )}
       </div>
 
       {open && props.children}

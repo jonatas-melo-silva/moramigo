@@ -1,77 +1,172 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.headerContainer {
+.navbar {
   width: 100%;
+  height: 68px;
   margin: 0 auto;
-  justify-content: center;
-
-}
-.headerContente{
-  display: flex;
-  justify-content: space-between;
-  width: 976px;
-  margin: 0 auto;
-}
-.navMenu {
-  display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 1.8rem;
-  transition: 200ms;
-}
-
-.contaPerfil,.conta{
+  position: fixed;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  transition: 200ms;
+  background-color: white;
+  border-bottom: 1px solid #939397;
 }
-.conta, .navMenu{
-  gap: 3rem;
+.logo img {
+  display: flex;
+  width: 9rem;
+  height: 64px;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
-.navMenu a:hover, .conta a:hover{
-  color: rgb(94, 91, 91);
-  filter:brightness(90%);
-}
-.conta a, .navMenu a {
+.navbar ul li a {
+  display: flex;
+  gap: 5px;
   text-decoration: none;
-  padding: 8px;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  color: #777;
-  padding:0 0 0 0;
-  position: relative;
-
-
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-/*pseu do elemento*/
-.containerHeader .contaPerfil a::after, .conta a::after, .navMenu a::after{
-  content: "";
+.navItem a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #777;
+  padding: 0 0 0 0;
+  position: relative;
+}
+.navItem a:hover {
+  color: rgb(94, 91, 91);
+  filter: brightness(90%);
+}
+.navItem a::after {
+  content: '';
   width: 0;
   display: flex;
   height: 3px;
   background-color: var(--color-secondary-hover);
   position: absolute;
-  left:0;
+  left: 0;
   border-radius: 3px 3px 0 0;
   bottom: -1.5rem;
-
+}
+.conta p {
+  padding-right: 5px;
+}
+.conta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-/*efeito de transição com pseu do elemento*/
-.containerHeader .contaPerfil a:hover::after, .conta a:hover::after, .navMenu a:hover::after{
+.navItem a:hover::after {
   width: 100%;
   transition: width 700ms ease-in-out;
-
 }
 
-/* @media (max-width: 900px){
-  .headerContainer{
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 1.2rem;
+  list-style: none;
+  text-align: center;
+  width: 870px;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  height: 60px;
+}
+
+.navLinks {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.icon {
+  color: gray;
+  font-size: 2rem;
+}
+
+.navLinks-mobile {
+  display: none;
+}
+
+.menuIcon {
+  display: none;
+}
+.buttomClose {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .buttomClose {
+    display: flex;
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    position: absolute;
+    top: 68px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    flex-direction: column-reverse;
+  }
+  .navbar img {
+    /* margin-left: 10px; */
+  }
+  .navbar ul li a {
+    color: white;
+  }
 
-};
+  .active {
+    background: var(--color-orange);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
 
-} */
+  .navLinks {
+    text-align: left;
+    width: 100%;
+    display: table;
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-35%, 8%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .navbar {
+    justify-content: left;
+  }
+  .conta {
+    align-items: left;
+    justify-content: left;
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+  .conta p {
+    color: white;
+  }
+  .navMenu {
+    gap: 10px;
+  }
+  .navItem a::after {
+    background-color: white;
+  }
+}

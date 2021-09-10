@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/usuario/SingUp/cadastrar.js", "src/components/templates/SignUp/index.js", "src/components/profile/ShowInterest/index.jsx", "src/libs/encode/index.js", "src/services/api.js"  ],
   "exclude": [
     "node_modules"
   ]

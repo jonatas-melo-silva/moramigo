@@ -1,0 +1,14 @@
+.viewProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 0.5rem;
+}
+
+.viewProfile a {
+  padding-top: 4px;
+  padding-right: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-purple);
+}

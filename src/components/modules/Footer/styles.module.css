@@ -1,0 +1,93 @@
+.footerContainer {
+  display: grid;
+  justify-content: center;
+  background: var(--color-orange);
+  color: white;
+  height: 380px;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+.card01,
+.card02 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15rem;
+}
+
+.card01,
+.card02 {
+  padding: 80px 0 20px 0px;
+}
+.card01 h4,
+.card02 h4 {
+  font-size: 1rem;
+}
+.icon {
+  margin-right: 3px;
+}
+
+.card01 img {
+  width: 12em;
+}
+
+/*Resposividade*/
+
+@media (max-width: 1000px) {
+  .card01,
+  .card02 {
+    margin: 0 40px 0 40px;
+  }
+  .card01 h4,
+  .card02 h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card01,
+  .card02 {
+    margin: 0 10px 0 10px;
+    gap: 2rem;
+    text-align: left;
+    justify-content: center;
+  }
+  .card01 h4,
+  .card02 h4 {
+    font-size: 0.8rem;
+  }
+  .card01 p {
+    font-size: 0.9rem;
+  }
+  .card02 p {
+    font-size: 0.9rem;
+  }
+  .card02 span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 424px) {
+  .card01,
+  .card02 {
+    margin: 0;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card02 {
+    flex-direction: column-reverse;
+  }
+  .card01 img {
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  .card02 p {
+    font-size: 0.8rem;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  .footerContainer {
+    height: 400px;
+  }
+}

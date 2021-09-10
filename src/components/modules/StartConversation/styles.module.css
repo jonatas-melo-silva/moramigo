@@ -1,0 +1,28 @@
+.button {
+  margin-top: 5px;
+}
+.startConversation {
+  background-color: var(--color-purple);
+  height: 28px;
+  padding: 3px;
+  font-size: 13px;
+  width: 150px;
+  border: 0;
+  border-radius: 4px;
+  transition: 700ms;
+  margin-top: 20px;
+}
+.startConversation a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  transition: filter 200ms;
+}
+
+.startConversation:hover {
+  filter: brightness(0.9);
+}

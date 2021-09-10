@@ -1,0 +1,102 @@
+.textInform {
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  height: 100%;
+  background-color: var(--color-orange);
+  text-align: -webkit-center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0 15px 0;
+}
+
+.card1 {
+  background-color: var(--color-orange);
+  width: 176px;
+  margin-top: 15px;
+}
+
+.card1 .span {
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.card2 {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  gap: 2rem;
+  width: 800px;
+  /* padding-left: 30px; */
+}
+.card2 p {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.span {
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.span span:first-child {
+  color: var(--color-purple);
+}
+
+.span span:last-child {
+  color: var(--color-button-green);
+}
+
+.card2 img {
+  width: 3.5rem;
+}
+/*Responsividade*/
+@media (max-width: 780px) {
+  .card2 {
+    gap: 0rem;
+  }
+
+  .span {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+  .card2 p {
+    font-size: 0.7rem;
+    padding: 8px;
+  }
+  .card2 img {
+    width: 2.8rem;
+  }
+  .textInform {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .textInform {
+    padding: 0px 0px 5px 5px;
+    gap: 0rem;
+    height: 62px;
+  }
+  .card2 img {
+    width: 2rem;
+  }
+  .card2 p {
+    font-size: 0.6rem;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    margin-bottom: 4px;
+  }
+  .card1 .span {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card2 p {
+    font-size: 0.5rem;
+  }
+}

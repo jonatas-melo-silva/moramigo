@@ -1,0 +1,31 @@
+.text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -3.3rem;
+}
+
+.text span {
+  color: rgb(112, 111, 111);
+  font-size: 1.4rem;
+  padding: 10px 40px 10px 40px;
+  font-weight: bold;
+  /* width: 460px; */
+  border: solid 3px #ff9a00;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+@media (max-width: 900px) {
+  .text {
+    margin-top: -1.2rem;
+  }
+  .text span {
+    font-size: 1rem;
+    padding: 8px 20px 8px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .text {
+    display: none;
+  }
+}

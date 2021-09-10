@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  background: #ffffff;
+  justify-content: center;
+}
+
+.chatSupport {
+  max-width: 330px;
+}
+.supportHeader img {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.supportHeader {
+  float: right;
+  width: 330px;
+  height: 56px;
+  background: var(--color-purple);
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.supportHeader span {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-right: 20px;
+}
+
+.textSupport {
+  border: 1px solid #cec9c9;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ededed;
+  width: 280px;
+  margin: 10px auto;
+  border-radius: 8px;
+  line-height: 20px;
+}
+.adminName {
+  font-weight: bold;
+  text-align: left;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.usuarioName {
+  font-weight: bold;
+  text-align: right;
+  font-size: 12px;
+  padding-right: 5px;
+}
+
+/*mensagem usuario*/
+.usuarioMessage {
+  background: #ccf0dc;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 0px 0px 8px 8px;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+/*mensagem amigo*/
+.amigoMessage {
+  background: #eee5fc;
+  padding: 10px;
+  border-radius: 0px 0px 8px 8px;
+  font-size: 12px;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+/*Input chat*/
+.messageSend {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #cec9c9;
+  align-items: center;
+}
+
+.messageSend input {
+  outline: none;
+  height: 34px;
+  margin: 10px;
+  align-items: center;
+  width: 252px;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #8257e6;
+}
+
+.messageSend input[type='text']:focus {
+  outline: 1px solid #8257e6;
+}
+.sendMessageButton {
+  display: flex;
+  cursor: pointer;
+}
+
+.sendMessageButton button {
+  border: 0px;
+  background: transparent;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.sendMessageButton:hover {
+  opacity: 0.8;
+}
+@media (max-width: 375px) {
+  .chatSupport,
+  .supportHeader {
+    width: 290px;
+  }
+}
+@media (max-width: 325px) {
+  .chatSupport,
+  .supportHeader {
+    width: 265px;
+  }
+}

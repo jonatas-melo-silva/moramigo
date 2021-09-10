@@ -1,0 +1,41 @@
+.card {
+  margin-top: 6.5rem;
+  background: var(--color-card-background);
+  color: var(--color-card-title);
+  border: 1px solid #e1e3e6;
+  border-radius: 0.313rem;
+  width: 24rem;
+  margin-right: 4rem;
+  text-align: center;
+  padding: 2.875rem 1.625rem;
+}
+
+.card:first-child img {
+  border-radius: 50%;
+  border: 0.25rem var(--color-secondary) solid;
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.875rem;
+  margin-bottom: 3.875rem;
+}
+.card p {
+  margin-bottom: 1.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+@media (max-width: 830px) {
+  .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

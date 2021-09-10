@@ -1,45 +1,45 @@
-import api from "../services/api"
-import { useAuth } from "../contexts/auth";
+import api from '../services/api';
 
-import { createContext, useState , useContext, useEffect } from "react";
+import { useAuth } from './AuthUserContext';
 
-const ProfileContext = createContext({})
+import { createContext, useState, useContext, useEffect } from 'react';
 
-export const ProfileProvider = ({ children}) => {
-  const [profile, setProfile] = useState()
-  const { logado, user } = useAuth();
+const ProfileContext = createContext({});
+
+export const ProfileProvider = ({ children }) => {
+  const [profile, setProfile] = useState();
+  const { logged } = useAuth();
 
   useEffect(() => {
     async function loadStoreData() {
-      const storageUser = await localStorage.getItem('@RNMoramigo:userData')
+      const localUserData = await localStorage.getItem(
+        '@RNMoramigo:localUserData'
+      );
 
-      if (logado) {
-        const User = JSON.parse(storageUser)
-        verPerfil(User.id)
+      if (logged) {
+        const userData = JSON.parse(localUserData);
+        verPerfil(userData.id);
       }
     }
-    loadStoreData()
-  }, [logado])
+    loadStoreData();
+  }, [logged]);
 
-  const verPerfil = async (id) => {
+  const verPerfil = async id => {
     try {
-      const url = "pessoas/";
-      const response = await api.get(url + id);
-      console.log(response.data)
-      setProfile(response.data)
+      const url = `pessoas/${id}`;
+      const response = await api.get(url);
+      setProfile(response.data);
     } catch (err) {}
-  }
+  };
 
   return (
-    <ProfileContext.Provider
-      value={{profile, verPerfil}}
-    >
+    <ProfileContext.Provider value={{ profile, verPerfil }}>
       {children}
     </ProfileContext.Provider>
-  )
-}
+  );
+};
 
 export const useProfile = () => {
-  const context = useContext(ProfileContext)
+  const context = useContext(ProfileContext);
   return context;
-}
+};
